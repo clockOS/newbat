@@ -21,7 +21,7 @@ html {
 }
 
 * {
-  font-family:Roboto,'Helvetica Neue',sans-serif,'黑体'!important;
+  font-family:Avenir,'Helvetica Neue',sans-serif,'黑体'!important;
 }
 .panel{
   border-width: 0;
@@ -304,4 +304,9 @@ a:visited {
 }
 .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
   border-color: #ff281e;
+}
+
+.navbar-brand{
+  color: #FFF!important;
+  font-size: 28px;
 }
