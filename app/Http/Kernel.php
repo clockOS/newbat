@@ -18,6 +18,7 @@ class Kernel extends HttpKernel
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         \App\Http\Middleware\VerifyCsrfToken::class,
+        \App\Http\Middleware\Languages::class,
     ];
 
     /**
@@ -29,5 +30,13 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'manager' => \App\Http\Middleware\RedirectIfNotManager::class,
+        'profile' => \App\Http\Middleware\MustFillProfiles::class,
+        'check' => \App\Http\Middleware\CheckProfile::class,
+        'sponsor' => \App\Http\Middleware\CheckSponsor::class,
+        'add_outcome' => \App\Http\Middleware\CanAddOutcome::class,
+        'check_outcome' => \App\Http\Middleware\CanCheckOutcome::class,
+        'edit_document' => \App\Http\Middleware\CanEditDoc::class,
+        'add_permission' => \App\Http\Middleware\CanEditDoc::class,
     ];
 }

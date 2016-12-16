@@ -37,8 +37,8 @@ return [
 
         'database' => [
             'driver' => 'database',
-            'table'  => 'jobs',
-            'queue'  => 'default',
+            'table' => 'jobs',
+            'queue' => 'default',
             'expire' => 60,
         ],
 
@@ -59,18 +59,18 @@ return [
 
         'iron' => [
             'driver'  => 'iron',
-            'host'    => 'mq-aws-us-east-1.iron.io',
-            'token'   => 'your-token',
-            'project' => 'your-project-id',
-            'queue'   => 'your-queue-name',
-            'encrypt' => true,
+            'host'    => 'mq-aws-eu-west-1-1.iron.io',
+            'token'   => env('IRON_TOKEN'),
+            'project' => env('IRON_PROJECT'),
+            'queue'   => 'app',
+            'encrypt' => false,
         ],
 
         'redis' => [
-            'driver'     => 'redis',
+            'driver' => 'redis',
             'connection' => 'default',
-            'queue'      => 'default',
-            'expire'     => 60,
+            'queue'  => 'default',
+            'expire' => 60,
         ],
 
     ],
@@ -87,8 +87,7 @@ return [
     */
 
     'failed' => [
-        'database' => env('DB_CONNECTION', 'mysql'),
-        'table'    => 'failed_jobs',
+        'database' => 'mysql', 'table' => 'failed_jobs',
     ],
 
 ];
