@@ -121,12 +121,12 @@
 
             while(i<1000){
                 setInterval(function () {
-                    $("#dick").html('<span style="margin-left: -34px">－<span style="margin-left: -32px">8</span></span>')
+                    $("#dick").html('<span style="margin-left: -26px">－<span style="margin-left: -32px">8</span></span>')
 
                 }, 900);
 
                 setInterval(function () {
-                    $("#dick").html('<span style="margin-left: -60px">－<span style="margin-left: -32px">8&nbsp;</span>')
+                    $("#dick").html('<span style="margin-left: -48px">－<span style="margin-left: -33px">8&nbsp;</span>')
                 }, 1000);
 
                 i++;
