@@ -43,14 +43,14 @@
         <div class="panel-body">
             我的推广代码：<span class="label label-info">{{\Auth::user()->sponsor_code}}</span><br/>
             确定你的介绍人后可以管理团队<br/>
-            在此之前无法验证谁通过你的介绍加入到了clockOS，请尽快确认你的介绍人。
+            在此之前无法验证谁通过你的介绍加入到了FuckBAT，请尽快确认你的介绍人。
         </div>
     </div>
     @endunless
     <div class="panel panel-danger">
         <div class="panel-heading">没有介绍人</div>
         <div class="panel-body">
-            有介绍人的情况下，分红中的12%会进入到介绍人的帐中。若没有介绍人，分红中的15%会返还回clockOS中。<br/>
+            有介绍人的情况下，分红中的12%会进入到介绍人的帐中。若没有介绍人，分红中的15%会返还回FuckBAT中。<br/>
             如果有介绍人，请询问他的注册邮箱或推广代码，再到此界面填写。<br/>
             <a href="/docs/sponsor">关于介绍人系统的详情</a>
             <hr/>

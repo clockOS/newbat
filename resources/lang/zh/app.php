@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'beian' => '辽ICP备14002468号-1',
+    'beian' => '辽ICP备14002468号-2',
     'settings' => '设置',
     'logout' => '注销',
     'notification' => '通知',

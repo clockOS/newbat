@@ -30,10 +30,8 @@ class PagesController extends Controller
 
     public function home(){
 
-        $last_week = Weekly::latest()->first();
-
         $status = Status::latest()->first();
 
-        return view('user.home',compact('last_week','status'));
+        return view('about.home',compact('status'));
     }
 }

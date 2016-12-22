@@ -26,8 +26,8 @@ return [
     'join' => '他们加入到了clockOS',
     'confirm' => '确认密码',
     'send' => '发送邮件',
-    'have' => '已有clockOS Developer账号',
-    'confirmation' => '激活clockOS Developer账号',
+    'have' => '已有FuckBAT账号',
+    'confirmation' => '激活FuckBAT账号',
     'sent' => '邮件发送成功，请登陆邮箱激活账号',
     'please_login' => '请登陆',
 
