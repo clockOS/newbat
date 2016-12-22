@@ -32,6 +32,6 @@ class PagesController extends Controller
 
         $status = Status::latest()->first();
 
-        return view('about.home',compact('status'));
+        return view('user.about',compact('status'));
     }
 }
