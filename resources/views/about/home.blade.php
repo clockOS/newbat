@@ -95,7 +95,7 @@
     </div>
 </div>
 @section('footer')
-    <script src="{{ \Clockos\Test::cdn('/js/countUp.js/countUp.js')}}"></script>
+    <script src="{{ \Clockos\Test::cdn('/js/countUp/countUp.js')}}"></script>
     <script>
         $(document).ready(function(){
             var options = {
