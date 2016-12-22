@@ -9,6 +9,10 @@ html,body{
     margin-bottom: 0;
     /*background: url(../img/bg/home.jpg);*/
 }
+.why-jumb{
+    background: #222222;
+    color: #FFF;
+}
 .first-jumb  h1{
     font-weight: bold;
     font-size: 78px;
@@ -55,17 +59,25 @@ html,body{
 }
 
 .last-jumb{
-    text-align: center;
     color: #FFF;
     background: #222222;
     margin-bottom: -70px;
 }
 .left-jumb{
-    text-align: right;
     background: #222;
     margin-bottom: 0;
+    color:#FFF;
 }
 .right-jumb{
+    text-align: right;
     margin-top: 0;
+    padding:0!important;
     background: #222;
+    color:#FFF;
+}
+.footer{
+    margin-bottom: -120px;
+}
+.col-sm-4{
+    background: #FFF;
 }

@@ -7,6 +7,7 @@
     <title>FuckBAT</title>
     <link rel="stylesheet" href="{{ \Clockos\Test::cdn((elixir('css/all.css'))) }}">
     <link rel="stylesheet" href="{{ \Clockos\Test::cdn('/css/home.css') }}">
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link rel="icon" href="{{ \Clockos\Test::cdn('/img/favicon.png')}}" type="image/gif" sizes="16x16">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,10 +23,10 @@
 
 <div class="jumbotron first-jumb">
     <div class="container">
-        <h1 id="main-title">Fuck <span id="fucked">BAT</span><span id="dick"></span>  </h1>
+        <h1 class="animated infinite shake">Fuck <span id="fucked">BAT</span><span id="dick"></span>  </h1>
         <h2>艹翻BAT</h2>
         <br/>
-        <p>FuckBAT 是一款主要面向程序猿的网络游戏<br/>
+        <p>FuckBAT是一款主要面向程序猿的网络游戏<br/>
             写代码来打怪升级，干掉“BAT”这三个BOSS</p>
         <br/>
         <p><a class="btn btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
@@ -42,28 +43,14 @@
             没办法...名字都起了，最主要的是花钱买域名了！<br/>
             按照这个字母顺序逐一干掉。<br/>
             <br/>
-        <p><a class="btn btn-lg" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名BAT Fucker&nbsp;</a></p>
-    </div>
-</div>
-<div class="jumbotron third-jumb">
-    <div class="container">
-        <br/>
-        <br/>
-        <h3>成为 BAT Fucker 的唯一条件</h3>
-        <h1>零欺骗</h1>
-        <br/>
-        <p>不要套路，不要谎言。<br/>
-            是几厘米就是几厘米，可以长，可以短<br/>
-            是老爷们就不是老娘们，可以快，可以慢<br/>
-            任何信息绝不允许虚报<br/>
-            拒绝洗脑，拒绝画饼。<br/>
-            <br/>
-            <br/>
+        <p><a class="btn btn-lg  animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名BAT Fucker&nbsp;</a></p>
     </div>
 </div>
 <div class="container">
-    <div class="jumbotron last-jumb left-jumb col-sm-6">
+    <div class="jumbotron left-jumb col-sm-6">
         <div class="container">
+            <br/>
+            <br/>
             <br/>
             <br/>
             <h3>成为 BAT Fucker 的唯一条件</h3>
@@ -76,42 +63,54 @@
                 拒绝洗脑，拒绝画饼。<br/>
                 <br/>
                 <br/>
-        </div>
-    </div>
-    <div class="jumbotron last-jumb right-jumb col-sm-6">
-        <div class="container">
-            <br/>
-            <br/>
-            <h3>成为 BAT Fucker 的唯一条件</h3>
-            <h1>零欺骗</h1>
-            <br/>
-            <p>不要套路，不要谎言。<br/>
-                是几厘米就是几厘米，可以长，可以短<br/>
-                是老爷们就不是老娘们，可以快，可以慢<br/>
-                任何信息绝不允许虚报<br/>
-                拒绝洗脑，拒绝画饼。<br/>
                 <br/>
                 <br/>
         </div>
     </div>
-</div>
-<div class="jumbotron last-jumb">
-    <div class="container">
-        <br/>
-        <br/>
-        <h3>成为 BAT Fucker 的唯一条件</h3>
-        <h1>零欺骗</h1>
-        <br/>
-        <p>不要套路，不要谎言。<br/>
-            是几厘米就是几厘米，可以长，可以短<br/>
-            是老爷们就不是老娘们，可以快，可以慢<br/>
-            任何信息绝不允许虚报<br/>
-            拒绝洗脑，拒绝画饼。<br/>
-            <br/>
-            <br/>
+    <div class="jumbotron right-jumb col-sm-6">
+
+            <h1 class="animated infinite hinge">Deceiving</h1>
+
     </div>
 </div>
 
+<div class="jumbotron second-jumb">
+    <br/>
+    <h1>为何要干？ </h1>
+    <div class="container">
+        <div class="jumbotron col-sm-4">
+            <h2>bbb</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur, deleniti illum quidem ratione saepe sequi tempore? Architecto consequuntur corporis, doloremque hic molestias mollitia non optio provident, quis sunt veritatis.</p>
+        </div>
+        <div class="jumbotron col-sm-4">
+            <h2>aaa</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus perspiciatis quisquam vero. Alias distinctio dolorem doloremque excepturi id in iste itaque magnam modi, nam recusandae reiciendis, saepe velit voluptas.</p>
+        </div>
+        <div class="jumbotron col-sm-4">
+            <h2>ccc</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid distinctio dolorem doloremque eaque, enim ipsam laudantium minus molestias nulla officia quia, ratione sit tempore vitae, voluptatibus. Facilis labore provident quaerat?</p>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <div class="jumbotron last-jumb">
+        <div class="jumbotron left-jumb col-sm-6">
+            <div class="container">
+
+                <h1>聊聊天</h1>
+                <br/>
+                <p>扫码加入群聊
+            </div>
+        </div>
+        <div class="jumbotron right-jumb col-sm-6">
+            <div class="container">
+                <br/><br/>
+            <img width="200px" src="{{ \Clockos\Test::cdn('/img/groupchat.png')}}">
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="footer">
     <div class="container">
         <p class="text-muted">
