@@ -8,7 +8,7 @@ return [
     'basic_law' => 'Documents',
     'ease' => 'shhh...ease',
     'participate' => 'Ways to Participate in clockOS',
-    'tutorial' => 'clockOS Developer Beginner\' Guide',
+    'tutorial' => 'FuckBAT Beginner\' Guide',
 
 
 ];

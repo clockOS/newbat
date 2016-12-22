@@ -3,7 +3,7 @@
     <h1>{{trans('app.manage')}}</h1>
     <hr/>
     <ul class="nav nav-tabs" style="margin-bottom: 15px">
-        <li role="presentation"><a href="{{ url('/manage') }}">clockOS</a></li>
+        <li role="presentation"><a href="{{ url('/manage') }}">FuckBAT</a></li>
         <li role="presentation" class="active"><a href="{{ url('/team') }}">{{trans('app.team')}}</a></li>
     </ul>
     <div class="panel panel-default">

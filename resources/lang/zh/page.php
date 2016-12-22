@@ -8,7 +8,7 @@ return [
     'basic_law' => '基本法',
     'ease' => '嘘...放轻松',
     'participate' => '参与clockOS建设的几种方式',
-    'tutorial' => 'clockOS Developer 新手向导',
+    'tutorial' => 'FuckBAT新手向导',
 
 
 ];

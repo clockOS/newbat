@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Join <span style="color: red">clockOS</span> Developers</div>
+                <div class="panel-heading">Join FuckBAT</div>
                 <div class="panel-body">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
