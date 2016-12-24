@@ -36,12 +36,6 @@ html,body{
 .btn-lg{
     border-radius: 50px;
 }
-.first-jumb .btn-lg{
-    background: rgba(255, 255, 255, 0.9);
-}
-.first-jumb .btn-lg:hover{
-    background: #FFF;
-}
 
 .second-jumb .btn-lg{
     background: rgba(54, 54, 54, 1);
@@ -51,10 +45,10 @@ html,body{
     background: #000;
 }
 
-.first-jumb .btn-lg{
+.white-btn-lg{
     background: rgba(255, 255, 255, 0.9);
 }
-.first-jumb .btn-lg:hover{
+.white-btn-lg:hover{
     background: #FFF;
 }
 
@@ -78,6 +72,9 @@ html,body{
 .footer{
     margin-bottom: -120px;
 }
-.col-sm-4{
+.col-sm-4 {
     background: #FFF;
+}
+.last-jumb .right-jumb{
+    text-align: center;
 }

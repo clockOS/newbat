@@ -29,7 +29,7 @@
         <p>FuckBAT是一款主要面向程序猿的网络游戏<br/>
             写代码来打怪升级，干掉“BAT”这三个BOSS</p>
         <br/>
-        <p><a class="btn btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
+        <p><a class="btn btn-lg white-btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
     </div>
 </div>
 <div class="jumbotron second-jumb">
@@ -43,7 +43,7 @@
             没办法...名字都起了，最主要的是花钱买域名了！<br/>
             按照这个字母顺序逐一干掉。<br/>
             <br/>
-        <p><a class="btn btn-lg  animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名BAT Fucker&nbsp;</a></p>
+        <p><a class="btn btn-lg animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名BAT Fucker&nbsp;</a></p>
     </div>
 </div>
 <div class="container">
@@ -79,15 +79,15 @@
     <h1>为何要干？ </h1>
     <div class="container">
         <div class="jumbotron col-sm-4">
-            <h2>bbb</h2>
+            <h2>因为穷</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur, deleniti illum quidem ratione saepe sequi tempore? Architecto consequuntur corporis, doloremque hic molestias mollitia non optio provident, quis sunt veritatis.</p>
         </div>
         <div class="jumbotron col-sm-4">
-            <h2>aaa</h2>
+            <h2>因为懒</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus perspiciatis quisquam vero. Alias distinctio dolorem doloremque excepturi id in iste itaque magnam modi, nam recusandae reiciendis, saepe velit voluptas.</p>
         </div>
         <div class="jumbotron col-sm-4">
-            <h2>ccc</h2>
+            <h2>就是看着不爽</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid distinctio dolorem doloremque eaque, enim ipsam laudantium minus molestias nulla officia quia, ratione sit tempore vitae, voluptatibus. Facilis labore provident quaerat?</p>
         </div>
     </div>
@@ -98,14 +98,14 @@
         <div class="jumbotron left-jumb col-sm-6">
             <div class="container">
 
-                <h1>聊聊天</h1>
+                <h2>扫码加入群聊</h2>
                 <br/>
-                <p>扫码加入群聊
+                <p><span id="letschat"></span><span class="animated infinite flash">|</span></p>
             </div>
         </div>
         <div class="jumbotron right-jumb col-sm-6">
             <div class="container">
-                <br/><br/>
+                <br/><br/><br/>
             <img width="200px" src="{{ \Clockos\Test::cdn('/img/groupchat.png')}}">
             </div>
         </div>
@@ -116,15 +116,16 @@
         <p class="text-muted">
             <a href="/about/index">{{trans('app.about')}}</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/contact">{{trans('app.contact')}}</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://clockos.com">clockos.com</a>
-            <span style="font-size: 12px;float: right" class="visible-md visible-lg"><a href="http://www.miitbeian.gov.cn/" target="_blank">{{trans('app.beian')}}</a>  &nbsp;&nbsp;&nbsp;Copyright © {{date('Y')}} clockOS. All Rights Reserved.</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://fuckb.at">clockos.com</a>
+            <span style="font-size: 12px;float: right" class="visible-md visible-lg"><a href="http://www.miitbeian.gov.cn/" target="_blank">{{trans('app.beian')}}</a>  &nbsp;&nbsp;&nbsp;Copyright © {{date('Y')}} FuckBAT. All Rights Reserved.</span>
         </p>
     </div>
 </footer>
 
 <script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="{{ \Clockos\Test::cdn('/js/countUp.js')}}"></script>
+<script src="https://cdn.bootcss.com/countup.js/1.7.1/countUp.min.js"></script>
+<script src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
 <script>
     $(document).ready(function(){
         var options = {
@@ -144,8 +145,14 @@
 
         setInterval(function () {
             $("#fucked").text('ATB')
-
         }, 500);
+
+        $("#letschat").typed({
+            strings: ['来一起聊聊天😏<br/> ^500 聊啥啊🤔<br/> ^500 聊啥都行😅','这是神马J8网站😒<br/> ^500 ...<br/> ^500 确实要用到J8😂','用屌来做什么？<br/> ^500 来FuckBAT😆<br/> ^500 8==✊==3······......'],
+            loop: true,
+            typeSpeed: 100,
+            cursorChar: ""
+        });
 
 
         while(i<1000){
