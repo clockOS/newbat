@@ -15,21 +15,21 @@ return [
 
     'failed' => '错误！',
     'throttle' => ':seconds 后再试',
-    'login' => '登陆',
-    'signup' => '注册成为clockOS开发者',
-    'github' => '使用GitHub账号登陆',
+    'login' => '登录',
+    'signup' => '注册FuckBAT帐号',
+    'github' => '使用GitHub账号登录',
     'email' => '邮箱',
     'password' => '密码',
-    'remember' => '自动登陆',
+    'remember' => '自动登录',
     'forget' => '忘记密码',
     'input' => '输入有误',
-    'join' => '他们加入到了clockOS',
+    'join' => '他们加入到了FuckBAT',
     'confirm' => '确认密码',
     'send' => '发送邮件',
     'have' => '已有FuckBAT账号',
     'confirmation' => '激活FuckBAT账号',
-    'sent' => '邮件发送成功，请登陆邮箱激活账号',
-    'please_login' => '请登陆',
+    'sent' => '邮件发送成功，请登录邮箱激活账号',
+    'please_login' => '请登录',
 
 
 ];
