@@ -11,6 +11,7 @@ namespace Clockos;
 
 use Illuminate\Contracts\Mail\Mailer;
 use App\User;
+use Config;
 
 class AppMailer
 {
