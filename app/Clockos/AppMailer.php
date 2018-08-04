@@ -16,7 +16,7 @@ class AppMailer
 {
     protected $mailer;
 
-    protected $from = 'admin@clockos.com';
+    protected $from = env('MAIL_FROM_ADDRESS', 'info@fuckb.at');
 
     protected $to;
 
