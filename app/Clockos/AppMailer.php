@@ -34,7 +34,7 @@ class AppMailer
     private function deliver()
     {
         $this->mailer->send($this->view, $this->data ,function($message){
-            $message->from($this->from, 'clockOS Developer')
+            $message->from($this->from, 'FuckBAT')
                     ->to($this->to)
                     ->subject($this->subject);
         });
