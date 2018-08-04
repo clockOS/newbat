@@ -11,13 +11,12 @@ namespace Clockos;
 
 use Illuminate\Contracts\Mail\Mailer;
 use App\User;
-use Config;
 
 class AppMailer
 {
     protected $mailer;
 
-    protected $from = config('mail.from.address');
+    protected $from = 'info@fuckb.at';
 
     protected $to;
 
