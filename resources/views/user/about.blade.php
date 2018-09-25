@@ -102,8 +102,8 @@
         <p class="text-muted">
             <a href="/about/index">{{trans('app.about')}}</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/contact">{{trans('app.contact')}}</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://fuckb.at">clockos.com</a>
-            <span style="font-size: 12px;float: right" class="visible-md visible-lg"><a href="http://www.miitbeian.gov.cn/" target="_blank">{{trans('app.beian')}}</a>  &nbsp;&nbsp;&nbsp;Copyright © {{date('Y')}} FuckBAT. All Rights Reserved.</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wograss.com">卧草科技</a>
+            <span style="font-size: 12px;float: right" class="visible-md visible-lg"><a href="http://www.miitbeian.gov.cn/" target="_blank">{{trans('app.beian')}}</a>  &nbsp;&nbsp;&nbsp;Copyright © {{date('Y')}} Wograss. All Rights Reserved.</span>
         </p>
     </div>
 </footer>
@@ -112,6 +112,15 @@
 <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/countup.js/1.7.1/countUp.min.js"></script>
 <script src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126411224-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126411224-1');
+</script>
 <script>
     $(document).ready(function(){
         var options = {
