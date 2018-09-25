@@ -75,22 +75,8 @@
 </div>
 
 <div class="jumbotron second-jumb">
-    <br/>
-    <h1>为何要干？ </h1>
-    <div class="container">
-        <div class="jumbotron col-sm-4">
-            <h2>因为穷</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur, deleniti illum quidem ratione saepe sequi tempore? Architecto consequuntur corporis, doloremque hic molestias mollitia non optio provident, quis sunt veritatis.</p>
-        </div>
-        <div class="jumbotron col-sm-4">
-            <h2>因为懒</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus perspiciatis quisquam vero. Alias distinctio dolorem doloremque excepturi id in iste itaque magnam modi, nam recusandae reiciendis, saepe velit voluptas.</p>
-        </div>
-        <div class="jumbotron col-sm-4">
-            <h2>就是看着不爽</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid distinctio dolorem doloremque eaque, enim ipsam laudantium minus molestias nulla officia quia, ratione sit tempore vitae, voluptatibus. Facilis labore provident quaerat?</p>
-        </div>
-    </div>
+
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/pL_1Hqnq4z8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 
 </div>
 <div class="container">
@@ -106,7 +92,7 @@
         <div class="jumbotron right-jumb col-sm-6">
             <div class="container">
                 <br/><br/><br/>
-            <img width="200px" src="{{ \Clockos\Test::cdn('/img/groupchat.png')}}">
+            <img width="200px" src="{{ \Clockos\Test::cdn('/img/slack.svg')}}">
             </div>
         </div>
     </div>
