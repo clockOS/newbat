@@ -23,7 +23,7 @@
 
 <div class="jumbotron first-jumb">
     <div class="container">
-        <h1 class="animated infinite shake">FuckBAT</h1>
+        <h1 class="animated shake">FuckBAT</h1>
         <h2>艹翻BAT</h2>
         <br/>
         <p>FuckBAT是一个网络游戏<br/>
