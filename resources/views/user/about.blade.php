@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset=utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>FuckBAT</title>
@@ -23,19 +23,19 @@
 
 <div class="jumbotron first-jumb">
     <div class="container">
-        <h1 class="animated infinite shake">Fuck <span id="fucked">BAT</span><span id="dick"></span>  </h1>
+        <h1 class="animated infinite shake">FuckBAT</h1>
         <h2>艹翻BAT</h2>
         <br/>
-        <p>FuckBAT是一款主要面向程序猿的网络游戏<br/>
-            写代码来打怪升级，干掉“BAT”这三个BOSS</p>
+        <p>FuckBAT是一个网络游戏<br/>
+            玩家们通过做各种任务共同击败"BAT"这三个BOSS</p>
         <br/>
         <p><a class="btn btn-lg white-btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
     </div>
 </div>
 <div class="jumbotron second-jumb">
     <div class="container">
-        <h1>召集<span id="myTargetElement">1'000'000</span>名BAT Fuckers</h1>
-        <h2>💩上最大的群P狂欢</h2>
+        <h1>召集<span id="myTargetElement">1'000'000</span>名玩家</h1>
+        <h2>💩上最大的群P(rogramming)项目</h2>
         <br/>
         <p>
             这三个BOSS略强大，需要1000000个人才能干的动<br/>
@@ -140,33 +140,12 @@
         var demo = new CountUp("myTargetElement", 0, 1000000, 0, 10, options);
         demo.start();
 
-        var i = 0;
-
-
-        setInterval(function () {
-            $("#fucked").text('ATB')
-        }, 500);
-
         $("#letschat").typed({
             strings: ['来一起聊聊天😏<br/> ^500 聊啥啊🤔<br/> ^500 聊啥都行😅','这是神马J8网站😒<br/> ^500 ...<br/> ^500 确实要用到J8😂','用屌来做什么？<br/> ^500 来FuckBAT😆<br/> ^500 8==✊==3······......'],
             loop: true,
             typeSpeed: 100,
             cursorChar: ""
         });
-
-
-        while(i<1000){
-            setInterval(function () {
-                $("#dick").html('<span style="margin-left: -26px">－<span style="margin-left: -32px">8</span></span>')
-
-            }, 900);
-
-            setInterval(function () {
-                $("#dick").html('<span style="margin-left: -48px">－<span style="margin-left: -33px">8&nbsp;</span>')
-            }, 1000);
-
-            i++;
-        }
 
     });
 </script>
