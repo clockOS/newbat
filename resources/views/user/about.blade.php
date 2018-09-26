@@ -23,7 +23,7 @@
 
 <div class="jumbotron first-jumb">
     <div class="container">
-        <h1 class="animated infinite shake">FuckBAT</h1>
+        <h1 class="animated shake">FuckBAT</h1>
         <h2>艹翻BAT</h2>
         <br/>
         <p>FuckBAT是一个网络游戏<br/>
@@ -43,7 +43,7 @@
             没办法...名字都起了，最主要的是花钱买域名了！<br/>
             按照这个字母顺序逐一干掉。<br/>
             <br/>
-        <p><a class="btn btn-lg animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名BAT Fucker&nbsp;</a></p>
+        <p><a class="btn btn-lg animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名玩家&nbsp;</a></p>
     </div>
 </div>
 <div class="container">
