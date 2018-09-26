@@ -31,7 +31,7 @@ return [
     'about' => '关于',
     'contact' => '联系方式',
     'quest' => '任务',
-    'stock' => '史塔克斯',
+    'stock' => '金币',
     'vote' => '投票权',
     'exp' => '经验',
     'filter' => '筛选',

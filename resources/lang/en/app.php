@@ -30,7 +30,7 @@ return [
     'contact' => 'Contact',
     'quest' => 'Task|Tasks',
     'welcome' => 'Welcome',
-    'stock' => 'Stock|Stocks',
+    'stock' => 'Coin|Coins',
     'vote' => 'Voting Rights',
     'exp' => 'Experience',
     'notification' => 'Notification|Notifications',
