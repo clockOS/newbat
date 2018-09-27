@@ -1,8 +1,7 @@
 @extends('app')
 @section('content')
     <h1>{{trans('app.contact')}}</h1><hr/>
-    Email: admin@clockos.com<br/>
-    QQ: 459947949<br/>
-    WeChat: clockos<br/>
-    QQ Group: <a href="http://jq.qq.com/?_wv=1027&k=YVF9j0" target="_blank">301589712</a>
+    Email: contact@fuckb.at<br/>
+    Slack: https://join.slack.com/t/fuckbat/shared_invite/enQtNDQyMjU2ODY2MjYyLTgxZWIzZDRkYWM4YzQyNDNjZWJiMTFkMjgxMjI4NDcxZjIwZDgzNWI1ZmRiZmUyNGNiMTBhYmZlYzk1ZDViMDk <br/>
+    Telegram: https://t.me/joinchat/AAAAAE5dBakuhUBvFHHVlw <br/>
 @stop
