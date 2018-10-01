@@ -116,7 +116,7 @@
 <script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://lib.baomitu.com/countup.js/1.9.3/countUp.min.js"></script>
-<script src="https://lib.baomitu.com/typed.js/2.0.9/typed.min.js"></script>
+<script src="https://lib.baomitu.com/typed.js/1.1.7/typed.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126411224-1"></script>
 <script>
