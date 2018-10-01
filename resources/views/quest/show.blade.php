@@ -32,7 +32,7 @@
     width:50px!important;
 }
 </style>
-<link href="https://cdn.bootcss.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
+<link href="https://lib.baomitu.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
 @endsection
 @section('content')
     <div class="panel panel-default">
@@ -213,8 +213,8 @@
 @stop
 
 @section('footer')
-    <script src="https://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js"></script>
-    <script src="https://cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://lib.baomitu.com/highlight.js/9.1.0/highlight.min.js"></script>
+    <script src="https://lib.baomitu.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <script>
         hljs.initHighlightingOnLoad();
         $(function () {
