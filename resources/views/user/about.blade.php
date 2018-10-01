@@ -7,14 +7,14 @@
     <title>FuckBAT</title>
     <link rel="stylesheet" href="{{ \Clockos\Test::cdn((elixir('css/all.css'))) }}">
     <link rel="stylesheet" href="{{ \Clockos\Test::cdn('/css/home.css') }}">
-    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link href="https://lib.baomitu.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link rel="icon" href="{{ \Clockos\Test::cdn('/img/favicon.png')}}" type="image/gif" sizes="16x16">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://lib.baomitu.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://lib.baomitu.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     @yield('stylesheet')
 </head>
@@ -113,10 +113,10 @@
     </div>
 </footer>
 
-<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdn.bootcss.com/countup.js/1.7.1/countUp.min.js"></script>
-<script src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
+<script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://lib.baomitu.com/countup.js/1.9.3/countUp.min.js"></script>
+<script src="https://lib.baomitu.com/typed.js/2.0.9/typed.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126411224-1"></script>
 <script>
