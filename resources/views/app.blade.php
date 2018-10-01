@@ -43,7 +43,7 @@
         </div>
     </footer>
 
-    <script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
