@@ -22,6 +22,7 @@
     <h2>主要任务是什么?</h2>
     <br>
     <p>创造一个搜索电商社交一体的产品取代BAT</p>
+    <p><a href="https://fuckb.at/docs/workflow">产品大致的模样</a>
     <br>
 
 @stop
