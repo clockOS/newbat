@@ -84,7 +84,7 @@
     </div>
 
 </div>
-<div class="jumbotron second-jumb">
+<div class="jumbotron second-jumb" id="alivid">
     <div class="container">
        <div class="embed-responsive embed-responsive-16by9">
        
@@ -144,7 +144,7 @@
 
         $('#youtubeFrame').load(function(){
             $(this).closest('.second-jumb').show();
-            console.log('laod the iframe')
+            $("#alivid").hide();
         });
     
         var options = {
