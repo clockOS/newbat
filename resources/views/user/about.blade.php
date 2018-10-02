@@ -74,11 +74,11 @@
     </div>
 </div>
 
-<div class="jumbotron second-jumb">
+<div class="jumbotron second-jumb" style="display:none">
     <div class="container">
        <div class="embed-responsive embed-responsive-16by9">
 
-        <iframe src="https://www.youtube.com/embed/nLvsBkscbiI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" class="embed-responsive-item"></iframe>
+        <iframe id="youtubeFrame" src="https://www.youtube.com/embed/nLvsBkscbiI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" class="embed-responsive-item"></iframe>
 
         </div>
     </div>
@@ -141,6 +141,12 @@
 </script>
 <script>
     $(document).ready(function(){
+
+        $('#youtubeFrame').load(function(){
+            $(this).closest('.second-jumb').show();
+            console.log('laod the iframe')
+        });
+    
         var options = {
             useEasing : true,
             useGrouping : true,
