@@ -87,9 +87,12 @@
 <div class="jumbotron second-jumb">
     <div class="container">
        <div class="embed-responsive embed-responsive-16by9">
-
-        <iframe src="https://video.fuckb.at/video/580d8d15-166328a22eb-0005-869e-c38-18e49.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" class="embed-responsive-item"></iframe>
-
+       
+        <video width="320" height="240" controls>
+          <source src="https://video.fuckb.at/video/580d8d15-166328a22eb-0005-869e-c38-18e49.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        
         </div>
     </div>
 
