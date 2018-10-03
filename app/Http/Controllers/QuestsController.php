@@ -40,7 +40,7 @@ class QuestsController extends Controller
             $quests = Quest::where('min_level','<=',\Auth::user()->level)
                            ->where('state',2);
         }else{
-            $quests = Quest::where($input);
+            $quests = Quest::where($input)->where('state','<'，6);
         }
 
         $quests = $quests->latest('updated_at')->paginate(12);
