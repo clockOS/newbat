@@ -68,6 +68,83 @@
         </div>
         </div>
     </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{trans('show.basic')}}</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table quests-prerequisite">
+                <tr>
+                    <td>{{trans('app.level')}}</td>
+                    <td>{{$quest->min_level}}</td>
+                </tr>
+                <tr>
+                    <td>{{trans('show.difficulty')}}</td>
+                    <td>{{trans('show.'.$quest->difficulty)}}</td>
+                </tr>
+                <tr>
+                    <td>{{trans('show.creator')}}</td>
+                    <td><a href="{{action('ProfilesController@show',[$quest->user->id])}}">{{$quest->user->username}}</a></td>
+                </tr>
+                <tr>
+                    <td>{{trans('show.created')}}</td>
+                    <td>{{$quest->created_at->diffForHumans()}}</td>
+                </tr>
+                @if($quest->state>0)
+                    <tr>
+                        <td>{{trans('show.checker')}}</td>
+                        <td><a href="{{action('ProfilesController@show',[$quest->checker->id])}}">{{$quest->checker->username}}</a></td>
+                    </tr>
+                @endif
+                @if($quest->state>2)
+                <tr>
+                    <td>{{trans('show.executor')}}</td>
+                    <td><a href="{{action('ProfilesController@show',[$quest->executor->id])}}">{{$quest->executor->username}}</a></td>
+                </tr>
+                <tr>
+                    <td>{{trans('show.executed')}}</td>
+                    <td>{{$quest->created_at->diffForHumans()}}</td>
+                </tr>
+                @endif
+                @if($quest->state==3)
+                    <tr>
+                        <td>{{trans('show.estimated')}}</td>
+                        <td>{{$quest->estimated->diffForHumans()}}</td>
+                    </tr>
+                @endif
+                @if($quest->state==4)
+                    <tr>
+                        <td>{{trans('show.final_checker')}}</td>
+                        <td><a href="{{action('ProfilesController@show',[$quest->final_checker->id])}}">{{$quest->final_checker->username}}</a></td>
+                    </tr>
+                    <tr>
+                        <td>{{trans('show.completed')}}</td>
+                        <td>{{$quest->completed->diffForHumans()}}</td>
+                    </tr>
+                @endif
+                <tr>
+                    <td>{{trans_choice('app.stock',$quest->stock)}}</td>
+                    <td>{{$quest->stock}}</td>
+                </tr>
+                <tr>
+                    <td>{{trans('form.departments')}}</td>
+                    <td>
+                        @foreach($quest->departments as $item)
+                            {{$item->name}}&nbsp;
+                        @endforeach
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{trans('form.skills')}}</td>
+                    <td>
+                        @foreach($quest->skills as $item)
+                            {{$item->name}}&nbsp;
+                        @endforeach
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 @stop
 
 @section('footer')
