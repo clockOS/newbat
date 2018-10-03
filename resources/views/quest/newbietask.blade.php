@@ -153,13 +153,15 @@
     
     <div class="btn-group btn-group-justified col-lg-6" role="group" aria-label="...">{{$quest->state}}
 
-    @if($quest->state==7)
+    @if(($quest->state==7)AND(!$quest->execution_id))
+        @can('min_level',$quest)
         <a class="btn btn-primary" href="{{action('ExecuteQuestsController@show',[$quest->id])}}">{{trans('show.execute')}}</a>
+        @endcan
     @endif
     @if($quest->state==8)
-
+        @if(($quest->completed<"0001-00-00")AND($quest->execution_id==\Auth::id()))
         <a class="btn btn-primary" href="/quests/done/{{$quest->id}}" data-token="{{csrf_token()}}" data-method="put" data-confirm="{{trans('show.sure')}}">{{trans('show.done')}}</a>
-
+        @endif
     @endif
     </div>
 @stop
