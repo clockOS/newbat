@@ -5,7 +5,7 @@ use App\Status;
 use Gate;
 use App\Department;
 use App\Http\Requests\QuestRequest;
-use App\Quest;
+use App\NewbieTask;
 use Illuminate\Support\Facades\Auth;
 class NewbieTasksController extends Controller
 {
@@ -18,7 +18,7 @@ class NewbieTasksController extends Controller
     public function index()
     {
 
-        $quests = Newbietask::latest('updated_at')->paginate(12);
+        $quests = NewbieTask::latest('updated_at')->paginate(12);
 
         return view('quest.newbietasklist',compact('quests'));
         
