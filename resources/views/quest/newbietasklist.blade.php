@@ -20,12 +20,6 @@
                     <div class="quests-list-bottom">
                         <img src="{{\Clockos\Test::cdn('/img/level.png!35')}}" class="quests-logo" alt="Lv" align="right">
                         <img src="{{\Clockos\Test::cdn('/img/'.$quest->difficulty.'.png!35')}}" class="quests-logo" align="right">
-                        @foreach($quest->departments as $item)
-                            <img src="{{\Clockos\Test::cdn($item->logo.'!35')}}" class="quests-logo" alt="{{$item->name}}" align="right">
-                        @endforeach
-                        @foreach($quest->skills as $item)
-                            <img src="{{\Clockos\Test::cdn($item->logo.'!35')}}" class="quests-logo" alt="{{$item->name}}" align="right">
-                        @endforeach
 
                             <span class="quests-level">Lv.{{$quest->min_level}}</span>
                     </div>
