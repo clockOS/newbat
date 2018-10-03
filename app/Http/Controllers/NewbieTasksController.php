@@ -7,7 +7,7 @@ use App\Department;
 use App\Http\Requests\QuestRequest;
 use App\Quest;
 use Illuminate\Support\Facades\Auth;
-class QuestsController extends Controller
+class NewbieTasksController extends Controller
 {
     public function __construct()
     {
