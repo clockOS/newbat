@@ -110,8 +110,29 @@
                             {{$item->name}}&nbsp;
                         @endforeach
                     </td>
-                </tr>
+                </tr>        
             </table>
+            @if($quest->quests->count()>0)
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{trans('form.quests')}}</h3>
+                </div>
+                <div class="panel-body">
+                <table class="table quests-prerequisite">
+                    @foreach($quest->quests as $item)
+
+                        <tr>
+                            <td><a href="{{action('QuestsController@show', ['id' => $item->id])}}" target="_blank">{{$item->title}}</a></td>
+                            <td>{{trans('form.'.$item->type)}}</td>
+                            <td>
+                                @include('partials.state',['state' => $item->state])
+                            </td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>    
+            </div>
+            @endif
         </div>
     </div>
 @stop
