@@ -63,7 +63,7 @@ class QuestsController extends Controller
             
         }else{
             
-            var_dump($quests);
+            var_dump($quest);
             //return view('quest.show',compact('quest','prerequisite'));
             die('Developing...');
         }
