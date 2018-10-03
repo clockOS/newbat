@@ -18,7 +18,7 @@ class NewbieTasksController extends Controller
     public function index()
     {
 
-        $quests = Quest::where($input)->where('state','>',5);
+        $quests = Quest::where('state','>',5);
 
         return view('quest.list',compact('quests'));
         
