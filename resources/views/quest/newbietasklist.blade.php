@@ -29,7 +29,6 @@
 
     @endforeach
     </div>
-    <div class="col-md-12" style="text-align: center">{!! $quests->appends(Request::except('page'))->render()!!}</div>
 
 @stop
 
