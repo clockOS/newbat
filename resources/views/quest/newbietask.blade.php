@@ -112,27 +112,43 @@
                     </td>
                 </tr>        
             </table>
-            @if($quest->quests->count()>0)
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{trans('form.quests')}}</h3>
-                </div>
-                <div class="panel-body">
-                <table class="table quests-prerequisite">
-                    @foreach($quest->quests as $item)
+        </div>
+    </div>
+    @if($quest->quests->count()>0)
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{trans('form.quests')}}</h3>
+        </div>
+        <div class="panel-body">
+        <table class="table quests-prerequisite">
+            @foreach($quest->quests as $item)
 
-                        <tr>
-                            <td><a href="{{action('QuestsController@show', ['id' => $item->id])}}" target="_blank">{{$item->title}}</a></td>
-                            <td>{{trans('form.'.$item->type)}}</td>
-                            <td>
-                                @include('partials.state',['state' => $item->state])
-                            </td>
-                        </tr>
-                    @endforeach
-                </table>
-            </div>    
-            </div>
-            @endif
+                <tr>
+                    <td><a href="{{action('QuestsController@show', ['id' => $item->id])}}" target="_blank">{{$item->title}}</a></td>
+                    <td>{{trans('form.'.$item->type)}}</td>
+                    <td>
+                        @include('partials.state',['state' => $item->state])
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+    </div>    
+    </div>
+    @endif
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{trans('form.details')}}</h3>
+        </div>
+        <div class="panel-body">
+
+            @can('min_level',$quest)
+            <div class="quests-markdown">{!! $quest->body !!}</div>
+            @endcan
+            @cannot('min_level',$quest)
+            <span class="bg-warning text-warning">{{trans('show.min_level',['level' =>$quest->min_level])}}</span>
+            @endcan
+        </div>
+    </div>
         </div>
     </div>
 @stop
