@@ -53,15 +53,18 @@ class QuestsController extends Controller
 
         $quest = Quest::findOrFail($id);
         
+        $quest['body'] = $parsedown->text($quest['body']);
+
+        $prerequisite = Quest::prerequisite($id);
+        
         if($quest['state']<6){
-
-            $quest['body'] = $parsedown->text($quest['body']);
-
-            $prerequisite = Quest::prerequisite($id);
 
             return view('quest.show',compact('quest','prerequisite'));
             
         }else{
+            
+            var_dump($quests);
+            //return view('quest.show',compact('quest','prerequisite'));
             die('Developing...');
         }
     }
