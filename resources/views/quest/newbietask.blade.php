@@ -90,38 +90,7 @@
                     <td>{{trans('show.created')}}</td>
                     <td>{{$quest->created_at->diffForHumans()}}</td>
                 </tr>
-                @if($quest->state>0)
-                    <tr>
-                        <td>{{trans('show.checker')}}</td>
-                        <td><a href="{{action('ProfilesController@show',[$quest->checker->id])}}">{{$quest->checker->username}}</a></td>
-                    </tr>
-                @endif
-                @if($quest->state>2)
-                <tr>
-                    <td>{{trans('show.executor')}}</td>
-                    <td><a href="{{action('ProfilesController@show',[$quest->executor->id])}}">{{$quest->executor->username}}</a></td>
-                </tr>
-                <tr>
-                    <td>{{trans('show.executed')}}</td>
-                    <td>{{$quest->created_at->diffForHumans()}}</td>
-                </tr>
-                @endif
-                @if($quest->state==3)
-                    <tr>
-                        <td>{{trans('show.estimated')}}</td>
-                        <td>{{$quest->estimated->diffForHumans()}}</td>
-                    </tr>
-                @endif
-                @if($quest->state==4)
-                    <tr>
-                        <td>{{trans('show.final_checker')}}</td>
-                        <td><a href="{{action('ProfilesController@show',[$quest->final_checker->id])}}">{{$quest->final_checker->username}}</a></td>
-                    </tr>
-                    <tr>
-                        <td>{{trans('show.completed')}}</td>
-                        <td>{{$quest->completed->diffForHumans()}}</td>
-                    </tr>
-                @endif
+                
                 <tr>
                     <td>{{trans_choice('app.stock',$quest->stock)}}</td>
                     <td>{{$quest->stock}}</td>
