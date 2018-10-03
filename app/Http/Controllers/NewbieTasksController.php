@@ -28,10 +28,9 @@ class NewbieTasksController extends Controller
                     ->orderBy('min_level')->paginate(12);*/
         
         $results = \DB::select
-                    ('select * from `newbietasks` a left join `newbietask_user` b on (a.id=b.task_id AND b.`user_id`=:uid);'
+                    ('select * from `newbietasks` a left join `newbietask_user` b on (a.id=b.task_id AND b.`user_id`=:uid) order by `min_level`;'
                      , ['uid' => \Auth::id()])
-                    ->orderBy('min_level')
-                    ->paginate(12);
+                     ->paginate(12);
 
         dd($results);
 
