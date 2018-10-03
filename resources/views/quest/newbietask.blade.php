@@ -154,7 +154,7 @@
     
     <div class="btn-group btn-group-justified col-lg-6" role="group" aria-label="...">
 
-    @if($quest->state==7)
+    @if($quest->state=='7')
         <a class="btn btn-primary" href="{{action('ExecuteQuestsController@show',[$quest->id])}}">{{trans('show.execute')}}</a>
     @endif
     @if($quest->state==8)
