@@ -22,7 +22,8 @@ class NewbieTasksController extends Controller
         
         $quests = \DB::table('newbietask_user')
             ->rightJoin('newbietasks', 'newbietask_user.task_id', '=', 'newbietasks.id')
-            ->latest('updated_at')->paginate(12);
+            ->groupBy('newbietasks.id')->
+            ->orderBy('level')->paginate(12);
         
         dd($quests);
 
