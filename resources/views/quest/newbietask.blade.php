@@ -151,7 +151,7 @@
     </div>
 
     
-    <div class="btn-group btn-group-justified col-lg-6" role="group" aria-label="...">{{$quest->state}}
+    <div class="btn-group btn-group-justified col-lg-6" role="group" aria-label="...">
 
     @if(($quest->state==7)AND(!$quest->execution_id))
         @can('min_level',$quest)
