@@ -11,7 +11,7 @@
                 <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
                 <div class="panel-body">
                     <div class="list-first-row">
-                        <div class="quests-list-title">{{$quest->title}}</div><div class="quests-type-tag">{{trans('form.'.$quest->type)}}</div>
+                        <div class="quests-list-title">{{$quest->title}}</div>
                     </div>
                     <div class="quests-list-status">
                         @include('partials.state',['state'=>$quest->state])
