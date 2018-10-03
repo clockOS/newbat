@@ -19,6 +19,8 @@ class NewbieTasksController extends Controller
     {
 
         $quests = Quest::where('state','>',5);
+        
+        $quests = $quests->latest('updated_at')->paginate(12);
 
         return view('quest.newbietasklist',compact('quests'));
         
