@@ -20,7 +20,7 @@ class NewbieTasksController extends Controller
 
         $quests = Quest::where('state','>',5);
 
-        return view('quest.list',compact('quests'));
+        return view('quest.newbietasklist',compact('quests'));
         
     }
     
