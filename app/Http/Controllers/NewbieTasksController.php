@@ -30,7 +30,7 @@ class NewbieTasksController extends Controller
         $quests = \DB::select
                     ('select * from `newbietasks` a left join `newbietask_user` b on (a.id=b.task_id AND b.`user_id`=:uid) order by `min_level`;'
                      , ['uid' => \Auth::id()])
-                       -->toJson()
+                       ->toJson()
                      ->paginate(12);
 
         //dd($results);
