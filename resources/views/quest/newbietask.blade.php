@@ -149,8 +149,7 @@
             @endcan
         </div>
     </div>
-        </div>
-    </div>
+
     
     <div class="btn-group btn-group-justified col-lg-6" role="group" aria-label="...">{{$quest->state}}
 
