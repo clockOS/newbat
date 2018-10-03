@@ -18,7 +18,11 @@ class NewbieTasksController extends Controller
     public function index()
     {
 
-        $quests = NewbieTask::latest('updated_at')->paginate(12);
+        //$quests = NewbieTask::rightJoin('posts', 'users.id', '=', 'posts.user_id')latest('updated_at')->paginate(12);
+        
+        $quests = table('newbietask_user')
+            ->rightJoin('newbietasks', 'newbietask_user.task_id', '=', 'newbietasks.id')
+            ->latest('updated_at')->paginate(12);
         
         dd($quests);
 
