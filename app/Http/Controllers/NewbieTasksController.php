@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Skill;
 use App\Status;
+use App\User;
 use Gate;
 use App\Department;
 use App\Http\Requests\QuestRequest;
@@ -27,12 +28,12 @@ class NewbieTasksController extends Controller
                         })
                     ->orderBy('min_level')->paginate(12);*/
         
-        $quests = \DB::select
+        $results = \DB::select
                     ('select * from `newbietasks` a left join `newbietask_user` b on (a.id=b.task_id AND b.`user_id`=:uid) order by `min_level`;'
-                     , ['uid' => \Auth::id()])
-                       ->toJson()
-                     ->paginate(12);
-
+                     , ['uid' => \Auth::id()]);
+        
+        $quests = User::hydrate($results);
+        
         //dd($results);
 
         return view('quest.newbietasklist',compact('quests'));
