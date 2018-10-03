@@ -32,7 +32,7 @@ class NewbieTasksController extends Controller
                     ('select * from `newbietasks` a left join `newbietask_user` b on (a.id=b.task_id AND b.`user_id`=:uid) order by `min_level`;'
                      , ['uid' => \Auth::id()]);
         
-        $quests = User::hydrate($results);
+        $quests = User::hydrate($results)->paginate(12);
         
         //dd($results);
 
