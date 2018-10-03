@@ -20,11 +20,13 @@ class NewbieTasksController extends Controller
 
         //$quests = NewbieTask::rightJoin('posts', 'users.id', '=', 'posts.user_id')latest('updated_at')->paginate(12);
         
-        $quests = \DB::table('newbietask_user')
-            ->rightJoin('newbietasks', 'newbietask_user.task_id', '=', 'newbietasks.id')
-            ->groupBy('newbietasks.id')
-            ->orderBy('min_level')->paginate(12);
-        
+        $quests = \DB::table('newbietasks')
+                    ->leftJoin('newbietask_user', function ($join) {
+                        $join->on('newbietask_user.user_id', '=', \Auth::id())
+                             ->on('newbietask_user.task_id', '=', 'newbietasks.id');
+                        })
+                    ->orderBy('min_level')->paginate(12);
+
         dd($quests);
 
         return view('quest.newbietasklist',compact('quests'));
