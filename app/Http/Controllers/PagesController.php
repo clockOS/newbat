@@ -29,6 +29,12 @@ class PagesController extends Controller
     }
 
     public function home(){
+        
+        if(\Auth::user()->roles()->first = 'rookie'){
+            
+            dd("rookie");
+        
+        }
 
         $status = Status::latest()->first();
 
