@@ -19,6 +19,8 @@ class NewbieTasksController extends Controller
     {
 
         $quests = NewbieTask::latest('updated_at')->paginate(12);
+        
+        dd($quest);
 
         return view('quest.newbietasklist',compact('quests'));
         
