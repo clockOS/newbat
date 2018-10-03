@@ -120,7 +120,7 @@ Route::resource('department','DepartmentsController');
 
 
 //newbie
-Route::resource('newbie','NewbiesController');
+Route::resource('newbie','NewbieTasksController');
 
 
 
