@@ -33,9 +33,9 @@ class NewbieTasksController extends Controller
                     // ->get()
                      //->paginate(12);
 
-        dd($results);
+        //dd($results);
 
-        return view('quest.newbietasklist',compact('quests'));
+        return view('quest.newbietasklist',compact('results'));
         
     }
     
