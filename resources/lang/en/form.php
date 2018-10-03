@@ -75,6 +75,12 @@ return [
     '2' => 'Open',
     '3' => 'Processing',
     '4' => 'Completed',
+    
+    '7' => 'Open',
+    '8' => 'Processing',
+    '9' => 'Completed',
+    
+    
 
     'hint' => 'Hint',
     'hint-content' => 'This task may be executed by other user, please enter a proper amounts of stocks',
