@@ -35,7 +35,39 @@
 <link href="https://lib.baomitu.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
 @endsection
 @section('content')
- @include('partials.state',['state' => $quest->state])
+    <div class="panel panel-default">
+        <div class="panel-body">
+        <div class="col-md-8">
+            <h3 class="quest-title">{{$quest->title}}</h3><br/>
+            @include('partials.state',['state' => $quest->state])
+            <br/>
+
+            <br/>
+            <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('app.level')}}:{{$quest->min_level}}">
+                <div style="position: relative"><img src="{{\Clockos\Test::cdn('/img/level.png!75')}}" alt="Level" class="quest-skill">
+                    <span class="quest-level">Lv.{{$quest->min_level}}</span>
+                </div>
+            </a>
+            <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('show.difficulty')}}:{{trans('show.'.$quest->difficulty)}}">
+                <div><img src="{{\Clockos\Test::cdn('/img/'.$quest->difficulty.'.png!75')}}" alt="Level" class="quest-skill"></div>
+            </a>
+            @foreach($quest->departments as $skill)
+                <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{$skill->fullname}}">
+                    <div><img src="{{\Clockos\Test::cdn($skill->logo.'!75')}}" alt="{{$skill->name}}" class="quest-skill"></div>
+                </a>
+            @endforeach
+            @foreach($quest->skills as $skill)
+                <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{$skill->fullname}}">
+                    <div><img src="{{\Clockos\Test::cdn($skill->logo.'!75')}}" alt="{{$skill->name}}" class="quest-skill"></div>
+                </a>
+            @endforeach
+        </div>
+        <div class="col-md-4">
+            <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
+            <span class="quest-type" style="">{{trans('form.'.$quest->type)}}</span>
+        </div>
+        </div>
+    </div>
 @stop
 
 @section('footer')
