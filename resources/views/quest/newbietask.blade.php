@@ -61,10 +61,6 @@
                     <td>{{trans('show.'.$difficulty)}}</td>
                 </tr>
                 <tr>
-                    <td>{{trans('show.created')}}</td>
-                    <td>{{$created_at->diffForHumans()}}</td>
-                </tr>  
-                <tr>
                     <td>{{trans_choice('app.stock',$stock)}}</td>
                     <td>{{$stock}}</td>
                 </tr> 
