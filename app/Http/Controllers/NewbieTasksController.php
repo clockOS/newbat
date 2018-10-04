@@ -60,7 +60,7 @@ class NewbieTasksController extends Controller
             
             \DB::table('newbietask_user')
             ->insert(
-                ['user_id' => \Auth::id(), 'user_id' => $id, 'state' = 8]
+                ['user_id' => \Auth::id(), 'user_id' => $id, 'state' => 8]
             );
                        
         }
