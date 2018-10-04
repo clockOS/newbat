@@ -97,9 +97,14 @@
         <a class="btn btn-primary" href="/newbietask/start/{{$id}}">开始任务</a>
 
     @endif
-    @if((@$user_id==\Auth::id())AND($state!="9"))
+    @if((@$user_id==\Auth::id())AND($state!="9")AND($state!="10"))
 
         <a class="btn btn-primary" href="/newbietask/done/{{$id}}" data-token="{{csrf_token()}}" data-method="get" data-confirm="{{trans('show.sure')}}">我已经完成了任务</a>
+
+    @endif
+    @if($state=="10")
+
+        <a class="btn btn-danger">任务检查中</a>
 
     @endif
     </div>
