@@ -62,8 +62,9 @@ class NewbieTasksController extends Controller
                            ->orderBy('updated_at','desc')
                            ->paginate(30);
             
-            dd($quests);
-            return view('manage.completion',compact('quests'));
+            //dd($quests);
+            return view('manage.checknewbie',compact('quests'));
+            
         }else{
             return 'opps';
         }
