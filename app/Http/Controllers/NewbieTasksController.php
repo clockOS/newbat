@@ -130,20 +130,9 @@ class NewbieTasksController extends Controller
         
             $quest = get_object_vars($quest);
             
-            $quest = (object) $quest;
-            dd($quest);
+            //$quest = (object) $quest;
             
-            dd($quest);
-            
-            
-            $quest = Quest::where('state',3)
-                          ->whereNotNull('completed')
-                          ->where('id',$id)
-                          ->firstOrFail();
-            $quest->state = 4;
-            $quest->final_checker_id = \Auth::id();
-            $quest->save();
-            $job = new UpdateStatus($quest);
+            $job = new NewbieReward($quest);
             $this->dispatch($job);
             flash()->success(trans('alert.check_completion'));
             return redirect('check/completion');
