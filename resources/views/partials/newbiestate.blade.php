@@ -4,7 +4,7 @@
 @if((\Auth::user()->level>=$quest->min_level)AND(@$quest->user_id!=\Auth::id()))
 <span class="glyphicon glyphicon-folder-open difficulty-text-2" aria-hidden="true"></span><span class="difficulty-text-2">可以开始
 @endif
-@if((@$quest->user_id==\Auth::id())AND($state!="9"))
+@if($state="8")
 <span class="glyphicon glyphicon-play difficulty-text-3" aria-hidden="true"></span><span class="difficulty-text-3">进行中
 @endif
 @if($state=="9")
