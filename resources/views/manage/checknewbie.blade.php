@@ -15,7 +15,6 @@
         </tr>
     @endforeach
 </table>
-<div class="col-md-12" style="text-align: center">{!! //$results->appends(Request::except('page'))->render()!!}</div>
 @endsection
 @section('footer')
 @endsection
