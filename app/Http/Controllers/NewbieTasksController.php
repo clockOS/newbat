@@ -54,6 +54,21 @@ class NewbieTasksController extends Controller
 
     }
     
+    public function checkList()
+    {
+        if(\Auth::user()->can('task_completion')){
+            $quests = \DB::table("newbietask_user")
+                           ->where('state', '=',10 )
+                           ->orderBy('updated_at','desc')
+                           ->paginate(30);
+            
+            dd($quests);
+            return view('manage.completion',compact('quests'));
+        }else{
+            return 'opps';
+        }
+    }
+    
     
     public function start($id)
     {
