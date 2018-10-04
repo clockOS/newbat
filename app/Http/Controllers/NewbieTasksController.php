@@ -35,7 +35,7 @@ class NewbieTasksController extends Controller
     {
         
         $results = \DB::select
-            ('select * from `newbietasks` a join `newbietask_user` b on (a.id=b.task_id) where id=:tid;'
+            ('select * from `newbietasks` a left join `newbietask_user` b on (a.id=b.task_id) where id=:tid;'
              , ['tid' => $id]);
         
         
