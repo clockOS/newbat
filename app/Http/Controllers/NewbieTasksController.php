@@ -97,7 +97,7 @@ class NewbieTasksController extends Controller
         
         if($started>0){
         
-            dd('did');
+            dd('already started');
         
         }else{
             
@@ -106,7 +106,7 @@ class NewbieTasksController extends Controller
                 ['user_id' => \Auth::id(), 'task_id' => $id, 'state' => 8]
             );
             
-            redirect('/newbie/'.$id);
+            return redirect('/newbie/'.$id);
                        
         }
         
@@ -123,7 +123,7 @@ class NewbieTasksController extends Controller
         
         if($submitted>0){
         
-            dd('did');
+            dd('told');
         
         }else{
             
