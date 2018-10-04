@@ -107,6 +107,11 @@
         <a class="btn btn-danger">任务检查中</a>
 
     @endif
+    
+    @can('task_completion')
+    <a class="btn btn-success" href="/check/completion/{{$quest->id}}" data-token="{{csrf_token()}}" data-method="put" data-confirm="Are you sure?">{{trans('show.completion')}}</a>
+    @endcan
+    
     </div>
 @stop
 
