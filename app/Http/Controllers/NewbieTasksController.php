@@ -136,7 +136,7 @@ class NewbieTasksController extends Controller
                 ['state' => 10 , 'completed' => $now ]
             );
             
-            redirect('/newbie/'.$id);
+            return redirect('/newbie/'.$id);
                        
         }
         
