@@ -66,7 +66,7 @@ class NewbieTasksController extends Controller
                             on t.id = n.task_id;'
                     );
         
-        dd($results);
+        $results=collect($results);
         
         
         
@@ -77,7 +77,7 @@ class NewbieTasksController extends Controller
                            ->paginate(30);
             
             //dd($quests);
-            return view('manage.checknewbie',compact('quests'));
+            return view('manage.checknewbie',compact('results'));
             
         }else{
             return 'opps';
