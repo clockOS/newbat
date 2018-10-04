@@ -127,14 +127,16 @@ class NewbieTasksController extends Controller
         
         }else{
             
+            $now = date('Y-m-d H:i:s');
+            
             \DB::table('newbietask_user')
                 ->where('task_id', '=',$id )
                 ->where('user_id', '=',\Auth::id())
             ->update(
-                ['state' => 10]
+                ['state' => 10 , 'completed' => $now ]
             );
             
-            redirect('/newbie/'.$id);
+            return redirect('/newbie/'.$id);
                        
         }
         
