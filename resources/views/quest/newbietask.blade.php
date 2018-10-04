@@ -30,7 +30,6 @@
         <div class="panel-body">
         <div class="col-md-8">
             <h3 class="quest-title">{{$title}}</h3><br/>
-            @include('partials.newbiestate',['state' => $state])
             <br/>
             <br/>
             <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('app.level')}}:{{$quest->min_level}}">
