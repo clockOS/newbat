@@ -83,8 +83,7 @@
 
             @if((\Auth::user()->level>=$min_level))
             <div class="quests-markdown">{!! $body !!}</div>
-            @endif
-            @if((@$user_id==\Auth::id())AND($state!="9"))
+            @else
             <span class="bg-warning text-warning">{{trans('show.min_level',['level' =>$min_level])}}</span>
             @endif
         </div>
