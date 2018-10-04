@@ -1,7 +1,7 @@
 @if(\Auth::user()->level<$quest->min_level)
 <span class="glyphicon glyphicon-time difficulty-text-4" aria-hidden="true"></span><span class="difficulty-text-4">等级不够
 @endif
-@if((\Auth::user()->level>=$quest->min_level))AND()@$quest->user_id!=\Auth::id())
+@if((\Auth::user()->level>=$quest->min_level)AND(@$quest->user_id!=\Auth::id()))
 <span class="glyphicon glyphicon-folder-open difficulty-text-2" aria-hidden="true"></span><span class="difficulty-text-2">可以开始
 @endif
 @if((@$quest->user_id==\Auth::id())AND($state!="9"))
@@ -12,6 +12,3 @@
 @endif
 </span>
 &nbsp;
-@if(@$quest->user_id==\Auth::id())
-    [{{trans('show.created_by')}}]
-@endif
