@@ -42,7 +42,7 @@ class NewbieTasksController extends Controller
         
         $quest2 = NewbieTask::findOrFail($id);
         
-        dd($quest1);
+        //dd($quest1);
         dd($quest2);
         
         
