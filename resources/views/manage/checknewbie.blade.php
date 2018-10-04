@@ -7,7 +7,7 @@
         <th>{{trans('form.title')}}</th>
         <th>{{trans('app.user')}}</th>
     </tr>
-    @foreach($quests as $item)
+    @foreach($results as $item)
         <tr>
             <td>#{{$item->cid}}</td>
             <td><a href="/newbie/{{$item->task_id}}">{{$item->title}}</a></td>
@@ -15,7 +15,7 @@
         </tr>
     @endforeach
 </table>
-<div class="col-md-12" style="text-align: center">{!! $quests->appends(Request::except('page'))->render()!!}</div>
+<div class="col-md-12" style="text-align: center">{!! //$results->appends(Request::except('page'))->render()!!}</div>
 @endsection
 @section('footer')
 @endsection
