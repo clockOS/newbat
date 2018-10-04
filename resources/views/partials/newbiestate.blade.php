@@ -11,7 +11,7 @@
 <span class="glyphicon glyphicon-ok difficulty-text-1" aria-hidden="true"></span><span class="difficulty-text-1">已完成
 @endif
 @if($state=="10")
-<span class="glyphicon glyphicon-lock difficulty-text-5" aria-hidden="true"></span><span class="difficulty-text-5">审核中
+<span class="glyphicon glyphicon-lock difficulty-text-5" aria-hidden="true"></span><span class="difficulty-text-5">检查中
 @endif
 </span>
 &nbsp;
