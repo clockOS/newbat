@@ -100,7 +100,7 @@
     @endif
     @if((@$user_id==\Auth::id())AND($state!="9"))
 
-        <a class="btn btn-primary" href="/newbietask/done/{{$id}}" data-token="{{csrf_token()}}" data-method="put" data-confirm="{{trans('show.sure')}}">我已经完成了任务</a>
+        <a class="btn btn-primary" href="/newbietask/done/{{$id}}" data-token="{{csrf_token()}}" data-method="get" data-confirm="{{trans('show.sure')}}">我已经完成了任务</a>
 
     @endif
     </div>
