@@ -42,19 +42,12 @@ class NewbieTasksController extends Controller
     
     public function show($id,\Parsedown $parsedown)
     {
-        $quest = Quest::findOrFail($id);
+        $quest = NewbieTask::findOrFail($id);
         
         $quest['body'] = $parsedown->text($quest['body']);
-        $prerequisite = Quest::prerequisite($id);
         
-        if($quest['state']<6){
-            return view('quest.show',compact('quest','prerequisite'));
-            
-        }else{
-            
-            return view('quest.newbietask',compact('quest','prerequisite'));
-            //die('Developing...');
-        }
+        return view('quest.newbietask',compact('quest'));
+
     }
 
 
