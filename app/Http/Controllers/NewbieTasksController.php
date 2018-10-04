@@ -33,7 +33,14 @@ class NewbieTasksController extends Controller
     
     public function show($id,\Parsedown $parsedown)
     {
-        $quest = NewbieTask::findOrFail($id);
+        
+        $results = \DB::select
+            ('select * from `newbietasks` a join `newbietask_user` b on (a.id=b.task_id) where id=:tid;'
+             , ['tid' => $id]);
+        
+        $quest = $results[0];
+        
+        //$quest = NewbieTask::findOrFail($id);
         
         $quest['body'] = $parsedown->text($quest['body']);
         
