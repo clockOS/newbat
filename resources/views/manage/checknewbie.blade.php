@@ -14,7 +14,7 @@
         <tr>
             <td>#{{$item->cid}}</td>
             <td><a href="/newbie/task/{{$item->task_id}}">查看任务</a></td>
-            <td><a href="{{action('ProfilesController@show',[$item->user->id])}}">{{$item->user->username}}</a></td>
+            <td><a href="{{action('ProfilesController@show',[$item->user_id])}}">执行者</a></td>
             <td>{{trans('form.'.$item->type)}}</td>
             <td>{{$item->updated_at->diffForHumans()}}</td>
             <td>{{$item->user->level}}</td>
