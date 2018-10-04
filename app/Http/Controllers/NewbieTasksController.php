@@ -83,13 +83,13 @@ class NewbieTasksController extends Controller
     public function done($id)
     {
         
-         $submited = \DB::table("newbietask_user")
+         $submitted = \DB::table("newbietask_user")
              ->where('task_id', '=',$id )
              ->where('user_id', '=',\Auth::id())
              ->where('state', '!=', 8)
              ->count();
         
-        if($started>0){
+        if($submitted>0){
         
             dd('did');
         
