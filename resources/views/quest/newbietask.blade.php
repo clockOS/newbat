@@ -100,7 +100,7 @@
 
     @if((\Auth::user()->level>=$quest->min_level)AND(@$quest->user_id!=\Auth::id()))
 
-        <a class="btn btn-primary" href="/newbietask/start/{{$quest->id}}',[$quest->id])}}">开始任务</a>
+        <a class="btn btn-primary" href="/newbietask/start/{{$quest->id}}">开始任务</a>
 
     @endif
     @if((@$quest->user_id==\Auth::id())AND($state!="9"))
