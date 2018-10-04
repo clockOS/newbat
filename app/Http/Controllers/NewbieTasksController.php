@@ -129,12 +129,9 @@ class NewbieTasksController extends Controller
             
             $quest =$quest->first();
         
-        
-        dd($quest);
-                
-        $quest->body = $parsedown->text($quest->body);
-        
-        $quest = get_object_vars($quest);
+            $quest = get_object_vars($quest);
+            
+            dd($quest);
             
             
             $quest = Quest::where('state',3)
