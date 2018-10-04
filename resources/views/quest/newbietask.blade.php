@@ -21,15 +21,8 @@
 .quest-title{
     word-wrap: break-word;
 }
-.quests-prerequisite td{
-    border-top: none!important;
-}
 .btn-group-justified{
     margin-bottom: 20px;
-}
-.quest-skill{
-    height:50px!important;
-    width:50px!important;
 }
 </style>
 <link href="https://lib.baomitu.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
@@ -39,9 +32,7 @@
         <div class="panel-body">
         <div class="col-md-8">
             <h3 class="quest-title">{{$quest->title}}</h3><br/>
-            @include('partials.state',['state' => $quest->state])
             <br/>
-
             <br/>
             <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('app.level')}}:{{$quest->min_level}}">
                 <div style="position: relative"><img src="{{\Clockos\Test::cdn('/img/level.png!75')}}" alt="Level" class="quest-skill">
@@ -77,16 +68,16 @@
                     <td>{{$quest->created_at->diffForHumans()}}</td>
                 </tr>  
                 <tr>
-                    <td>{{trans('app.vote')}}</td>
-                    <td>{{$quest->vote}}</td>
+                    <td>{{trans_choice('app.stock',$quest->stock)}}</td>
+                    <td>{{$quest->stock}}</td>
                 </tr> 
-                 <tr>
-                    <td>{{trans('app.experience')}}</td>
+                <tr>
+                    <td>{{trans('app.exp')}}</td>
                     <td>{{$quest->experience}}</td>
                 </tr> 
                 <tr>
-                    <td>{{trans_choice('app.stock',$quest->stock)}}</td>
-                    <td>{{$quest->stock}}</td>
+                    <td>{{trans('app.vote')}}</td>
+                    <td>{{$quest->vote}}</td>
                 </tr> 
             </table>
         </div>
