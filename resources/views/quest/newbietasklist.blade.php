@@ -33,15 +33,13 @@
 
         <a href="{{action('QuestsController@show',[$quest->id])}}" class="col-md-6 col-lg-4" id="{{$quest->id}}">
             <div class="panel panel-default">
-                <div class="img-container>
                 <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
-                </div>
                 <div class="panel-body">
                     <div class="list-first-row">
                         <div class="quests-list-title">{{$quest->title}}</div>
                     </div>
                     <div class="quests-list-status">
-                        @include('partials.state',['state'=>$quest->state])
+                        @include('partials.newbiestate',['state'=>$quest->state])
                             <br/><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>&nbsp;{{trans_choice('app.stock',$quest->stock)}}:{{$quest->stock}}
                     </div>
                     <div class="quests-list-bottom">
