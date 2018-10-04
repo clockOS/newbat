@@ -38,12 +38,11 @@ class NewbieTasksController extends Controller
             ('select * from `newbietasks` a join `newbietask_user` b on (a.id=b.task_id) where id=:tid;'
              , ['tid' => $id]);
         
-        $quest = $results[0]->toArray();
         
         $quest2 = NewbieTask::findOrFail($id);
         
         
-        dd($quest);
+        dd($results);
                 
         $quest['body'] = $parsedown->text($quest['body']);
         
