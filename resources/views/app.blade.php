@@ -47,7 +47,7 @@
     <script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('div.alert').not('.alert-important').delay(3000).slideUp(300);
+            $('div.alert').not('.alert-important').delay(10000).slideUp(300);
             $('#flash-overlay-modal').modal();
         });
     </script>
