@@ -6,7 +6,6 @@
         <th>id</th>
         <th>{{trans('form.title')}}</th>
         <th>{{trans('app.user')}}</th>
-        <th>{{trans('form.type')}}</th>
         <th>{{trans('show.completed')}}</th>
         <th>{{trans('app.user')}}{{trans('app.level')}}</th>
     </tr>
@@ -15,7 +14,6 @@
             <td>#{{$item->cid}}</td>
             <td><a href="/newbie/task/{{$item->task_id}}">查看任务</a></td>
             <td><a href="{{action('ProfilesController@show',[$item->user_id])}}">执行者</a></td>
-            <td>{{trans('form.'.$item->type)}}</td>
             <td>{{$item->updated_at->diffForHumans()}}</td>
             <td>{{$item->user->level}}</td>
         </tr>
