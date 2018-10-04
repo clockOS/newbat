@@ -18,27 +18,18 @@ class NewbieTasksController extends Controller
     
     public function index()
     {
-
-        //$quests = NewbieTask::rightJoin('posts', 'users.id', '=', 'posts.user_id')latest('updated_at')->paginate(12);
-        
-        /*$quests = \DB::table('newbietasks')
-                    ->leftJoin('newbietask_user', function ($join) {
-                        $join->on('newbietask_user.user_id', '=', \Auth::id())
-                             ->on('newbietask_user.task_id', '=', 'newbietasks.id');
-                        })
-                    ->orderBy('min_level')->paginate(12);*/
         
         $results = \DB::select
                     ('select * from `newbietasks` a left join `newbietask_user` b on (a.id=b.task_id AND b.`user_id`=:uid) order by `min_level`;'
                      , ['uid' => \Auth::id()]);
         
         $quests = collect($results);
-        
-        //dd($results);
+
 
         return view('quest.newbietasklist',compact('quests'));
         
     }
+    
     
     public function show($id,\Parsedown $parsedown)
     {
@@ -48,6 +39,29 @@ class NewbieTasksController extends Controller
         
         return view('quest.newbietask',compact('quest'));
 
+    }
+    
+    
+    public function start($id)
+    {
+        
+        = \DB::table("newbietask_user");
+        
+         $started = \DB::table("newbietask_user")
+             ->where('task_id', '=',$id )
+             ->where('user_id', '=',\Auth::id() )
+             ->count();
+        
+        if($started>0){
+        
+            dd('did');
+        
+        }else{
+            
+            dd('start');
+            
+        }
+        
     }
 
 
