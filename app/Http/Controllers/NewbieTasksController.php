@@ -42,8 +42,8 @@ class NewbieTasksController extends Controller
         
         $quest2 = NewbieTask::findOrFail($id);
         
-        var_dump($quest1);
-        var_dump($quest2);
+        dd($quest1);
+        dd($quest2);
         
         
         //$quest['body'] = $parsedown->text($quest['body']);
