@@ -45,7 +45,7 @@ class NewbieTasksController extends Controller
     public function start($id)
     {
         
-        // \DB::table("newbietask_user");
+        
         
          $started = \DB::table("newbietask_user")
              ->where('task_id', '=',$id )
@@ -58,8 +58,11 @@ class NewbieTasksController extends Controller
         
         }else{
             
-            dd('start');
-            
+            \DB::table('newbietask_user')
+            ->insert(
+                ['user_id' => \Auth::id(), 'user_id' => $id, 'state' = 8]
+            );
+                       
         }
         
     }
