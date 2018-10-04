@@ -123,6 +123,7 @@ Route::resource('department','DepartmentsController');
 Route::resource('newbie','NewbieTasksController');
 
 Route::get('newbietask/start/{id}','NewbieTasksController@start');
+Route::get('newbietask/done/{id}','NewbieTasksController@done');
 
 
 
