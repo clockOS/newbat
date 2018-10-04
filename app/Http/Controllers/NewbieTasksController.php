@@ -97,7 +97,7 @@ class NewbieTasksController extends Controller
         
         if($started>0){
         
-            dd('did');
+            dd('already started');
         
         }else{
             
@@ -106,7 +106,9 @@ class NewbieTasksController extends Controller
                 ['user_id' => \Auth::id(), 'task_id' => $id, 'state' => 8]
             );
             
-            redirect('/newbie/'.$id);
+            flash()->info('任务已经开始，完成任务后点击下面的“我已经完成了任务“');
+            
+            return redirect('/newbie/'.$id);
                        
         }
         
@@ -123,7 +125,7 @@ class NewbieTasksController extends Controller
         
         if($submitted>0){
         
-            dd('did');
+            dd('told');
         
         }else{
             
@@ -135,6 +137,8 @@ class NewbieTasksController extends Controller
             ->update(
                 ['state' => 10 , 'completed' => $now ]
             );
+            
+            flash()->info('任务已经等待审核，审核结果将会发送到你的邮件');
             
             return redirect('/newbie/'.$id);
                        
