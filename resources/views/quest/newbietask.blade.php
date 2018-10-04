@@ -37,7 +37,7 @@
                     <span class="quest-level">Lv.{{$min_level}}</span>
                 </div>
             </a>
-            <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('show.difficulty')}}:{{trans('show.'.$quest->difficulty)}}">
+            <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('show.difficulty')}}:{{trans('show.'.$difficulty)}}">
                 <div><img src="{{\Clockos\Test::cdn('/img/'.$difficulty.'.png!75')}}" alt="Level" class="quest-skill"></div>
             </a>
         </div>
