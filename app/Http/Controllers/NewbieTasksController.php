@@ -56,6 +56,20 @@ class NewbieTasksController extends Controller
     
     public function checkList()
     {
+        
+        $results = \DB::select
+                    ('SELECT *
+                        FROM `newbietask_user` n
+                        INNER JOIN `users` u
+                            on n.user_id = u.id
+                        INNER JOIN `newbietasks` t
+                            on t.id = n.task_id;'
+                    );
+        
+        dd($results);
+        
+        
+        
         if(\Auth::user()->can('task_completion')){
             $quests = \DB::table("newbietask_user")
                            ->where('state', '=',10 )
