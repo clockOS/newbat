@@ -48,6 +48,8 @@ class NewbieTasksController extends Controller
         
         $quest['body'] = $parsedown->text($quest['body']);
         
+        dd($quest);
+        
         return view('quest.newbietask',compact('quest'));
 
     }
