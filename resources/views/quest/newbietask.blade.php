@@ -24,6 +24,10 @@
 .btn-group-justified{
     margin-bottom: 20px;
 }
+.quest-skill{
+    height:50px!important;
+    width:50px!important;
+}
 </style>
 <link href="https://lib.baomitu.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
 @endsection
