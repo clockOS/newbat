@@ -32,7 +32,7 @@
             <h3 class="quest-title">{{$title}}</h3><br/>
             <br/>
             <br/>
-            <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('app.level')}}:{{min_level}}">
+            <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('app.level')}}:{{$min_level}}">
                 <div style="position: relative"><img src="{{\Clockos\Test::cdn('/img/level.png!75')}}" alt="Level" class="quest-skill">
                     <span class="quest-level">Lv.{{$min_level}}</span>
                 </div>
