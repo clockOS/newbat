@@ -90,6 +90,8 @@ class NewbieTasksController extends Controller
             ->insert(
                 ['user_id' => \Auth::id(), 'task_id' => $id, 'state' => 8]
             );
+            
+            redirect('/newbie/'.$id);
                        
         }
         
@@ -116,6 +118,8 @@ class NewbieTasksController extends Controller
             ->update(
                 ['state' => 10]
             );
+            
+            redirect('/newbie/'.$id);
                        
         }
         
