@@ -24,7 +24,6 @@
 .btn-group-justified{
     margin-bottom: 20px;
 }
-
 </style>
 <link href="https://lib.baomitu.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
 @endsection
