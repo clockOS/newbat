@@ -10,7 +10,7 @@
     @foreach($quests as $item)
         <tr>
             <td>#{{$item->cid}}</td>
-            <td><a href="/newbie/{{$item->task_id])}}">{{$item->title}}</a></td>
+            <td><a href="/newbie/{{$item->task_id}}">{{$item->title}}</a></td>
             <td><a href="{{action('ProfilesController@show',[$item->user_id])}}">{{$item->user->email}}</a></td>
         </tr>
     @endforeach
