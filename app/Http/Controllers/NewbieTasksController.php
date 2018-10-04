@@ -126,6 +126,8 @@ class NewbieTasksController extends Controller
         
         
         $quest = $results[0];
+            
+            $quest =$quest->first();
         
         
         dd($quest);
