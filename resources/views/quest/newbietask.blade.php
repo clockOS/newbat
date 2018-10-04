@@ -29,21 +29,21 @@
     <div class="panel panel-default">
         <div class="panel-body">
         <div class="col-md-8">
-            <h3 class="quest-title">{{$quest->title}}</h3><br/>
-            @include('partials.newbiestate',['state' => $quest->state])
+            <h3 class="quest-title">{{$title}}</h3><br/>
+            @include('partials.newbiestate',['state' => $state])
             <br/>
             <br/>
             <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('app.level')}}:{{$quest->min_level}}">
                 <div style="position: relative"><img src="{{\Clockos\Test::cdn('/img/level.png!75')}}" alt="Level" class="quest-skill">
-                    <span class="quest-level">Lv.{{$quest->min_level}}</span>
+                    <span class="quest-level">Lv.{{$min_level}}</span>
                 </div>
             </a>
             <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('show.difficulty')}}:{{trans('show.'.$quest->difficulty)}}">
-                <div><img src="{{\Clockos\Test::cdn('/img/'.$quest->difficulty.'.png!75')}}" alt="Level" class="quest-skill"></div>
+                <div><img src="{{\Clockos\Test::cdn('/img/'.$difficulty.'.png!75')}}" alt="Level" class="quest-skill"></div>
             </a>
         </div>
         <div class="col-md-4">
-            <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
+            <img src="{{\Clockos\Test::cdn('/img/types/'.$type.'.png')}}">
         </div>
         </div>
     </div>
@@ -55,27 +55,27 @@
             <table class="table quests-prerequisite">
                 <tr>
                     <td>{{trans('app.level')}}</td>
-                    <td>{{$quest->min_level}}</td>
+                    <td>{{$min_level}}</td>
                 </tr>
                 <tr>
                     <td>{{trans('show.difficulty')}}</td>
-                    <td>{{trans('show.'.$quest->difficulty)}}</td>
+                    <td>{{trans('show.'.$difficulty)}}</td>
                 </tr>
                 <tr>
                     <td>{{trans('show.created')}}</td>
-                    <td>{{$quest->created_at->diffForHumans()}}</td>
+                    <td>{{$created_at->diffForHumans()}}</td>
                 </tr>  
                 <tr>
-                    <td>{{trans_choice('app.stock',$quest->stock)}}</td>
-                    <td>{{$quest->stock}}</td>
+                    <td>{{trans_choice('app.stock',$stock)}}</td>
+                    <td>{{$stock}}</td>
                 </tr> 
                 <tr>
                     <td>{{trans('app.exp')}}</td>
-                    <td>{{$quest->experience}}</td>
+                    <td>{{$experience}}</td>
                 </tr> 
                 <tr>
                     <td>{{trans('app.vote')}}</td>
-                    <td>{{$quest->vote}}</td>
+                    <td>{{$vote}}</td>
                 </tr> 
             </table>
         </div>
@@ -86,11 +86,11 @@
         </div>
         <div class="panel-body">
 
-            @if((\Auth::user()->level>=$quest->min_level)AND(@$quest->user_id!=\Auth::id()))
-            <div class="quests-markdown">{!! $quest->body !!}</div>
+            @if((\Auth::user()->level>=$min_level)AND(@$user_id!=\Auth::id()))
+            <div class="quests-markdown">{!! $body !!}</div>
             @endif
-            @if((@$quest->user_id==\Auth::id())AND($state!="9"))
-            <span class="bg-warning text-warning">{{trans('show.min_level',['level' =>$quest->min_level])}}</span>
+            @if((@$user_id==\Auth::id())AND($state!="9"))
+            <span class="bg-warning text-warning">{{trans('show.min_level',['level' =>$min_level])}}</span>
             @endif
         </div>
     </div>
@@ -98,14 +98,14 @@
     
     <div class="btn-group btn-group-justified col-lg-6" role="group" aria-label="...">
 
-    @if((\Auth::user()->level>=$quest->min_level)AND(@$quest->user_id!=\Auth::id()))
+    @if((\Auth::user()->level>=$min_level)AND(@$user_id!=\Auth::id()))
 
-        <a class="btn btn-primary" href="/newbietask/start/{{$quest->id}}">开始任务</a>
+        <a class="btn btn-primary" href="/newbietask/start/{{$id}}">开始任务</a>
 
     @endif
-    @if((@$quest->user_id==\Auth::id())AND($state!="9"))
+    @if((@$user_id==\Auth::id())AND($state!="9"))
 
-        <a class="btn btn-primary" href="/newbietask/done/{{$quest->id}}" data-token="{{csrf_token()}}" data-method="put" data-confirm="{{trans('show.sure')}}">我已经完成了任务</a>
+        <a class="btn btn-primary" href="/newbietask/done/{{$id}}" data-token="{{csrf_token()}}" data-method="put" data-confirm="{{trans('show.sure')}}">我已经完成了任务</a>
 
     @endif
     </div>
