@@ -2,18 +2,10 @@
 
 namespace App\Jobs;
 
-use App\Income;
 use App\Jobs\Job;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Bus\SelfHandling;
-use Clockos\LevelCalculate;
-use App\Status;
-use DB;
-use App\User;
 
-class UpdateStatus extends Job implements SelfHandling, ShouldQueue
+class NewbieReward extends Job implements SelfHandling, ShouldQueue
 {
     use InteractsWithQueue, SerializesModels;
 
@@ -41,7 +33,7 @@ class UpdateStatus extends Job implements SelfHandling, ShouldQueue
 
             //更新执行任务的用户的股权等
 
-            $user = User::where('id',$this->quest->execution_id)->first();
+            $user = User::where('id',$this->quest->user_id)->first();
 
             $exp = $user->experience + $this->quest->experience;
 
@@ -72,46 +64,6 @@ class UpdateStatus extends Job implements SelfHandling, ShouldQueue
             $income->title = '完成"'.$this->quest->title.'"';
 
             $income->type = 'complete_task';
-
-            $income->subject_id = $this->quest->id;
-
-            $income->save();
-
-            //创建此任务用户相应的奖励
-
-            $creator = User::where('id',$this->quest->user_id)->first();
-
-            $incr = $this->quest->stock*0.05;
-
-            $exp = $creator->experience + $incr;
-
-            $creator->level = $calculate->toLevel($exp,$creator->level);
-
-            $creator->experience += $incr;
-
-            $creator->stock += $incr;
-
-            $creator->vote += $incr;
-
-            $creator->voting += $incr;
-
-            $creator->save();
-
-            $income = new Income;
-
-            $income->user_id = $this->quest->user_id;
-
-            $income->stock = $incr;
-
-            $income->experience = $incr;
-
-            $income->vote = $incr;
-
-            $income->per_stock = ($incr/Status::usersSum('stock'))*100;
-
-            $income->title = '创建任务"'.$this->quest->title.'"';
-
-            $income->type = 'create_task';
 
             $income->subject_id = $this->quest->id;
 
