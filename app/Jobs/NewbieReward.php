@@ -33,7 +33,7 @@ class NewbieReward extends Job implements SelfHandling, ShouldQueue
 
             //更新执行任务的用户的股权等
 
-            $user = User::where('id',$this->quest->execution_id)->first();
+            $user = User::where('id',$this->quest->user_id)->first();
 
             $exp = $user->experience + $this->quest->experience;
 
