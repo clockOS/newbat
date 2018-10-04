@@ -43,7 +43,7 @@ class UpdateStatus extends Job implements SelfHandling, ShouldQueue
 
             $user = User::where('id',$this->quest->execution_id)->first();
 
-            $exp = $user->experience + $this->quest->stock;
+            $exp = $user->experience + $this->quest->experience;
 
             $user->level = $calculate->toLevel($exp,$user->level);
 
@@ -51,9 +51,9 @@ class UpdateStatus extends Job implements SelfHandling, ShouldQueue
 
             $user->stock = $user->stock + $this->quest->stock;
 
-            $user->voting = $user->voting + $this->quest->stock;
+            $user->voting = $user->voting + $this->quest->vote;
 
-            $user->vote = $user->vote + $this->quest->stock;
+            $user->vote = $user->vote + $this->quest->vote;
 
             $user->save();
 
@@ -63,9 +63,9 @@ class UpdateStatus extends Job implements SelfHandling, ShouldQueue
 
             $income->stock = $this->quest->stock;
 
-            $income->experience = $this->quest->stock;
+            $income->experience = $this->quest->experience;
 
-            $income->vote = $this->quest->stock;
+            $income->vote = $this->quest->vote;
 
             $income->per_stock = ($this->quest->stock/Status::usersSum('stock'))*100;
 
