@@ -6,14 +6,12 @@
         <th>id</th>
         <th>{{trans('form.title')}}</th>
         <th>{{trans('app.user')}}</th>
-        <th>{{trans('show.completed')}}</th>
     </tr>
     @foreach($quests as $item)
         <tr>
             <td>#{{$item->cid}}</td>
-            <td><a href="/newbie/{{$item->task_id}}">查看任务</a></td>
-            <td><a href="{{action('ProfilesController@show',[$item->user_id])}}">执行者</a></td>
-            <td>{{$item->updated_at}}</td>
+            <td><a href="/newbie/{{$item->task_id])}}">{{$item->title}}</a></td>
+            <td><a href="{{action('ProfilesController@show',[$item->user_id])}}">{{$item->user->email}}</a></td>
         </tr>
     @endforeach
 </table>
