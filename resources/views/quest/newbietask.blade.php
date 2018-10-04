@@ -81,7 +81,7 @@
         </div>
         <div class="panel-body">
 
-            @if((\Auth::user()->level>=$min_level)AND(@$user_id!=\Auth::id()))
+            @if((\Auth::user()->level>=$min_level))
             <div class="quests-markdown">{!! $body !!}</div>
             @endif
             @if((@$user_id==\Auth::id())AND($state!="9"))
