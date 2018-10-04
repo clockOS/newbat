@@ -73,30 +73,24 @@
                     <td>{{trans('show.'.$quest->difficulty)}}</td>
                 </tr>
                 <tr>
-                    <td>{{trans('show.creator')}}</td>
-                    <td><a href="{{action('ProfilesController@show',[$quest->user->id])}}">{{$quest->user->username}}</a></td>
-                </tr>
-                <tr>
                     <td>{{trans('show.created')}}</td>
                     <td>{{$quest->created_at->diffForHumans()}}</td>
-                </tr>
-                
+                </tr>  
+                <tr>
+                    <td>{{trans('app.vote')}}</td>
+                    <td>{{$quest->vote}}</td>
+                </tr> 
+                 <tr>
+                    <td>{{trans('app.experience')}}</td>
+                    <td>{{$quest->experience}}</td>
+                </tr> 
                 <tr>
                     <td>{{trans_choice('app.stock',$quest->stock)}}</td>
                     <td>{{$quest->stock}}</td>
-                </tr>      
+                </tr> 
             </table>
         </div>
     </div>
-    @if($quest->quests->count()>0)
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{trans('form.quests')}}</h3>
-        </div>
-        <div class="panel-body">
-    </div>    
-    </div>
-    @endif
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">{{trans('form.details')}}</h3>
