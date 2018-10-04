@@ -118,6 +118,23 @@ class NewbieTasksController extends Controller
     public function isCompleted($id)
     {
         if(\Auth::user()->can('task_completion')){
+            
+            
+        $results = \DB::select
+            ('select * from `newbietask_user` a inner join `newbietasks` b on (b.id=a.task_id) where cid=:cid;'
+             , ['cid' => $id]);
+        
+        
+        $quest = $results[0];
+        
+        
+        dd($quests);
+                
+        $quest->body = $parsedown->text($quest->body);
+        
+        $quest = get_object_vars($quest);
+            
+            
             $quest = Quest::where('state',3)
                           ->whereNotNull('completed')
                           ->where('id',$id)
