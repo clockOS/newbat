@@ -46,7 +46,9 @@ class NewbieTasksController extends Controller
                 
         $quest->body = $parsedown->text($quest->body);
         
-        dd($quest->toArray());
+        $quest = get_object_vars($quest)
+        
+        dd($quest);
                 
         return view('quest.newbietask')->with($quest);
 
