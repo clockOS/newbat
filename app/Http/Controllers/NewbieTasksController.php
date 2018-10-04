@@ -45,7 +45,7 @@ class NewbieTasksController extends Controller
     public function start($id)
     {
         
-        = \DB::table("newbietask_user");
+        // \DB::table("newbietask_user");
         
          $started = \DB::table("newbietask_user")
              ->where('task_id', '=',$id )
