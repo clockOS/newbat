@@ -46,7 +46,7 @@ class NewbieTasksController extends Controller
         var_dump($quest2);
         
         
-        $quest['body'] = $parsedown->text($quest['body']);
+        //$quest['body'] = $parsedown->text($quest['body']);
         
         //return view('quest.newbietask',compact('quest'));
 
