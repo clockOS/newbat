@@ -51,16 +51,6 @@
             <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{trans('show.difficulty')}}:{{trans('show.'.$quest->difficulty)}}">
                 <div><img src="{{\Clockos\Test::cdn('/img/'.$quest->difficulty.'.png!75')}}" alt="Level" class="quest-skill"></div>
             </a>
-            @foreach($quest->departments as $skill)
-                <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{$skill->fullname}}">
-                    <div><img src="{{\Clockos\Test::cdn($skill->logo.'!75')}}" alt="{{$skill->name}}" class="quest-skill"></div>
-                </a>
-            @endforeach
-            @foreach($quest->skills as $skill)
-                <a style="vertical-align: middle;display: inline-block" href="#" data-toggle="tooltip" data-placement="bottom" title="{{$skill->fullname}}">
-                    <div><img src="{{\Clockos\Test::cdn($skill->logo.'!75')}}" alt="{{$skill->name}}" class="quest-skill"></div>
-                </a>
-            @endforeach
         </div>
         <div class="col-md-4">
             <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
@@ -94,23 +84,7 @@
                 <tr>
                     <td>{{trans_choice('app.stock',$quest->stock)}}</td>
                     <td>{{$quest->stock}}</td>
-                </tr>
-                <tr>
-                    <td>{{trans('form.departments')}}</td>
-                    <td>
-                        @foreach($quest->departments as $item)
-                            {{$item->name}}&nbsp;
-                        @endforeach
-                    </td>
-                </tr>
-                <tr>
-                    <td>{{trans('form.skills')}}</td>
-                    <td>
-                        @foreach($quest->skills as $item)
-                            {{$item->name}}&nbsp;
-                        @endforeach
-                    </td>
-                </tr>        
+                </tr>      
             </table>
         </div>
     </div>
@@ -120,18 +94,6 @@
             <h3 class="panel-title">{{trans('form.quests')}}</h3>
         </div>
         <div class="panel-body">
-        <table class="table quests-prerequisite">
-            @foreach($quest->quests as $item)
-
-                <tr>
-                    <td><a href="{{action('QuestsController@show', ['id' => $item->id])}}" target="_blank">{{$item->title}}</a></td>
-                    <td>{{trans('form.'.$item->type)}}</td>
-                    <td>
-                        @include('partials.state',['state' => $item->state])
-                    </td>
-                </tr>
-            @endforeach
-        </table>
     </div>    
     </div>
     @endif
