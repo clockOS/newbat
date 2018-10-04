@@ -115,6 +115,25 @@ class NewbieTasksController extends Controller
         
     }
     
+    public function isCompleted($id)
+    {
+        if(\Auth::user()->can('task_completion')){
+            $quest = Quest::where('state',3)
+                          ->whereNotNull('completed')
+                          ->where('id',$id)
+                          ->firstOrFail();
+            $quest->state = 4;
+            $quest->final_checker_id = \Auth::id();
+            $quest->save();
+            $job = new UpdateStatus($quest);
+            $this->dispatch($job);
+            flash()->success(trans('alert.check_completion'));
+            return redirect('check/completion');
+        }else{
+            return 'opps';
+        }
+    }
+    
     public function done($id)
     {
         
