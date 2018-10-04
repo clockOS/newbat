@@ -63,7 +63,8 @@ class NewbieTasksController extends Controller
                         INNER JOIN `users` u
                             on n.user_id = u.id
                         INNER JOIN `newbietasks` t
-                            on t.id = n.task_id;'
+                            on t.id = n.task_id 
+                            order by `completed`;'
                     );
         
         $results=collect($results);
