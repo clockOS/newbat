@@ -39,12 +39,12 @@ class NewbieTasksController extends Controller
              , ['tid' => $id]);
         
         
-        $quest2 = NewbieTask::findOrFail($id);
+        $quest = $results[0];
         
         
-        dd($results);
+        //dd($results);
                 
-        $quest['body'] = $parsedown->text($quest['body']);
+        $quest->body = $parsedown->text($quest->body);
         
         dd($quest);
                 
