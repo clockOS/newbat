@@ -31,7 +31,7 @@
     <div id="quests-list">
     @foreach($quests->all() as $quest)
 
-        <a href="{{url("/newbie")}}/{{$quest->id}}" class="col-md-6 col-lg-4" id="{{$quest->id}}">
+        <a href="{{url("/newbie")}}/{{$quest->newbietasks.id}}" class="col-md-6 col-lg-4" id="{{$quest->newbietasks.id}}">
             <div class="panel panel-default">
                 <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
                 <div class="panel-body">
