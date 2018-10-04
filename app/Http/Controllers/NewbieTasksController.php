@@ -128,7 +128,7 @@ class NewbieTasksController extends Controller
         $quest = $results[0];
         
         
-        dd($quests);
+        dd($quest);
                 
         $quest->body = $parsedown->text($quest->body);
         
