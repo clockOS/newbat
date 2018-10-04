@@ -128,7 +128,7 @@ class NewbieTasksController extends Controller
         $quest = $results[0];
     
         
-            $quest = get_object_vars($quest);
+            //$quest = get_object_vars($quest);
             
             //$quest = (object) $quest;
             
