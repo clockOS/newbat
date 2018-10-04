@@ -1,15 +1,6 @@
 @extends('app')
 @section('stylesheet')
 <style type="text/css">
-.quest-type{
-    position: absolute;
-    right:18px;
-    bottom: 0;
-    text-align: right;
-    color: white;
-    text-shadow: rgba(0,0,09, 0.5) 1px 1px 6px;
-    font-size: 18px;
-}
 .quest-level{
     position: absolute;
     left: 2px;
@@ -53,7 +44,6 @@
         </div>
         <div class="col-md-4">
             <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
-            <span class="quest-type" style="">{{trans('form.'.$quest->type)}}</span>
         </div>
         </div>
     </div>
