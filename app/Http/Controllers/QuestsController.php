@@ -82,7 +82,11 @@ class QuestsController extends Controller
     public function store(QuestRequest $request)
     {
         $input = $request->all();
-
+        
+        $input['vote'] = $input['stock'];
+        
+        $input['experience'] = $input['stock'];
+        
         $type  = trans('form.'.$input['type']);
 
         $state = trans('form.0');       //审核中/Draft
@@ -142,6 +146,10 @@ class QuestsController extends Controller
         }
 
         $input = $request->all();
+        
+        $input['vote'] = $input['stock'];
+        
+        $input['experience'] = $input['stock'];
 
         $type  = trans('form.'.$input['type']);
 
