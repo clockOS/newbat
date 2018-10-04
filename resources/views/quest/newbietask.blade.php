@@ -86,27 +86,27 @@
         </div>
         <div class="panel-body">
 
-            @can('min_level',$quest)
+            @if((\Auth::user()->level>=$quest->min_level)AND(@$quest->user_id!=\Auth::id()))
             <div class="quests-markdown">{!! $quest->body !!}</div>
-            @endcan
-            @cannot('min_level',$quest)
+            @endif
+            @if((@$quest->user_id==\Auth::id())AND($state!="9"))
             <span class="bg-warning text-warning">{{trans('show.min_level',['level' =>$quest->min_level])}}</span>
-            @endcan
+            @endif
         </div>
     </div>
 
     
     <div class="btn-group btn-group-justified col-lg-6" role="group" aria-label="...">
 
-    @if(($quest->state==7)AND(!$quest->execution_id))
-        @can('min_level',$quest)
-        <a class="btn btn-primary" href="{{action('ExecuteQuestsController@show',[$quest->id])}}">{{trans('show.execute')}}</a>
-        @endcan
+    @if((\Auth::user()->level>=$quest->min_level)AND(@$quest->user_id!=\Auth::id()))
+
+        <a class="btn btn-primary" href="/newbietask/start/{{$quest->id}}',[$quest->id])}}">开始任务</a>
+
     @endif
-    @if($quest->state==8)
-        @if(($quest->completed<"0001-00-00")AND($quest->execution_id==\Auth::id()))
-        <a class="btn btn-primary" href="/quests/done/{{$quest->id}}" data-token="{{csrf_token()}}" data-method="put" data-confirm="{{trans('show.sure')}}">{{trans('show.done')}}</a>
-        @endif
+    @if((@$quest->user_id==\Auth::id())AND($state!="9"))
+
+        <a class="btn btn-primary" href="/newbietask/done/{{$quest->id}}" data-token="{{csrf_token()}}" data-method="put" data-confirm="{{trans('show.sure')}}">我已经完成了任务</a>
+
     @endif
     </div>
 @stop
