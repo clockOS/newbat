@@ -8,6 +8,7 @@ use App\Department;
 use App\Http\Requests\QuestRequest;
 use App\NewbieTask;
 use Illuminate\Support\Facades\Auth;
+use App\Jobs\NewbieReward;
 class NewbieTasksController extends Controller
 {
     public function __construct()
