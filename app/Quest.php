@@ -14,6 +14,8 @@ class Quest extends Model
         'type',
         'difficulty',
         'stock',
+        'vote',
+        'experience',
         'fullname',
         'estimated',
         'min_level',
