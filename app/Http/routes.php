@@ -122,6 +122,8 @@ Route::resource('department','DepartmentsController');
 //newbie
 Route::resource('newbie','NewbieTasksController');
 
+Route::get('newbietask/start','NewbieTasksController@start');
+
 
 
 Route::resource('manage','ManageController');
