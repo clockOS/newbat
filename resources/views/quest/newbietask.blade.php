@@ -28,6 +28,9 @@
     height:50px!important;
     width:50px!important;
 }
+.quests-prerequisite td{
+    border-top: none!important;
+}
 </style>
 <link href="https://lib.baomitu.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
 @endsection
