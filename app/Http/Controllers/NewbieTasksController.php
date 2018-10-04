@@ -36,7 +36,7 @@ class NewbieTasksController extends Controller
         
         $results = \DB::select
             ('select * from `newbietasks` a left join `newbietask_user` b on (a.id=b.task_id AND b.`user_id`=:uid) where id=:tid;'
-             , ['tid' => $id]);
+             , ['tid' => $id,'uid' => \Auth::id()]);
         
         
         $quest = $results[0];
