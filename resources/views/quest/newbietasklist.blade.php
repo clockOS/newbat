@@ -1,3 +1,28 @@
+<style type="text/css">
+.quest-type{
+    position: absolute;
+    right:18px;
+    bottom: 0;
+    text-align: right;
+    color: white;
+    text-shadow: rgba(0,0,09, 0.5) 1px 1px 6px;
+    font-size: 18px;
+}
+.quest-level{
+    position: absolute;
+    left: 2px;
+    color: #FFF;
+    top: 18px;
+    text-align: center;
+    width: 50px;
+}
+.quest-title{
+    word-wrap: break-word;
+}
+.btn-group-justified{
+    margin-bottom: 20px;
+}
+</style>
 @extends('app')
 @section('content')
     <h1>{{trans('app.newbietask')}}</h1>
@@ -8,7 +33,9 @@
 
         <a href="{{action('QuestsController@show',[$quest->id])}}" class="col-md-6 col-lg-4" id="{{$quest->id}}">
             <div class="panel panel-default">
+                <div class="img-container>
                 <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
+                </div>
                 <div class="panel-body">
                     <div class="list-first-row">
                         <div class="quests-list-title">{{$quest->title}}</div>
