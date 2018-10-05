@@ -59,7 +59,7 @@ class NewbieReward extends Job implements SelfHandling, ShouldQueue
 
             $income = new Income;
 
-            $income->user_id = $this->quest->execution_id;
+            $income->user_id = $this->quest->user_id;
 
             $income->stock = $this->quest->stock;
 
