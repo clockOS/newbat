@@ -30,11 +30,19 @@ class PagesController extends Controller
 
     public function home(){
         
-        if(\Auth::user()->roles()->first = 'rookie'){
-            
-            return redirect("/newbie");
+        if(Auth::check()){
+        
+        
+            if(\Auth::user()->roles()->first = 'rookie'){
+
+                return redirect("/newbie");
+
+            }
+         
         
         }
+        
+
 
         $status = Status::latest()->first();
 
