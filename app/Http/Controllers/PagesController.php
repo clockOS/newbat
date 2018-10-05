@@ -31,7 +31,7 @@ class PagesController extends Controller
 
     public function home(){
         
-        if(Auth::check()){
+        if(Auth::user()){
         
         
             if(\Auth::user()->roles()->first = 'rookie'){
