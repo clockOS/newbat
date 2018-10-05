@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Auth;
 
 class PagesController extends Controller
 {
@@ -30,7 +31,7 @@ class PagesController extends Controller
 
     public function home(){
         
-        /*if(Auth::check()){
+        if(Auth::check()){
         
         
             if(\Auth::user()->roles()->first = 'rookie'){
@@ -40,7 +41,7 @@ class PagesController extends Controller
             }
          
         
-        }*/
+        }
         
 
 
