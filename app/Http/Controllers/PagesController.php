@@ -33,7 +33,7 @@ class PagesController extends Controller
         
         if(Auth::user()){
             
-            dd(\Auth::user()->roles()->first());
+            dd(\Auth::user()->roles()->first()->name);
         
         
             if(\Auth::user()->roles()->first()->name == 'rookie'){
