@@ -2,8 +2,16 @@
 
 namespace App\Jobs;
 
+use App\Income;
 use App\Jobs\Job;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Bus\SelfHandling;
+use Clockos\LevelCalculate;
+use App\Status;
+use DB;
+use App\User;
 
 class NewbieReward extends Job implements SelfHandling, ShouldQueue
 {
