@@ -30,6 +30,12 @@ class SkillCheck
                 }
             }
         }
+        
+        if($check->id = 6){
+        
+            contain = true;
+            
+        }
 
         return $contain;
     }
