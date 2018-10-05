@@ -31,7 +31,7 @@ class SkillCheck
             }
         }
         
-        if($check->id = 6){
+        if($check->id == 6){
         
             contain = true;
             
