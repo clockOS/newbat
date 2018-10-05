@@ -120,29 +120,38 @@ class NewbieTasksController extends Controller
     {
         if(\Auth::user()->can('task_completion')){
             
-            
-        $results = \DB::select
-            ('select * from `newbietask_user` a inner join `newbietasks` b on (b.id=a.task_id) where cid=:cid;'
-             , ['cid' => $id]);
+              $rewarded = \DB::table("newbietask_user")
+             ->where('cid', '=',$id )
+             ->where('state', '=', 9)
+             ->count();
         
-        
-        $quest = $results[0];
+            if($rewarded>0){
+
+                dd('rewarded');
+
+            }else{
+
+                $results = \DB::select
+                    ('select * from `newbietask_user` a inner join `newbietasks` b on (b.id=a.task_id) where cid=:cid;'
+                     , ['cid' => $id]);
+
+                $now = date('Y-m-d H:i:s');
+
+                $quest = $results[0];
     
-        
-            //$quest = get_object_vars($quest);
             
-            //$quest = (object) $quest;
+                \DB::table('newbietask_user')
+                    ->where('cid', '=',$id )
+                ->update(
+                    ['state' => 9 , 'updated_at' => $now ]
+                );
+
+                $job = new NewbieReward($quest);
+                $this->dispatch($job);
+                flash()->success(trans('alert.check_completion'));
+                return redirect('check/completion');
+            }
             
-            \DB::table('newbietask_user')
-                ->where('cid', '=',$id )
-            ->update(
-                ['state' => 9 , 'updated_at' => $now ]
-            );
-            
-            $job = new NewbieReward($quest);
-            $this->dispatch($job);
-            flash()->success(trans('alert.check_completion'));
-            return redirect('check/completion');
         }else{
             return 'opps';
         }
