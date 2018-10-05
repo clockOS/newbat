@@ -172,9 +172,9 @@
                     @if($item->id==$option->option_id)
                     progress-bar-striped active
                     @endif" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:{{($item->amount/($decision->amount+0.0001))*100}}%;min-width: 10em;">
-                        {{$item->title}}
+                        {{$item->title}} : {{$item->amount}}
                     </div>
-                    {{$item->amount}}
+    
                 </div>
 
             @endforeach
