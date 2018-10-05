@@ -133,6 +133,12 @@ class NewbieTasksController extends Controller
             
             //$quest = (object) $quest;
             
+            \DB::table('newbietask_user')
+                ->where('cid', '=',$id )
+            ->update(
+                ['state' => 9 , 'updated_at' => $now ]
+            );
+            
             $job = new NewbieReward($quest);
             $this->dispatch($job);
             flash()->success(trans('alert.check_completion'));
