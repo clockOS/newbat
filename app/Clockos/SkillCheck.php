@@ -33,7 +33,7 @@ class SkillCheck
         
         if($check->id == 6){
         
-            contain = true;
+            $contain = true;
             
         }
 
