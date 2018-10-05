@@ -34,7 +34,7 @@ class PagesController extends Controller
         if(Auth::user()){
         
         
-            if(\Auth::user()->roles()->first == 'rookie'){
+            if(\Auth::user()->roles()->first() == 'rookie'){
 
                 return redirect("/newbie");
 
