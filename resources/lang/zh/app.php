@@ -12,6 +12,9 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    
+        
+    'brand' => env('APP_BRAND'),
 
     'beian' => '辽ICP备14002468号-2',
     'settings' => '设置',
@@ -42,7 +45,7 @@ return [
     'user' => '用户',
     'position' => '职业',
     'cancel' => '取消',
-    'ok' => '吼啊',
+    'ok' => '确定',
     'select' => '选择',
     'return_home' => '返回主页',
     'welcome' => 'Welcome',
