@@ -34,7 +34,7 @@ class AppMailer
     private function deliver()
     {
         $this->mailer->send($this->view, $this->data ,function($message){
-            $message->from($this->from, 'FuckBAT')
+            $message->from($this->from, trans('app.brand'))
                     ->to($this->to)
                     ->subject($this->subject);
         });
