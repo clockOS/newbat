@@ -12,6 +12,9 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    
+        
+    'brand' => env('APP_BRAND');
 
     'beian' => '辽ICP备14002468号-2',
     'settings' => '设置',
