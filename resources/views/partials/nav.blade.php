@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('/') }}">FuckBAT</a>
+            <a class="navbar-brand" href="{{ url('/') }}">{{trans('app.brand')}}</a>
         </div>
 
         <div id="navbar" class="collapse navbar-collapse">

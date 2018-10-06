@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">{{trans('auth.login')}} FuckBAT</div>
+                <div class="panel-heading">{{trans('auth.login')}} {{trans('app.brand')}}</div>
                 <div class="panel-body">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">

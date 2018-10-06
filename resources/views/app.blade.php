@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <title>FuckBAT</title>
+    <title>{{trans('app.brand')}}</title>
     <link rel="stylesheet" href="{{ \Clockos\Test::cdn((elixir('css/all.css'))) }}">
     <link rel="icon" href="{{ \Clockos\Test::cdn('/img/favicon.png')}}" type="image/gif" sizes="16x16">
     <link href="https://lib.baomitu.com/select2/4.0.1/css/select2.min.css" rel="stylesheet" />

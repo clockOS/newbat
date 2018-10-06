@@ -3,9 +3,9 @@
     <link rel="stylesheet" href="{{ \Clockos\Test::cdn('/css/login.css') }}">
 @endsection
 @section('content')
-    <h2>什么是FuckBAT?</h2>
+    <h2>什么是{{trans('app.brand')}}?</h2>
     <br>
-    <p>FuckBAT 是一个网络游戏，玩家们通过做各种任务共同击败BAT这三个BOSS</p>
+    <p>{{trans('app.brand')}} 是一个网络游戏，玩家们通过做各种任务共同击败BAT这三个BOSS</p>
     <br>
     
     <h2>玩家能获得什么?</h2>
