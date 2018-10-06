@@ -24,7 +24,7 @@
 <div class="jumbotron first-jumb">
     <div class="container">
         <h1 class="animated shake">{{trans('app.brand')}}</h1>
-        <h2>艹翻BAT</h2>
+        <h2>新BAT</h2>
         <br/>
         <p>{{trans('app.brand')}}是一个网络游戏<br/>
             玩家们通过做各种任务共同击败"BAT"这三个BOSS</p>
@@ -53,7 +53,7 @@
             <br/>
             <br/>
             <br/>
-            <h3>成为 BAT Fucker 的唯一条件</h3>
+            <h3>成为新BAT玩家的唯一条件</h3>
             <h1>零欺骗</h1>
             <br/>
             <p>不要套路，不要谎言。<br/>
@@ -160,7 +160,7 @@
         demo.start();
 
         $("#letschat").typed({
-            strings: ['来一起聊聊天😏<br/> ^500 聊啥啊🤔<br/> ^500 聊啥都行😅','这是神马J8网站😒<br/> ^500 ...<br/> ^500 确实要用到J8😂','用屌来做什么？<br/> ^500 来FuckBAT😆<br/> ^500 8==✊==3······......'],
+            strings: ['来一起聊聊天😏<br/> ^500 聊啥啊🤔<br/> ^500 聊啥都行😅','这是神马网站😒<br/> ^500 ...<br/> ^500 没多少人啊😂','用来做什么？<br/> ^500 来NewBAT😆<br/> ^500 8==✊==3······......'],
             loop: true,
             typeSpeed: 100,
             cursorChar: ""
