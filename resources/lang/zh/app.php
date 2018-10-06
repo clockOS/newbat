@@ -14,7 +14,7 @@ return [
     */
     
         
-    'brand' => env('APP_BRAND');
+    'brand' => env('APP_BRAND'),
 
     'beian' => '辽ICP备14002468号-2',
     'settings' => '设置',
