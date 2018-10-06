@@ -45,7 +45,7 @@ return [
     'user' => '用户',
     'position' => '职业',
     'cancel' => '取消',
-    'ok' => '吼啊',
+    'ok' => '确定',
     'select' => '选择',
     'return_home' => '返回主页',
     'welcome' => 'Welcome',
