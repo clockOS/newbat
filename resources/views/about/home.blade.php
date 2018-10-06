@@ -6,10 +6,10 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron first-jumb">
     <div class="container">
-        <h1 id="main-title">Fuck <span id="fucked">BAT</span><span id="dick"></span>  </h1>
-        <h2>艹翻BAT</h2>
+        <h1 id="main-title">{{trans('app.brand')}}</h1>
+        <h2>{{trans('app.brand')}}</h2>
         <br/>
-        <p>FuckBAT 是一款主要面向程序猿的网络游戏<br/>
+        <p>{{trans('app.brand')}} 是一款主要面向程序猿的网络游戏<br/>
             写代码来打怪升级，干掉“BAT”这三个BOSS</p>
         <br/>
         <p><a class="btn btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
