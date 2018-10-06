@@ -12,6 +12,8 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    
+    'brand' => env('APP_BRAND');
 
     'beian' => '',
     'settings' => 'Settings',
