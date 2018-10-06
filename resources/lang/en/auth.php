@@ -23,11 +23,11 @@ return [
     'remember' => 'Remember Me',
     'forget' => 'Forgot Your Password',
     'input' => 'There were some problems with your input',
-    'join' => 'We\'ve Joined in FuckBAT',
+    'join' => 'We\'ve Joined in '.env('APP_BRAND'),
     'confirm' => 'Confirm',
     'send' => 'Send Email',
     'have' => 'I\'ve already have a FuckBAT account',
-    'confirmation' => 'FuckBAT account confirmation',
+    'confirmation' => env('APP_BRAND').' account confirmation',
     'sent' => 'We have e-mailed your confirmation link! Please check your Email.',
     'please_login' => 'Login please.',
 
