@@ -13,7 +13,7 @@ return [
     |
     */
     
-    'brand' => env('APP_BRAND');
+    'brand' => env('APP_BRAND'),
 
     'beian' => '',
     'settings' => 'Settings',
