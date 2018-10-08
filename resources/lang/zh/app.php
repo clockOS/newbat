@@ -26,6 +26,7 @@ return [
     'docs' => '文档',
     'finance' => '财务',
     'decision' => '决策',
+    'forum' => '论坛',
     'status' => '状态',
     'manage' => '管理',
     'team' => '团队',

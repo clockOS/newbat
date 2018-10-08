@@ -18,7 +18,7 @@
         "erusev/parsedown": "^1.6",
         "pda/pheanstalk": "^3.1",
         "predis/predis": "~1.0",
-        "iron-io/iron_mq": "^4.0"
+        "iron-io/iron_mq": "^4.0",
     },
 
     "require-dev": {

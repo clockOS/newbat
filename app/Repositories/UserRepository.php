@@ -26,6 +26,8 @@ class UserRepository
 
             $user->assignRole('rookie');
 
+            dispatch(new \App\Jobs\SyncUserToForum($user));
+
         }
 
         return $user;

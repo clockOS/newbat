@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Clockos\ConnectToForum;
 
 class PagesController extends Controller
 {
@@ -29,17 +30,19 @@ class PagesController extends Controller
         return view('about.contact');
     }
 
-    public function home(){
+    public function home(ConnectToForum $forum){
         
         if(Auth::user()){
+
+            $user = Auth::user();
+
+            $forum->login($user['email'],$user['password']);        
         
-        
-            if(\Auth::user()->roles()->first()->name == 'rookie'){
+            if(@\Auth::user()->roles()->first()->name == 'rookie'){
 
                 return redirect("/newbie");
 
-            }
-         
+            }         
         
         }
         

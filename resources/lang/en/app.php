@@ -26,6 +26,7 @@ return [
     'decision' => 'Decision',
     'status' => 'Status',
     'manage' => 'Manage',
+    'forum' => 'Forum',
     'team' => 'Team',
     'role' => 'Career',
     'about' => 'About',

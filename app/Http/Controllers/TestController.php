@@ -12,6 +12,8 @@ use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Redis;
 
+use Clockos\ConnectToForum;
+
 
 
 class TestController extends Controller
@@ -23,24 +25,13 @@ class TestController extends Controller
 
 
 
-    public function test($config = [])
+    public function test(ConnectToForum $forum)
     {
-        $formApiKey = "cLgJ6oKxhxeGq5Ej0jVsjDpZsOU=";
-        $sign =  Signature($formApiKey);
-        $upload = new Upload($sign);
-        $upload->setBucketName('your_bucket_name');//�ϴ��Ŀռ�
-        try {
-            //���������μ��ĵ�: http://docs.upyun.com/api/form_api/#Policy�������
-            $options = array(
-                'path' => $config['path'],                   // �ļ��ڷ����������·��,����
-            );
-            $file = new File($config['file']);
+        //$res = $forum->signup('xinmima', '12345678', 'xinyou3@6we436.com',5);
 
-            $result = $upload->upload($file, $options);
+        $forum->login('asdf@fuckb.at', '123456');
 
-        } catch(\Exception $e) {
-            echo $e->getMessage();
-        }
+        echo 'zhuce';
     }
 
 }
