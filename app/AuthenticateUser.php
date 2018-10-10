@@ -34,7 +34,7 @@ class AuthenticateUser
 
         $user = $this->users->findByUsernameOrCreate($this->getGithubUser());
 
-        $forum = new ConnectToForum $forum;
+        $forum = new ConnectToForum;
 
         $forum->login($user['email'],$user['password']);
 
