@@ -28,11 +28,13 @@ class AuthenticateUser
         $this->auth = $auth;
     }
 
-    public function execute($hasCode,AuthenticateUserListener $listener,ConnectToForum $forum)
+    public function execute($hasCode,AuthenticateUserListener $listener)
     {
         if(!$hasCode) return $this->getAuthorizationFirst();
 
         $user = $this->users->findByUsernameOrCreate($this->getGithubUser());
+
+        $forum = new ConnectToForum $forum;
 
         $forum->login($user['email'],$user['password']);
 
