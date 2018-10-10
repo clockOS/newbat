@@ -36,7 +36,7 @@ class PagesController extends Controller
 
             $user = Auth::user();
 
-            $forum->login($user['email'],$user['password']);        
+            $forum->login($user['email'],$user['forum_pw']);        
         
             if(@\Auth::user()->roles()->first()->name == 'rookie'){
 

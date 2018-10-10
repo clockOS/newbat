@@ -92,7 +92,7 @@ class ConnectToForum
 
         //$act = $this->activate($response['data']['id']);
 
-        return $response['data']['id'];
+        return $response;
     }
 
     private function sendPostRequest($path, $data)

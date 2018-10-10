@@ -150,6 +150,14 @@ Route::resource('finance','FinanceController');
 
 Route::get('settings','SettingsController@index');
 
+
+
+//admin
+
+Route::get('admin/migrate','ForumController@migrate');
+
+
+
 Route::post('queue', function()
 {
     return Queue::marshal();
