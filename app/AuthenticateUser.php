@@ -28,7 +28,7 @@ class AuthenticateUser
         $this->auth = $auth;
     }
 
-    public function execute($hasCode,AuthenticateUserListener $listener)
+    public function execute($hasCode,AuthenticateUserListener $listener,ConnectToForum $forum)
     {
         if(!$hasCode) return $this->getAuthorizationFirst();
 
