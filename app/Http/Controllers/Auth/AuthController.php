@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Clockos\ConnectToForum;
 
 class AuthController extends Controller
 {
@@ -21,7 +22,11 @@ class AuthController extends Controller
     |
     */
 
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    use AuthenticatesAndRegistersUsers     
+    {
+        getLogout as authLogout;
+    }
+    use ThrottlesLogins;
 
     /**
      * Create a new authentication controller instance.
@@ -31,6 +36,19 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+    }
+
+    public function getLogout(ConnectToForum $forum)
+    {
+
+        $forum->logout();
+
+        /*if (!empty(\URL::previous()) && !str_contains(\URL::previous(), "auth/"))
+        {
+            $this->redirectAfterLogout = \URL::previous(); // Send back to previous url if possible
+        }*/
+ 
+        return $this->authLogout(); // rest of the old method of the trait
     }
 
     /**

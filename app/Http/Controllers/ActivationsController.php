@@ -33,6 +33,8 @@ class ActivationsController extends Controller
 
         Activation::where('email',$user['email'])->delete();
 
+        dispatch(new \App\Jobs\SyncUserToForum($user));
+
         Auth::login($newUser);
 
         Auth::user()->assignRole('rookie');

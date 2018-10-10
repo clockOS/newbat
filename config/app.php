@@ -163,6 +163,7 @@ return [
         App\Providers\ViewComposerServiceProvider::class,
 
 
+
     ],
 
     /*
@@ -224,5 +225,25 @@ return [
     'ossServerInternal' => 'devsrc.oss-cn-beijing-internal.aliyuncs.com', //青岛为 http://oss-cn-qingdao-internal.aliyuncs.com
     'AccessKeyId' => env('ALIYUN_ID'),
     'AccessKeySecret' => env('ALIYUN_SECRET'),
+
+    'forum' => [
+
+            'url' => env('FORUM_URL', 'http://bbs.fuckbat.dev:8888'),
+
+            'admin_username' => env('FORUM_USER'),
+
+            'admin_password' => env('FORUM_PASS'),
+
+            'root_domain' => env('ROOT_DOMAIN'),
+
+            'api_key' => env('FORUM_API_KEY'),
+
+            'password_token' => env('FORUM_PW_TOKEN'),
+
+            // How many days should the login be valid
+            'lifetime_in_days' => 14
+
+
+    ]
 
 ];
