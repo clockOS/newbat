@@ -29,12 +29,6 @@ class TestController extends Controller
     {
         $res = $forum->signup('xinmima', '18', 'xinasedfyo3@6we436.com');
 
-        if(array_key_exists('errors', $res)){
-
-            echo 'Error!';
-
-        }
-
         //$forum->login('asdf@fuckb.at', '123456');
 
         dd($res);
