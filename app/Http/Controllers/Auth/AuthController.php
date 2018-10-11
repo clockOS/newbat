@@ -25,6 +25,7 @@ class AuthController extends Controller
     use AuthenticatesAndRegistersUsers     
     {
         getLogout as authLogout;
+        postLogin as authLogin; 
     }
     use ThrottlesLogins;
 
@@ -51,6 +52,19 @@ class AuthController extends Controller
         return $this->authLogout(); // rest of the old method of the trait
     }
 
+    public function postLogin(ConnectToForum $forum)
+    {
+        /*if (!empty(\URL::previous()) && !str_contains(\URL::previous(), "auth/"))
+        {
+            $this->redirectAfterLogout = \URL::previous(); // Send back to previous url if possible
+        }*/
+ 
+        return $this->authLogout(); // rest of the old method of the trait
+        
+        $forum->login(Auth::user()->email,Auth::user()->forum_pw);
+    }
+
+    
     /**
      * Get a validator for an incoming registration request.
      *
