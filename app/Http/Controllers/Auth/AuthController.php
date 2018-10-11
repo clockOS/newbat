@@ -59,7 +59,7 @@ class AuthController extends Controller
             $this->redirectAfterLogout = \URL::previous(); // Send back to previous url if possible
         }*/
  
-        return $this->authLogout(); // rest of the old method of the trait
+        return $this->authLogin(); // rest of the old method of the trait
         
         $forum->login(Auth::user()->email,Auth::user()->forum_pw);
     }
