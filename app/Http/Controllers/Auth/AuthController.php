@@ -61,7 +61,7 @@ class AuthController extends Controller
  
         return $this->authLogin(); // rest of the old method of the trait
         
-        ConnectToForum $forum;
+        $forum = new ConnectToForum;
         
         $forum->login(Auth::user()->email,Auth::user()->forum_pw);
     }
