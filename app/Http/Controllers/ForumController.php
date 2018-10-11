@@ -59,7 +59,11 @@ class ForumController extends Controller
 
                     if(array_key_exists('errors', $res)){
 
-                        var_dump($res['errors']);
+                        foreach($res['errors'] as $error){
+                            
+                            echo $error;
+                        
+                        }
                         $fail ++;
 
                     }else{
