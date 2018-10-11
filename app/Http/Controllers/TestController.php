@@ -27,7 +27,7 @@ class TestController extends Controller
 
     public function test(ConnectToForum $forum)
     {
-        $res = $forum->signup('xinmima', '18', 'xinasedfyo3@6we436.com');
+        $res = $forum->signup('xinmima', '188888888', 'xin.yo3@6we436.com');
 
         //$forum->login('asdf@fuckb.at', '123456');
 
