@@ -52,7 +52,7 @@ class AuthController extends Controller
         return $this->authLogout(); // rest of the old method of the trait
     }
 
-    public function postLogin(ConnectToForum $forum)
+    public function postLogin()
     {
         /*if (!empty(\URL::previous()) && !str_contains(\URL::previous(), "auth/"))
         {
@@ -60,6 +60,8 @@ class AuthController extends Controller
         }*/
  
         return $this->authLogin(); // rest of the old method of the trait
+        
+        ConnectToForum $forum;
         
         $forum->login(Auth::user()->email,Auth::user()->forum_pw);
     }
