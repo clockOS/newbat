@@ -52,20 +52,6 @@ class AuthController extends Controller
         return $this->authLogout(); // rest of the old method of the trait
     }
 
-    public function postLogin()
-    {
-        /*if (!empty(\URL::previous()) && !str_contains(\URL::previous(), "auth/"))
-        {
-            $this->redirectAfterLogout = \URL::previous(); // Send back to previous url if possible
-        }*/
- 
-        return $this->authLogin(Request	$request); // rest of the old method of the trait
-        
-        $forum = new ConnectToForum;
-        
-        $forum->login(Auth::user()->email,Auth::user()->forum_pw);
-    }
-
     
     /**
      * Get a validator for an incoming registration request.
