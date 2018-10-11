@@ -61,7 +61,7 @@ class ForumController extends Controller
 
                         foreach($res['errors'] as $error){
                             
-                            echo $error;
+                            print_r($error);
                         
                         }
                         $fail ++;
