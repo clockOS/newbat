@@ -59,7 +59,7 @@ class ForumController extends Controller
 
                     if(array_key_exists('errors', $res)){
 
-                        echo '   <p style="color:red">注册失败</p>';
+                        var_dump($res['errors']);
                         $fail ++;
 
                     }else{
