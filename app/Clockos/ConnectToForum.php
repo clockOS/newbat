@@ -33,7 +33,7 @@ class ConnectToForum
 
         $this->setRememberMeCookie($token);
         
-        return $token
+        return $token;
 
     }
 
