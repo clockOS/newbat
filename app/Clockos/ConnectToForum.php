@@ -32,6 +32,8 @@ class ConnectToForum
         $token = $this->getToken($email, $password);
 
         $this->setRememberMeCookie($token);
+        
+        return $token
 
     }
 
@@ -69,7 +71,7 @@ class ConnectToForum
 
         //die(var_dump($response));
 
-        return isset($response['token']) ? $response['token'] : '';
+        return isset($response['token']) ? $response['token'] : $response;
     }
 
     public function signup($username, $password, $email)
