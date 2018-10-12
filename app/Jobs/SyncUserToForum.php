@@ -35,6 +35,8 @@ class SyncUserToForum extends Job implements SelfHandling, ShouldQueue
     {
         $generated_pw =  substr(md5(microtime()), 0, 59);
         
+        $sso_user = User::find($user->id);
+        
         $sso_user->forum_pw = $generated_pw;
         
         $sso_user->save();
