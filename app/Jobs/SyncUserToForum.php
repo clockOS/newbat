@@ -33,6 +33,8 @@ class SyncUserToForum extends Job implements SelfHandling, ShouldQueue
      */
     public function handle(ConnectToForum $forum, User $sso_user)
     {
+        dd($this->user);
+        
         $generated_pw =  substr(md5(microtime()), 0, 59);
         
         $sso_user = User::find($this->user->id);
