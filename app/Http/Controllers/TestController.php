@@ -29,7 +29,7 @@ class TestController extends Controller
     {
         //$res = $forum->signup('xinmima', '188888888', 'xin.yo3@6we436.com');
 
-        $res = $forum->login('fxxkbat@gmail.com', 'd341fecb6989e3a46b1187d5d017edba');
+        $res = $forum->login('yellove1992@gmail.com', 'e8ff9779c75012e6d89096089c45366f');
 
         dd($res);
 
