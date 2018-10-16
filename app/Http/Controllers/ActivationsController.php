@@ -39,7 +39,7 @@ class ActivationsController extends Controller
 
         Auth::user()->assignRole('rookie');
 
-        return redirect('auth/login');
+        return redirect("/newbie");
 
     }
 }
