@@ -43,6 +43,8 @@ class SyncUserToForum extends Job implements SelfHandling, ShouldQueue
         $sso_user->save();
 
         $forum_id = $forum->signup($this->user['username'], $this->user['forum_pw'], $this->user['email']);
+        
+        dd($forum_id);
 
         $forum->login($this->user['email'], $this->user['forum_pw']);
 
