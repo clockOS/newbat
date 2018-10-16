@@ -30,8 +30,6 @@ class ConnectToForum
     {
 
         $token = $this->getToken($email, $password);
-        
-        dd($token);
 
         $this->setRememberMeCookie($token);
         
@@ -91,10 +89,6 @@ class ConnectToForum
         ];
 
         $response = $this->sendPostRequest('/api/users', $data);
-
-        //dd($response);
-
-        //$act = $this->activate($response['data']['id']);
 
         return $response;
     }
