@@ -44,10 +44,10 @@ class AuthController extends Controller
 
         $forum->logout();
 
-        /*if (!empty(\URL::previous()) && !str_contains(\URL::previous(), "auth/"))
+        if (!empty(\URL::previous()) && !str_contains(\URL::previous(), "auth/"))
         {
             $this->redirectAfterLogout = \URL::previous(); // Send back to previous url if possible
-        }*/
+        }
  
         return $this->authLogout(); // rest of the old method of the trait
     }
