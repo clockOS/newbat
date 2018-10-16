@@ -21,7 +21,7 @@ class ActivationsController extends Controller
 
         $nameparts = explode("@", $user['email']);
 
-        $user['username'] = $nameparts[0];
+        $user['username'] = substr($nameparts[0], 0, 29);
 
         $user['sponsor_code'] = md5($user['email'].time());
 
