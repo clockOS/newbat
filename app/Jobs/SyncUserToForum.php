@@ -31,23 +31,16 @@ class SyncUserToForum extends Job implements SelfHandling, ShouldQueue
      *
      * @return void
      */
-    public function handle(ConnectToForum $forum, User $sso_user)
+    public function handle(ConnectToForum $forum)
     {
-        dd($this->user);
         
         $generated_pw =  substr(md5(microtime()), 0, 59);
         
-        $sso_user = User::find($this->user->id);
+        $this->user->forum_pw = $generated_pw;
         
-        $sso_user->forum_pw = $generated_pw;
-        
-        $sso_user->save();
-        
-        dd($sso_user);
+        $this->user->save();
 
-        $forum_id = $forum->signup($this->user['username'], $this->user['forum_pw'], $this->user['email']);
-        
-        dd($forum_id);
+        $forum_id = $forum->signup($this->user->username, $this->user->forum_pw , $this->user->email);    
 
         $forum->login($this->user['email'], $this->user['forum_pw']);
 
