@@ -11,7 +11,6 @@ namespace App;
 use Laravel\Socialite\Contracts\Factory as Socialite;
 use App\Repositories\UserRepository;
 use Illuminate\Contracts\Auth\Guard;
-use Clockos\ConnectToForum;
 
 class AuthenticateUser
 {
@@ -33,10 +32,6 @@ class AuthenticateUser
         if(!$hasCode) return $this->getAuthorizationFirst();
 
         $user = $this->users->findByUsernameOrCreate($this->getGithubUser());
-
-        $forum = new ConnectToForum;
-
-        $forum->login($user['email'],$user['password']);
 
         $this->auth->login($user,true);
 
