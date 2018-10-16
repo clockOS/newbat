@@ -35,8 +35,12 @@ class PagesController extends Controller
         if(Auth::user()){
 
             $user = Auth::user();
+            
+            dd($user);
 
-            $conn = $forum->login($user['email'],$user['forum_pw']);   
+            $conn = $forum->login($user['email'],$user['forum_pw']); 
+            
+            
             
             dd($conn);
         
