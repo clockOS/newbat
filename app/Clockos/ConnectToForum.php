@@ -30,6 +30,8 @@ class ConnectToForum
     {
 
         $token = $this->getToken($email, $password);
+        
+        dd($token);
 
         $this->setRememberMeCookie($token);
         
