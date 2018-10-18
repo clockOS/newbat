@@ -46,9 +46,11 @@ class TestController extends Controller
         );
         $result = curl_exec($ch);
         
-        dd($result);
+        $result = json_decode($result, true);
         
-        echo count($result->data);
+        //dd($result);
+        
+        echo count($result['data']);
         
         
 
