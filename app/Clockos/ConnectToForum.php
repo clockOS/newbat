@@ -111,6 +111,23 @@ class ConnectToForum
 
         return json_decode($result, true);
     }
+    
+    private function sendGetRequest($path, $data)
+    {
+        $data_string = json_encode($data);
+        $ch = curl_init($this->config['url'] . $path);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($data_string),
+                'Authorization: Token ' . $this->config['api_key'] . '; userId=1',
+            ]
+        );
+        $result = curl_exec($ch);
+        return json_decode($result, true);
+    }
 
     private function activate($id)
     {
