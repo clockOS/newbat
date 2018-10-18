@@ -27,13 +27,29 @@ class TestController extends Controller
 
     public function test(ConnectToForum $forum)
     {
-        $res = $forum->signup('yellove', 'e8ff9773wdth12e6d89096089c45366f', 'yellove2392@gmail.com');
+        //$res = $forum->signup('yellove', 'e8ff9773wdth12e6d89096089c45366f', 'yellove2392@gmail.com');
 
         //$res = $forum->login('yellove1992@gmail.com', 'e8ff9779c75012e6d89096089c45366f');
+        
+        $data= [];
+        
+        $data_string = json_encode($data);
+        $ch = curl_init('https://bbsdev.fuckb.at/api/posts');
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($data_string),
+                'Authorization: Token ' . config('app.forum.api_key') . '; userId=1',
+            ]
+        );
+        $result = curl_exec($ch);
+        
+        dd($result);
+        
+        
 
-        dd($res);
-
-        echo 'zhuce';
     }
 
 }
