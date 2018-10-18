@@ -34,7 +34,7 @@ class TestController extends Controller
         $data= [];
         
         $data_string = json_encode($data);
-        $ch = curl_init('https://bbsdev.fuckb.at/api/posts/1');
+        $ch = curl_init('https://bbsdev.fuckb.at/api/posts?filter[user]=1');
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
