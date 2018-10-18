@@ -33,6 +33,9 @@ class TestController extends Controller
         
         $data= [];
         
+        $uid = Input::get('uid');
+        dd($uid);
+        
         $data_string = json_encode($data);
         $ch = curl_init('https://bbsdev.fuckb.at/api/posts?filter[user]=5');
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -44,7 +47,7 @@ class TestController extends Controller
                 'Authorization: Token ' . config('app.forum.api_key') . '; userId=1',
             ]
         );
-        $result = curl_exec($ch);
+        //$result = curl_exec($ch);
         
         dd($result);
         
