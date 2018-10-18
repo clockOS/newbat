@@ -46,7 +46,9 @@ class TestController extends Controller
         );
         $result = curl_exec($ch);
         
-        echo count($result['data']);
+        dd($result);
+        
+        //echo count($result['data']);
         
         
 
