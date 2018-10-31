@@ -43,7 +43,7 @@ class TestController extends Controller
         
         $data['currentExp'] = 350;
         
-        return view('user.levelup',compact('data'));
+        return view('user.levelup',$data);
     }
 
 
