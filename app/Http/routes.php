@@ -43,6 +43,7 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 // Test routes...
 Route::get('/test','TestController@index');
 Route::get('/test/test','TestController@test');
+Route::get('/test/levelup','TestController@levelup');
 Route::get('/test/index',function(){
     return view('test.index');
 });
