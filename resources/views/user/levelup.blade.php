@@ -10,6 +10,17 @@
     <link href="https://lib.baomitu.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
       
       <style>
+      
+      /* spicy-rice-regular */
+@font-face {
+  font-family: 'Spicy Rice';
+  font-style: normal;
+  font-weight: regular;
+  src: url('//lib.baomitu.com/fonts/spicy-rice/spicy-rice-regular.eot'); /* IE9 Compat Modes */
+  src: local('Spicy Rice'), local('SpicyRice-Normal'),
+       url('//lib.baomitu.com/fonts/spicy-rice/spicy-rice-regular.woff') format('woff'), /* Modern Browsers */
+       url('//lib.baomitu.com/fonts/spicy-rice/spicy-rice-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
           .modal-body{
               padding-top:55px;
               padding-left:35px;
@@ -21,11 +32,12 @@
           .progress-bar{
               padding: 10px;
               text-align:left;
-              font-family: 'Sacramento', cursive;
+              font-family: 'Spicy Rice', cursive
           }
           .progress-bar span{
               font-size:2em;
-              font-weight:600;
+              font-weight:200;
+       
           }
           .inc-img{
               height:24px;
@@ -37,10 +49,10 @@
           }          
           .level-title{             
               
-              font-family: cursive;
-              font-size:6em;
+              font-family: 'Spicy Rice', cursive
+              font-size:7em;
               text-align:center;
-              font-weight:600;
+              font-weight:500;
               text-transform: uppercase;
               background: linear-gradient(to top, #5cb85c 0%, #FFFF00 100%);
               -webkit-background-clip: text;
@@ -57,7 +69,7 @@
               font-size:3em;
               text-align:center;
               font-weight:500;  
-              font-family: cursive;
+              font-family: 'Spicy Rice', cursive
               
           }
           .added{
