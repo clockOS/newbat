@@ -158,9 +158,9 @@
                 <div id="level-title" class="level-title bounceIn animated delay-3s">LEVEL UP!</div>
                 <div class="level-change">Level {{$preLevel}}</div>
                 <br>
-                <div id="coin-inc" class="added fadeIn animated"><img class="inc-img" src="{{ \Clockos\Test::cdn('/img/coin.svg')}}">&nbsp;{{trans('app.stock')}}   {{$stockInc}}&nbsp;<img class="inc-img" src="img/4.svg"></div>
-                <div id="vote-inc" class="added fadeIn animated"><img class="inc-img" src="{{ \Clockos\Test::cdn('/img/ticket.svg')}}">&nbsp;{{trans('app.vote')}}   {{$voteInc}}&nbsp;<img class="inc-img" src="img/4.svg"></div>
-                <div id="exp-inc" class="added fadeIn animated"><img class="inc-img" src="{{ \Clockos\Test::cdn('/img/book.svg')}}">&nbsp;{{trans('app.exp')}}   {{$expInc}}&nbsp;<img class="inc-img" src="img/4.svg"></div>
+                <div id="coin-inc" class="added fadeIn animated"><img class="inc-img" src="{{ \Clockos\Test::cdn('/img/coin.svg')}}">&nbsp;{{trans('app.stock')}}   {{$stockInc}}&nbsp;<img class="inc-img" src="{{ \Clockos\Test::cdn('/img/up.svg')}}"></div>
+                <div id="vote-inc" class="added fadeIn animated"><img class="inc-img" src="{{ \Clockos\Test::cdn('/img/ticket.svg')}}">&nbsp;{{trans('app.vote')}}   {{$voteInc}}&nbsp;<img class="inc-img" src="{{ \Clockos\Test::cdn('/img/up.svg')}}"></div>
+                <div id="exp-inc" class="added fadeIn animated"><img class="inc-img" src="{{ \Clockos\Test::cdn('/img/book.svg')}}">&nbsp;{{trans('app.exp')}}   {{$expInc}}&nbsp;<img class="inc-img" src="{{ \Clockos\Test::cdn('/img/up.svg')}}"></div>
                 <br><br>
               <div class="progress" id="exp-full-bar">
                   <div class="progress-bar progress-bar-success" id="exp-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
