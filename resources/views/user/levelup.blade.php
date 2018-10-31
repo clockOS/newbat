@@ -82,7 +82,7 @@
             } 
             @keyframes pre-up {
               0% {
-                width: 75%;
+                width: {{$preRatio}}%;
               }
               30% {
                 width: 100%;
@@ -101,7 +101,7 @@
               }
                 
               to {
-                width: 30%;
+                width: {{$postRatio}}%;
               }
             } 
 
@@ -188,7 +188,7 @@
                     prefix : '',
                     suffix : ''
                 };
-                var demo = new CountUp("exp-value", 300, 600, 0, 1, options);
+                var demo = new CountUp("exp-value", {{$currentExp}}, {{$preLevelExp}}, 0, 1, options);
                 demo.start(function() {
                     
                 });
@@ -212,7 +212,7 @@
                     suffix : ''
                 };
                 
-                var demo = new CountUp("exp-value", 0, 200, 0, 1.5, options);
+                var demo = new CountUp("exp-value", 0, {{$finishExp}}, 0, 1.5, options);
 
                 demo.start(function() {
 
