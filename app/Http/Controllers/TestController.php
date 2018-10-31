@@ -26,22 +26,31 @@ class TestController extends Controller
     public function levelup()
     {
         
+        $data['currentExp'] = 350;
+        
+        $data['finishExp'] = 227;
         
         $data['preLevel'] = 5;
         
         $data['postLevel'] = 6;
         
-        $data['preLevelExp'] = 200;
+        $data['preLevelExp'] = 550;
         
-        $data['postLevelExp'] = 5;
+        $data['postLevelExp'] = 700;
         
-        $data['stockInc'] = 5;
+        $data['preRatio'] = ($data['currentExp']/$data['preLevelExp'])*100;
         
-        $data['voteInc'] = 5;
+        $data['postRatio'] = ($data['finishExp']/$data['postLevelExp'])*100;
         
-        $data['expInc'] = 5;
+        $data['stockInc'] = 50;
         
-        $data['currentExp'] = 350;
+        $data['voteInc'] = 30;
+        
+        $data['expInc'] = 350;
+        
+        
+        
+
         
         return view('user.levelup',$data);
     }
