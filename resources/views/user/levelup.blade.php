@@ -10,17 +10,6 @@
     <link href="https://lib.baomitu.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
       
       <style>
-          /* sacramento-regular */
-@font-face {
-    font-family: 'Sacramento';
-    font-style: normal;
-    font-weight: regular;
-    src: url('//lib.baomitu.com/fonts/sacramento/sacramento-regular.eot');
-    src: local('Sacramento'), local('Sacramento-Normal'),
-         url('//lib.baomitu.com/fonts/sacramento/sacramento-regular.woff') format('woff'),
-         url('//lib.baomitu.com/fonts/sacramento/sacramento-regular.ttf') format('truetype')
-}
-
           .modal-body{
               padding-top:55px;
               padding-left:35px;
@@ -48,7 +37,7 @@
           }          
           .level-title{             
               
-              font-family: 'Sacramento', cursive;
+              font-family: cursive;
               font-size:6em;
               text-align:center;
               font-weight:600;
@@ -68,7 +57,7 @@
               font-size:3em;
               text-align:center;
               font-weight:500;  
-              font-family: 'Sacramento', cursive;
+              font-family: cursive;
               
           }
           .added{
