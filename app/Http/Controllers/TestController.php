@@ -22,6 +22,29 @@ class TestController extends Controller
     {
         return Invest::invested();
     }
+    
+    public function levelup()
+    {
+        
+        
+        $data['preLevel'] = 5;
+        
+        $data['postLevel'] = 6;
+        
+        $data['preLevelExp'] = 200;
+        
+        $data['postLevelExp'] = 5;
+        
+        $data['stockInc'] = 5;
+        
+        $data['voteInc'] = 5;
+        
+        $data['expInc'] = 5;
+        
+        $data['currentExp'] = 350;
+        
+        return view('user.levelup',compact('data'));
+    }
 
 
 
