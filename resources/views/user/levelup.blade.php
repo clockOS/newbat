@@ -28,6 +28,8 @@
           .progress-bar span{
               font-size:2em;
               font-weight:200;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: #5cb85c;
        
           }
           .inc-img{
