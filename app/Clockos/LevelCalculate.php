@@ -29,4 +29,22 @@ class LevelCalculate
 
         return $level;
     }
+    
+    
+    public function expPerLevel($level)
+    {
+
+        if($level == 1){
+            $exp = 26;
+        }elseif($level == 255)){
+            $exp = '∞';
+        }else{
+            $exp = 6*$level*$level + 6*$level +2;
+        }
+
+        return $exp;
+    }
+    
+    
+    
 }
