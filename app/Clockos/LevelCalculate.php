@@ -47,7 +47,7 @@ class LevelCalculate
 
         if($level == 1){
             $exp = 26;
-        }elseif($level == 255)){
+        }elseif($level == 255){
             $exp = '∞';
         }else{
             $exp = 6*$level*$level + 6*$level +2;
