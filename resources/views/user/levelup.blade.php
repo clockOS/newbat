@@ -40,7 +40,7 @@
           }          
           .level-title{             
               
-              font-family: 'Spicy Rice', cursive
+              font-family: 'Spicy Rice', cursive;
               font-size:7em;
               text-align:center;
               font-weight:500;
