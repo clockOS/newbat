@@ -12,6 +12,8 @@ use Clockos\LevelCalculate;
 use App\Status;
 use DB;
 use App\User;
+use Event;
+use App\Events\UserHasIncome;
 
 class NewbieReward extends Job implements SelfHandling, ShouldQueue
 {
@@ -96,6 +98,8 @@ class NewbieReward extends Job implements SelfHandling, ShouldQueue
         $status['quests_done'] = Status::questsNum([4]);
 
         Status::updateStatus($status);
+        
+        Event::fire(new UserHasIncome($income));
         //通知执行者
 
     }
