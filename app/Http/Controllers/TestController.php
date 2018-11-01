@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Redis;
 
 use Clockos\ConnectToForum;
+use Clockos\LevelCalculate;
 
 
 
@@ -23,35 +24,38 @@ class TestController extends Controller
         return Invest::invested();
     }
     
-    public function levelup()
+    public function levelup(LevelCalculate $calc)
     {
+        //input
         
-        $data['currentExp'] = 350;
+        $level = 6;
         
-        $data['finishExp'] = 227;
+        $exp = 530;
         
-        $data['preLevel'] = 5;
-        
-        $data['postLevel'] = 6;
-        
-        $data['preLevelExp'] = 550;
-        
-        $data['postLevelExp'] = 700;
-        
-        $data['preRatio'] = ($data['currentExp']/$data['preLevelExp'])*100;
-        
-        $data['postRatio'] = ($data['finishExp']/$data['postLevelExp'])*100;
+        $data['expInc'] = 200;
         
         $data['stockInc'] = 50;
         
         $data['voteInc'] = 30;
         
-        $data['expInc'] = 350;
+        //cal
+                     
+        $data['currentExp'] = $exp - 200 - $calc->toExp($level-1);
         
+        $data['finishExp'] = $exp - $calc->toExp($level);
         
+        $data['preLevel'] = $data['postLevel'] - 1;
         
-
+        $data['postLevel'] = $level;
         
+        $data['preLevelExp'] = $calc->expPerLevel($level-1);    //182
+        
+        $data['postLevelExp'] = $calc->expPerLevel($level);     //254
+        
+        $data['preRatio'] = ($data['currentExp']/$data['preLevelExp'])*100;
+        
+        $data['postRatio'] = ($data['finishExp']/$data['postLevelExp'])*100;
+       
         return view('user.levelup',$data);
     }
 
