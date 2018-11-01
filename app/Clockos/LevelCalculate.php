@@ -30,6 +30,17 @@ class LevelCalculate
         return $level;
     }
     
+    public function toExp($level)
+    {
+        if($level == 1){
+            $exp = 26;
+        }else{
+            $exp = 2*pow($level, 3) + 10;
+        }
+
+        return $exp;
+    }
+    
     
     public function expPerLevel($level)
     {
