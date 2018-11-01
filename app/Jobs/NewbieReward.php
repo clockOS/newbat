@@ -78,29 +78,10 @@ class NewbieReward extends Job implements SelfHandling, ShouldQueue
             $income->subject_id = $this->quest->id;
 
             $income->save();
+            
+            Event::fire(new UserHasIncome($income));
 
         });
-
-        //更新状态
-
-        $status['stock_wait'] = Status::stocksNum([1,2,3]);             //待发行股权的总数
-
-        $status['stock'] = Status::usersSum('stock');              //已发行股权的总数
-
-        $status['per_stock'] = (1/(Status::usersSum('stock')))*100;                //平均每股所占百分比
-
-        $status['quests_doing'] = Status::questsNum([3]);             //待发行股权的总数
-
-        $status['quests_done'] = Status::questsNum([4]);
-
-        $status['vote'] = Status::usersSum('vote');
-
-        $status['quests_done'] = Status::questsNum([4]);
-
-        Status::updateStatus($status);
-        
-        Event::fire(new UserHasIncome($income));
-        //通知执行者
 
     }
 }
