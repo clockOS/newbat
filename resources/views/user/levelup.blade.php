@@ -8,19 +8,10 @@
     <meta name="author" content="">
     <link href="https://lib.baomitu.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://lib.baomitu.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.loli.net/css?family=Spicy+Rice" rel="stylesheet">
       
       <style>
-      
-      /* spicy-rice-regular */
-@font-face {
-  font-family: 'Spicy Rice';
-  font-style: normal;
-  font-weight: regular;
-  src: url('//lib.baomitu.com/fonts/spicy-rice/spicy-rice-regular.eot'); /* IE9 Compat Modes */
-  src: local('Spicy Rice'), local('SpicyRice-Normal'),
-       url('//lib.baomitu.com/fonts/spicy-rice/spicy-rice-regular.woff') format('woff'), /* Modern Browsers */
-       url('//lib.baomitu.com/fonts/spicy-rice/spicy-rice-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-}
+
           .modal-body{
               padding-top:55px;
               padding-left:35px;
