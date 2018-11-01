@@ -13,6 +13,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\AvailableUser' => [
             'App\Listeners\EventListener',
         ],
+        'App\Events\UserHasIncome' => [
+            'App\Listeners\IncomeNotifications',
+        ]
     ];
     /**
      * Register any other events for your application.
