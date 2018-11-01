@@ -16,7 +16,7 @@
           .progress-bar{
               padding: 10px;
               text-align:left;
-              font-family: 'Spicy Rice', cursive
+              font-family: 'Spicy Rice', cursive!important;
           }
           .progress-bar span{
               font-size:2em;
@@ -35,7 +35,7 @@
           }          
           .level-title{             
               
-              font-family: 'Spicy Rice', cursive;
+              font-family: 'Spicy Rice', cursive!important;
               font-size:7em;
               text-align:center;
               font-weight:500;
@@ -55,7 +55,7 @@
               font-size:3em;
               text-align:center;
               font-weight:500;  
-              font-family: 'Spicy Rice', cursive
+              font-family: 'Spicy Rice', cursive!important;
               
           }
           .added{
