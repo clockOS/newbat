@@ -16,13 +16,14 @@
           .progress-bar{
               padding: 10px;
               text-align:left;
-              font-family: 'Spicy Rice', cursive!important;
+              
           }
           .progress-bar span{
               font-size:2em;
               font-weight:200;
               -webkit-text-stroke-width: 1px;
               -webkit-text-stroke-color: #5cb85c;
+              font-family: 'Spicy Rice', cursive!important;
        
           }
           .inc-img{
@@ -124,7 +125,6 @@
 }
 
       </style>
-<link href="https://lib.baomitu.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
 @endsection
 @section('content')
 
@@ -159,7 +159,7 @@
           </div>
         </div>
       </div>
-
+@endsection
 @section('footer')
 
       <script src="https://lib.baomitu.com/countup.js/1.9.3/countUp.min.js"></script>
