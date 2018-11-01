@@ -44,7 +44,7 @@ class TestController extends Controller
         
         $data['finishExp'] = $exp - $calc->toExp($level);
         
-        $data['preLevel'] = $data['postLevel'] - 1;
+        $data['preLevel'] = $level - 1;
         
         $data['postLevel'] = $level;
         
