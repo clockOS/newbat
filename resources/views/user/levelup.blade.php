@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://lib.baomitu.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+@extends('app')
+@section('stylesheet')
     <link href="https://lib.baomitu.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link href="https://fonts.loli.net/css?family=Spicy+Rice" rel="stylesheet">
       
@@ -131,12 +124,10 @@
 }
 
       </style>
-  </head>
+<link href="https://lib.baomitu.com/highlight.js/9.1.0/styles/tomorrow-night.min.css" rel="stylesheet">
+@endsection
+@section('content')
 
-  <body>
-
-
-    <div class="container">
         
         
 
@@ -169,12 +160,8 @@
         </div>
       </div>
 
-    </div>
+@section('footer')
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
       <script src="https://lib.baomitu.com/countup.js/1.9.3/countUp.min.js"></script>
       <script>
         $(document).ready(function(){
@@ -244,5 +231,4 @@
 
       </script>
 
-  </body>
-</html>
+@endsection
