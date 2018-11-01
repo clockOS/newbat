@@ -26,6 +26,6 @@ class IncomeNotifications
      */
     public function handle(UserHasIncome $event)
     {
-        //
+        var_dump('New income');
     }
 }
