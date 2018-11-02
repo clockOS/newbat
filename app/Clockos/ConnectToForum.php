@@ -131,7 +131,7 @@ class ConnectToForum
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Content-Length: ' . strlen($data_string),
-                'Authorization: Token ' . $this->config['api_key'] . '; userId=1',
+                'Authorization: Token ' . $this->config['api_key'] . '; userId=130',
             ]
         );
         $result = curl_exec($ch);
@@ -149,7 +149,7 @@ class ConnectToForum
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Content-Length: ' . strlen($data_string),
-                'Authorization: Token ' . $this->config['api_key'] . '; userId=1',
+                'Authorization: Token ' . $this->config['api_key'] . '; userId=130',
             ]
         );
         $result = curl_exec($ch);
@@ -166,7 +166,7 @@ class ConnectToForum
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Content-Length: ' . strlen($data_string),
-                'Authorization: Token ' . $this->config['api_key'] . '; userId=1',
+                'Authorization: Token ' . $this->config['api_key'] . '; userId=130',
             ]
         );
         $result = curl_exec($ch);
