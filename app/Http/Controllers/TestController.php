@@ -88,7 +88,7 @@ class TestController extends Controller
         
         echo count($result['data']);*/
         
-        $attr => ["password" => 666];
+        $attr = ["password" => '666'];
         
         $result = $forum->updateUser(130,$attr);
         
