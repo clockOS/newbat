@@ -111,7 +111,6 @@ class ConnectToForum
                 "type" => "users",
                 "attributes" => $attr
                 ]
-            ]
         ];
 
         $response = $this->sendPatchRequest('/api/users:'.$id, $data);
