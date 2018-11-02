@@ -92,7 +92,7 @@ class TestController extends Controller
         
         $user = User::findOrFail(130);
         
-        dd($user->forum_pw);
+        //dd($user->forum_pw);
         
         $attr = ["password" => $user->forum_pw];
         
