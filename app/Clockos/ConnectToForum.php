@@ -44,6 +44,17 @@ class ConnectToForum
     {
         $this->removeRememberMeCookie();
     }
+    
+    public function getPosts($id)
+    {
+
+        $path = '/api/posts?filter[user]='.$id;
+
+        $data = [];
+
+        return $this->sendGetRequest($path, $data);
+        
+    }
 
     /**
      * Redirects a user back to the forum.
