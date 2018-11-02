@@ -94,11 +94,9 @@ class TestController extends Controller
         
         //dd($user->forum_pw);
         
-        $attr = ["password" => time()];
+        $attr = ["password" => $user->forum_pw];
         
         $result = $forum->updateUser(130,$attr);
-        
-        dd($result);
         
     }
 
