@@ -82,14 +82,16 @@ class TestController extends Controller
         );
         $result = curl_exec($ch);
         
-        $result = json_decode($result, true);*/
+        $result = json_decode($result, true);
        
         $result = $forum->getPosts(130);
         
-        echo count($result['data']);
+        echo count($result['data']);*/
         
+        $attr => ["password" => 666];
         
-
+        $result = $forum->updateUser(130,$attr);
+        
     }
 
 }
