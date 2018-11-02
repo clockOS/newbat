@@ -98,6 +98,8 @@ class TestController extends Controller
         
         $result = $forum->updateUser(130,$attr);
         
+        dd($result);
+        
     }
 
 }
