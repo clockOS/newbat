@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Decision;
 use App\Invest;
+use App\User;
 use App\Services\UpyunOther;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Redis;
 
 use Clockos\ConnectToForum;
 use Clockos\LevelCalculate;
+
 
 
 
@@ -88,7 +90,11 @@ class TestController extends Controller
         
         echo count($result['data']);*/
         
-        $attr = ["password" => '666'];
+        $user = User::findOrFail(130);
+        
+        dd($user->forum_pw);
+        
+        $attr = ["password" => $user->forum_pw;];
         
         $result = $forum->updateUser(130,$attr);
         
