@@ -115,7 +115,7 @@ class ConnectToForum
                 ]
         ];
 
-        $response = $this->sendPatchRequest('/api/users/:'.$id, $data);
+        $response = $this->sendPatchRequest('/api/users/'.$id, $data);
 
         return $response;
     }
