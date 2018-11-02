@@ -82,7 +82,7 @@ class ConnectToForum
 
         $response = $this->sendPostRequest('/api/token', $data);
 
-        //die(var_dump($response));
+        die(var_dump($response));
 
         return isset($response['token']) ? $response['token'] : $response;
     }
