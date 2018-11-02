@@ -67,7 +67,7 @@ class TestController extends Controller
 
         //$res = $forum->login('yellove1992@gmail.com', 'e8ff9779c75012e6d89096089c45366f');
         
-        $data= [];
+        /*$data= [];
         
         $data_string = json_encode($data);
         $ch = curl_init('https://bbsdev.fuckb.at/api/posts?filter[user]=130');
@@ -82,9 +82,9 @@ class TestController extends Controller
         );
         $result = curl_exec($ch);
         
-        $result = json_decode($result, true);
-        
-        //dd($result);
+        $result = json_decode($result, true);*/
+       
+        $result = $forum->getPosts(130);
         
         echo count($result['data']);
         
