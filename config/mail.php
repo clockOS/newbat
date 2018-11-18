@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'info@fuckb.at', 'name' => env('MAIL_FROM_NAME', 'FuckBAT')],
 
     /*
     |--------------------------------------------------------------------------
@@ -119,6 +119,6 @@ return [
     |
     */
 
-    'pretend' => env('MAIL_PRETEND', false),
+    'pretend' => false,
 
 ];

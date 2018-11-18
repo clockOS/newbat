@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Clockos\ConnectToForum;
 
 class AuthController extends Controller
 {
@@ -21,7 +22,12 @@ class AuthController extends Controller
     |
     */
 
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    use AuthenticatesAndRegistersUsers     
+    {
+        getLogout as authLogout;
+        postLogin as authLogin; 
+    }
+    use ThrottlesLogins;
 
     /**
      * Create a new authentication controller instance.
@@ -33,6 +39,20 @@ class AuthController extends Controller
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
+    public function getLogout(ConnectToForum $forum)
+    {
+
+        $forum->logout();
+
+        if (!empty(\URL::previous()) && !str_contains(\URL::previous(), "auth/"))
+        {
+            $this->redirectAfterLogout = \URL::previous(); // Send back to previous url if possible
+        }
+ 
+        return $this->authLogout(); // rest of the old method of the trait
+    }
+
+    
     /**
      * Get a validator for an incoming registration request.
      *
@@ -42,7 +62,6 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
@@ -56,10 +75,14 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        $nameparts = explode("@", $data['email']);
+        $username = $nameparts[0];
         return User::create([
-            'name' => $data['name'],
+            'username' => $username,
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    protected $redirectPath = '/';
 }

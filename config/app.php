@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'zh',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'zh',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +95,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => 'single',
 
     /*
     |--------------------------------------------------------------------------
@@ -136,6 +136,22 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Html\HtmlServiceProvider::class,
+
+
+
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        Laracasts\Flash\FlashServiceProvider::class,
+
+        Intervention\Image\ImageServiceProvider::class,
+
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
+        Spatie\Permission\PermissionServiceProvider::class,
+
+
+
 
         /*
          * Application Service Providers...
@@ -144,6 +160,9 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ViewComposerServiceProvider::class,
+
+
 
     ],
 
@@ -176,6 +195,7 @@ return [
         'Gate'      => Illuminate\Support\Facades\Gate::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
         'Input'     => Illuminate\Support\Facades\Input::class,
+        'Inspiring' => Illuminate\Foundation\Inspiring::class,
         'Lang'      => Illuminate\Support\Facades\Lang::class,
         'Log'       => Illuminate\Support\Facades\Log::class,
         'Mail'      => Illuminate\Support\Facades\Mail::class,
@@ -192,7 +212,38 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'Form'      => Illuminate\Html\FormFacade::class,
+        'Html'      => Illuminate\Html\HtmlFacade::class,
+        'Flash'     => Laracasts\Flash\Flash::class,
+        'Image'     => Intervention\Image\Facades\Image::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
+
+
+    'ossServer' => 'devsrc.oss-cn-beijing.aliyuncs.com',
+    'ossServerInternal' => 'devsrc.oss-cn-beijing-internal.aliyuncs.com', //青岛为 http://oss-cn-qingdao-internal.aliyuncs.com
+    'AccessKeyId' => env('ALIYUN_ID'),
+    'AccessKeySecret' => env('ALIYUN_SECRET'),
+
+    'forum' => [
+
+            'url' => env('FORUM_URL', 'http://bbs.fuckbat.dev:8888'),
+
+            'admin_username' => env('FORUM_USER'),
+
+            'admin_password' => env('FORUM_PASS'),
+
+            'root_domain' => env('ROOT_DOMAIN'),
+
+            'api_key' => env('FORUM_API_KEY'),
+
+            'password_token' => env('FORUM_PW_TOKEN'),
+
+            // How many days should the login be valid
+            'lifetime_in_days' => 14
+
+
+    ]
 
 ];
