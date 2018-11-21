@@ -42,6 +42,17 @@ class CreateUsersTable extends Migration
             $table->json('settings');
             $table->unsignedTinyInteger('type')->default(0);            //用户类型
         });
+
+        DB::table('users')->insert(
+            array(
+                'email' => 'admin@newb.at',
+                'username' => 'admin',
+                'password' => bcrypt('123456'),
+                'avatar' => 'https://img.fuckb.at/img/avatar.png',
+                'sponsor_code' => '123456'
+            )
+        );
+
     }
 
     /**

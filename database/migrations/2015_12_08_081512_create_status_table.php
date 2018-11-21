@@ -36,6 +36,14 @@ class CreateStatusTable extends Migration
             $table->unsignedInteger('members');                 //总会员的数
         });
 
+        DB::insert("
+        
+        INSERT INTO `status` (`id`, `created_at`, `updated_at`, `stock`, `stock_wait`, `per_stock`, `average_price`, `stock_trade`, `experience`, `vote`, `quests_done`, `quests_doing`, `quests_open`, `quests_wait`, `quests_all`, `cash_flow`, `invested`, `invest_wait`, `outcome`, `outcome_wait`, `full_time`, `members`)
+        VALUES
+            (282, '2018-11-20 07:27:52', '2018-11-20 07:27:52', 30207, 175, 0.00, 0.0000, 0, 30010, 30751, 9, 3, 1, 2, 51, 1698, 5000, 0, 3302, 570, 1, 132);
+        
+        ");
+
     }
 
     /**
