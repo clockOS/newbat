@@ -81,6 +81,17 @@ class CreatePermissionTables extends Migration
                 $table->primary(['permission_id', 'role_id']);
             });
         });
+
+
+        DB::insert("
+        
+        INSERT INTO `roles` (`id`, `name`, `logo`, `superior_id`, `full_path`, `created_at`, `updated_at`)
+            
+            VALUES
+                (1, 'ceo', '/img/roles/color/ceo.png', 0, '', '2015-12-12 10:09:13', '2015-12-12 10:09:13'),
+                (2, 'rookie', '/img/roles/color/rookie.png', 0, '', '2016-01-27 01:43:44', '2016-01-27 01:43:44');
+        
+        ");
     }
 
     /**

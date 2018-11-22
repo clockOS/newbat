@@ -16,6 +16,10 @@ class CreateUsersTable extends Migration
 
         });
 
+        DB::statement('
+            SET GLOBAL FOREIGN_KEY_CHECKS = 0;
+        ');
+
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username');
@@ -62,6 +66,10 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+        DB::statement('
+            SET GLOBAL FOREIGN_KEY_CHECKS = 0;
+        ');
+
         Schema::drop('users');
     }
 }
