@@ -101,9 +101,6 @@
     <div class="jumbotron last-jumb">
         <div class="jumbotron left-jumb col-sm-6">
             <div class="container">
-
-                <h2>扫码加入群聊</h2>
-                <br/>
                 <p><span id="letschat"></span><span class="animated infinite flash">|</span></p>
             </div>
         </div>
