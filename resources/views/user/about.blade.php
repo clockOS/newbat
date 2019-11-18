@@ -23,7 +23,7 @@
 
 <div class="jumbotron first-jumb">
     <div class="container">
-        <h1 class="animated shake">{{trans('app.brand')}}</h1>
+        <h1 class="animated shake">CoolDevelop</h1>
         <h2>酷开发</h2>
         <br/>
         <p>数万名开发者共同开发一款产品</p>
