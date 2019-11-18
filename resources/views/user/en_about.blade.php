@@ -23,27 +23,22 @@
 
 <div class="jumbotron first-jumb">
     <div class="container">
-        <h1 class="animated shake">{{trans('app.brand')}}</h1>
-        <h2>BAT</h2>
+        <h1 class="animated shake">CoolDevelop</h1>
         <br/>
-        <p>{{trans('app.brand')}}is a online game<br/>
-            玩家们通过做各种任务共同击败"BAT"这三个BOSS</p>
+        <p>Make an App with thousands of developers</p>
         <br/>
         <p><a class="btn btn-lg white-btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
     </div>
 </div>
 <div class="jumbotron second-jumb">
     <div class="container">
-        <h1>召集<span id="myTargetElement">1'000'000</span>名玩家</h1>
-        <h2>💩上最大的群P(rogramming)项目</h2>
+        <h1>Gathering<span id="myTargetElement">1'000'000</span>developers</h1>
         <br/>
         <p>
-            这三个BOSS略强大，需要1000000个人才能干的动<br/>
-            虽然第一个BOSS "B"自己就要挂了<br/>
-            没办法...名字都起了，最主要的是花钱买域名了！<br/>
-            按照这个字母顺序逐一干掉。<br/>
+            One App, One Goal<br/>
+
             <br/>
-        <p><a class="btn btn-lg animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名玩家&nbsp;</a></p>
+        <p><a class="btn btn-lg animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;Become a member</a></p>
     </div>
 </div>
 <div class="container">
@@ -53,14 +48,13 @@
             <br/>
             <br/>
             <br/>
-            <h3>成为新BAT玩家的唯一条件</h3>
-            <h1>零欺骗</h1>
+            <h3>Why it is cool </h3>
             <br/>
-            <p>不要套路，不要谎言。<br/>
-                是几厘米就是几厘米，可以长，可以短<br/>
-                是老爷们就不是老娘们，可以快，可以慢<br/>
-                任何信息绝不允许虚报<br/>
-                拒绝洗脑，拒绝画饼。<br/>
+            <p>Participate wherever you are<br/>
+                Get the reward no matter how small it is<br/>
+                A new way to make decision together<br/>
+                You will always find a worktype you like<br/>
+                Intuitive data helps you grow<br/>
                 <br/>
                 <br/>
                 <br/>
@@ -101,10 +95,7 @@
     <div class="jumbotron last-jumb">
         <div class="jumbotron left-jumb col-sm-6">
             <div class="container">
-
-                <h2>扫码加入群聊</h2>
-                <br/>
-                <p><span id="letschat"></span><span class="animated infinite flash">|</span></p>
+                <p><span id="letschat" style="font-size:11"></span><span class="animated infinite flash">|</span></p>
             </div>
         </div>
         <div class="jumbotron right-jumb col-sm-6">
@@ -120,7 +111,7 @@
         <p class="text-muted">
             <a href="/about/index">{{trans('app.about')}}</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/contact">{{trans('app.contact')}}</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wograss.com">卧草科技</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>CoolDevelop</a>
             <span style="font-size: 12px;float: right" class="visible-md visible-lg"><a href="http://www.miitbeian.gov.cn/" target="_blank">{{trans('app.beian')}}</a>  &nbsp;&nbsp;&nbsp;Copyright © {{date('Y')}} Wograss. All Rights Reserved.</span>
         </p>
     </div>
@@ -160,7 +151,7 @@
         demo.start();
 
         $("#letschat").typed({
-            strings: ['∎∎∎∎∎∎ "∎∎∎"<br/> ^500 ∎∎∎∎ ∎∎∎∎() {<br/> ^500 <pre>    ∎∎∎.∎∎∎∎∎("∎∎∎, ∎∎")<pre><br/> ^100 }','#∎∎∎∎∎∎∎ <∎∎∎∎∎.∎> <br/> ^500 ∎∎∎ ∎∎∎∎()<br/> ^500 { ^500 &nbsp;&nbsp; ∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!"); <br/> ^500 &nbsp;&nbsp;∎∎∎∎∎∎ ∎;<br/> ^100 }','∎∎∎∎∎ ∎∎∎∎∎∎∎  {<br/> ^500 &nbsp;&nbsp; ∎∎∎∎∎∎ ∎∎∎∎∎∎ ∎∎∎∎ ∎∎∎∎(∎∎∎∎∎∎[] ∎∎∎∎) {<br/> ^500 &nbsp;&nbsp;&nbsp;&nbsp; ∎∎∎∎∎∎.∎∎∎.∎∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!");<br/>  ^100 &nbsp;&nbsp;}</br> ^100 } '],
+            strings: ['∎∎∎∎∎∎ "∎∎∎"<br/> ^500 ∎∎∎∎ ∎∎∎∎() {<br/> ^500<span style="color:#222">∎∎∎</span>     ∎∎∎.∎∎∎∎∎("∎∎∎, ∎∎")<br/> ^100 }','#∎∎∎∎∎∎∎ <∎∎∎∎∎.∎> <br/> ^500 ∎∎∎ ∎∎∎∎()<br/> ^500 { ^500 <span style="color:#222">∎∎</span> ∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!"); <br/> ^500 <span style="color:#222">∎∎</span>∎∎∎∎∎∎ ∎;<br/> ^100 }','∎∎∎∎∎ ∎∎∎∎∎∎∎  {<br/> ^500 <span style="color:white">∎∎</span> ∎∎∎∎∎∎ ∎∎∎∎∎∎ ∎∎∎∎ ∎∎∎∎(∎∎∎∎∎∎[] ∎∎∎∎) {<br/> ^500 <span style="color:#222">∎∎∎∎</span> ∎∎∎∎∎∎.∎∎∎.∎∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!");<br/>  ^100 <span style="color:#222">∎∎</span>}</br> ^100 } '],
             loop: true,
             typeSpeed: 100,
             cursorChar: ""
