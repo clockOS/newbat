@@ -160,7 +160,7 @@
         demo.start();
 
         $("#letschat").typed({
-            strings: ['∎∎∎∎∎∎ "∎∎∎"<br/> ^500 ∎∎∎∎ ∎∎∎∎() {<br/> ^500<span style="color:white">∎∎∎</span>     ∎∎∎.∎∎∎∎∎("∎∎∎, ∎∎")<br/> ^100 }','#∎∎∎∎∎∎∎ <∎∎∎∎∎.∎> <br/> ^500 ∎∎∎ ∎∎∎∎()<br/> ^500 { ^500 <span style="color:white">∎∎</span>; ∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!"); <br/> ^500 <span style="color:white">∎∎</span>;∎∎∎∎∎∎ ∎;<br/> ^100 }','∎∎∎∎∎ ∎∎∎∎∎∎∎  {<br/> ^500 <span style="color:white">∎∎</span> ∎∎∎∎∎∎ ∎∎∎∎∎∎ ∎∎∎∎ ∎∎∎∎(∎∎∎∎∎∎[] ∎∎∎∎) {<br/> ^500 <span style="color:white">∎∎∎∎</span> ∎∎∎∎∎∎.∎∎∎.∎∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!");<br/>  ^100 <span style="color:white">∎∎</span>}</br> ^100 } '],
+            strings: ['∎∎∎∎∎∎ "∎∎∎"<br/> ^500 ∎∎∎∎ ∎∎∎∎() {<br/> ^500<span style="color:#222">∎∎∎</span>     ∎∎∎.∎∎∎∎∎("∎∎∎, ∎∎")<br/> ^100 }','#∎∎∎∎∎∎∎ <∎∎∎∎∎.∎> <br/> ^500 ∎∎∎ ∎∎∎∎()<br/> ^500 { ^500 <span style="color:#222">∎∎</span>; ∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!"); <br/> ^500 <span style="color:#222">∎∎</span>;∎∎∎∎∎∎ ∎;<br/> ^100 }','∎∎∎∎∎ ∎∎∎∎∎∎∎  {<br/> ^500 <span style="color:white">∎∎</span> ∎∎∎∎∎∎ ∎∎∎∎∎∎ ∎∎∎∎ ∎∎∎∎(∎∎∎∎∎∎[] ∎∎∎∎) {<br/> ^500 <span style="color:#222">∎∎∎∎</span> ∎∎∎∎∎∎.∎∎∎.∎∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!");<br/>  ^100 <span style="color:#222">∎∎</span>}</br> ^100 } '],
             loop: true,
             typeSpeed: 100,
             cursorChar: ""
