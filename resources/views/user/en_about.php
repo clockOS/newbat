@@ -26,7 +26,7 @@
         <h1 class="animated shake">{{trans('app.brand')}}</h1>
         <h2>WTF</h2>
         <br/>
-        <p>{{trans('app.brand')}}is a online game<br/>
+        <p>{{trans('app.brand')} is a online game<br/>
             玩家们通过做各种任务共同击败"BAT"这三个BOSS</p>
         <br/>
         <p><a class="btn btn-lg white-btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
