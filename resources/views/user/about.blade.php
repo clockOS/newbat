@@ -101,7 +101,7 @@
     <div class="jumbotron last-jumb">
         <div class="jumbotron left-jumb col-sm-6">
             <div class="container">
-                <p><span id="letschat"></span><span class="animated infinite flash">|</span></p>
+                <p><span id="letschat" style="font-size:11"></span><span class="animated infinite flash">|</span></p>
             </div>
         </div>
         <div class="jumbotron right-jumb col-sm-6">
