@@ -50,6 +50,16 @@ class PagesController extends Controller
 
         $status = Status::latest()->first();
 
-        return view('user.about',compact('status'));
+        
+        
+        if(\App::getLocale()=='zh'){
+            
+            return view('user.about',compact('status'));
+            
+        }else{
+            
+            return view('user.en_about',compact('status'));
+            
+        }
     }
 }
