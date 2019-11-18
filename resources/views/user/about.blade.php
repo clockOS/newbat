@@ -24,24 +24,23 @@
 <div class="jumbotron first-jumb">
     <div class="container">
         <h1 class="animated shake">{{trans('app.brand')}}</h1>
-        <h2>新BAT</h2>
+        <h2>酷开发</h2>
         <br/>
-        <p>{{trans('app.brand')}}是一个网络游戏<br/>
-            玩家们通过做各种任务共同击败"BAT"这三个BOSS</p>
+        <p>数万名开发者共同开发一款产品</p>
         <br/>
         <p><a class="btn btn-lg white-btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
     </div>
 </div>
 <div class="jumbotron second-jumb">
     <div class="container">
-        <h1>召集<span id="myTargetElement">1'000'000</span>名玩家</h1>
+        <h1>召集<span id="myTargetElement">1'000'000</span>名开发者</h1>
         <h2>💩上最大的群P(rogramming)项目</h2>
         <br/>
         <p>
-            这三个BOSS略强大，需要1000000个人才能干的动<br/>
-            虽然第一个BOSS "B"自己就要挂了<br/>
-            没办法...名字都起了，最主要的是花钱买域名了！<br/>
-            按照这个字母顺序逐一干掉。<br/>
+            开发一款超级app<br/>
+            所有的开发者，一个共同的目标<br/>
+            像打游戏做任务一样最终打到终极BOSS<br/>
+
             <br/>
         <p><a class="btn btn-lg animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名玩家&nbsp;</a></p>
     </div>
@@ -53,14 +52,13 @@
             <br/>
             <br/>
             <br/>
-            <h3>成为新BAT玩家的唯一条件</h3>
-            <h1>零欺骗</h1>
+            <h3>Cool在哪里</h3>
             <br/>
-            <p>不要套路，不要谎言。<br/>
-                是几厘米就是几厘米，可以长，可以短<br/>
-                是老爷们就不是老娘们，可以快，可以慢<br/>
-                任何信息绝不允许虚报<br/>
-                拒绝洗脑，拒绝画饼。<br/>
+            <p>随时随地参与开发<br/>
+                任务颗粒化，再小的贡献也有记录<br/>
+                新型的决策方式，拥有少量的投票权也能左右你关心的决策<br/>
+                即使没有专业技能，也能参与到开发之中<br/>
+                直观的数据看到自己的成长<br/>
                 <br/>
                 <br/>
                 <br/>
