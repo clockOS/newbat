@@ -24,10 +24,10 @@
 <div class="jumbotron first-jumb">
     <div class="container">
         <h1 class="animated shake">{{trans('app.brand')}}</h1>
-        <h2>WTF</h2>
+        <h2>BAT</h2>
         <br/>
-        <p>{{trans('app.brand')} is a online game<br/>
-            玩家们通过做各种任务共同击败"BAT"这三个BOSS</p>
+        <p>{{trans('app.brand')}}是一个网络游戏<br/>
+            whatever</p>
         <br/>
         <p><a class="btn btn-lg white-btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
     </div>
@@ -136,10 +136,12 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'UA-126411224-1');
 </script>
 <script>
     $(document).ready(function(){
+
         $('#youtubeFrame').load(function(){
             $(this).closest('.second-jumb').show();
             $("#alivid").hide();
@@ -153,14 +155,17 @@
             prefix : '',
             suffix : ''
         };
+
         var demo = new CountUp("myTargetElement", 0, 1000000, 0, 10, options);
         demo.start();
+
         $("#letschat").typed({
             strings: ['∎∎∎∎∎∎ "∎∎∎"<br/> ^500 ∎∎∎∎ ∎∎∎∎() {<br/> ^500 <pre>    ∎∎∎.∎∎∎∎∎("∎∎∎, ∎∎")<pre><br/> ^100 }','#∎∎∎∎∎∎∎ <∎∎∎∎∎.∎> <br/> ^500 ∎∎∎ ∎∎∎∎()<br/> ^500 { ^500 &nbsp;&nbsp; ∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!"); <br/> ^500 &nbsp;&nbsp;∎∎∎∎∎∎ ∎;<br/> ^100 }','∎∎∎∎∎ ∎∎∎∎∎∎∎  {<br/> ^500 &nbsp;&nbsp; ∎∎∎∎∎∎ ∎∎∎∎∎∎ ∎∎∎∎ ∎∎∎∎(∎∎∎∎∎∎[] ∎∎∎∎) {<br/> ^500 &nbsp;&nbsp;&nbsp;&nbsp; ∎∎∎∎∎∎.∎∎∎.∎∎∎∎∎∎∎("∎∎∎∎∎, ∎∎∎∎∎!");<br/>  ^100 &nbsp;&nbsp;}</br> ^100 } '],
             loop: true,
             typeSpeed: 100,
             cursorChar: ""
         });
+
     });
 </script>
 </body>
