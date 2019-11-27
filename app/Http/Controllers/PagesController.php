@@ -32,7 +32,7 @@ class PagesController extends Controller
 
     public function home(ConnectToForum $forum){
         
-        if(Auth::user()){
+        /*if(Auth::user()){
 
             $user = Auth::user();
 
@@ -44,7 +44,7 @@ class PagesController extends Controller
 
             }         
         
-        }
+        }*/
         
 
 
