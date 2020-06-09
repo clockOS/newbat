@@ -34,9 +34,7 @@
             <div class="panel panel-default">
                 <img src="https://cdn.cooldevelop.com/img/types/invite.png">
                 <div class="panel-body">
-                    <div class="list-first-row">
-                        <div class="quests-list-title">获取推广代码</div>
-                    </div>
+                        <h3>   1. 获取推广代码</h3>
                 </div>
             </div>
         </a>
@@ -45,9 +43,7 @@
             <div class="panel panel-default">
                 <img src="https://cdn.cooldevelop.com/img/types/jobs.png">
                 <div class="panel-body">
-
-                        <h3>选择你的技能</h3>
-
+                        <h3>   2. 选择你的技能</h3>
                 </div>
             </div>
         </a>
