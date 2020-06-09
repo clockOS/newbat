@@ -47,7 +47,6 @@
                     <li class="{{ ($current_route_name == 'quests') ? 'active' : '' }}"><a href="{{ url('/quests') }}">{{trans('app.project')}}</a></li>
                     <li class="{{ ($current_route_name == 'finance') ? 'active' : '' }}"><a href="{{ url('/finance') }}">{{trans('app.finance')}}</a></li>
                     <li class="{{ ($current_route_name == 'decision') ? 'active' : '' }}"><a href="{{ url('/decision') }}">{{trans('app.decision')}}</a></li>
-                    <li><a href="{{ config('app.forum.url') }}">{{trans('app.forum')}}</a></li>
                     <li class="{{ ($current_route_name == 'status') ? 'active' : '' }}"><a href="{{ url('/status') }}">{{trans('app.status')}}</a></li>
                     <li class="{{ ($current_route_name == 'manage') ? 'active' : '' }}"><a href="{{ url('/manage') }}">{{trans('app.manage')}}</a></li>
 
