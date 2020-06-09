@@ -46,7 +46,7 @@
        <div class="embed-responsive embed-responsive-16by9">
        
         <video width="320" height="240" controls>
-          <source src="https://video.fuckb.at/video/580d8d15-166328a22eb-0005-869e-c38-18e49.mp4" type="video/mp4">
+          <source src="https://dhfsrc.cooldevelop.com/video/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
         </video>
         
@@ -105,7 +105,7 @@
         <div class="jumbotron right-jumb col-sm-6">
             <div class="container">
                 <br/><br/><br/>
-            <img width="200px" src="{{ \Clockos\Test::cdn('/img/slack.svg')}}">
+            <img width="200px" src="https://dhfsrc.cooldevelop.com/img/contact/IMG_0183.JPG">
             </div>
         </div>
     </div>
