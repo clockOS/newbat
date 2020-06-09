@@ -11,7 +11,6 @@
 
                 你已经向介绍人发送了信息，请等待他/她的确认<br/>
                 确认之后可以开始管理团队。<br/>
-                我的推广代码：<span class="label label-info">{{\Auth::user()->sponsor_code}}</span>
 
     @else
         请填写介绍人的邮箱或询问他/她的推广代码</div>
