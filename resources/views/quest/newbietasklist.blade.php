@@ -29,30 +29,62 @@
     <hr/>
 
     <div id="quests-list">
-    @foreach($quests->all() as $quest)
 
-        <a href="{{url("/newbie")}}/{{$quest->id}}" class="col-md-6 col-lg-4" id="{{$quest->id}}">
+        <a href="https://youtube.com" class="col-md-6 col-lg-4">
             <div class="panel panel-default">
-                <img src="{{\Clockos\Test::cdn('/img/types/'.$quest->type.'.png')}}">
+                <img src="https://cdn.cooldevelop.com/img/types/invite.png">
                 <div class="panel-body">
                     <div class="list-first-row">
-                        <div class="quests-list-title">{{$quest->title}}</div>
+                        <div class="quests-list-title">获取推广代码</div>
                     </div>
-                    <div class="quests-list-status">
-                        @include('partials.newbiestate',['state'=>$quest->state])
-                            <br/><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>&nbsp;{{trans_choice('app.stock',$quest->stock)}}:{{$quest->stock}}
+                </div>
+            </div>
+        </a>
+        
+        <a href="https://youtube.com" class="col-md-6 col-lg-4">
+            <div class="panel panel-default">
+                <img src="https://cdn.cooldevelop.com/img/types/jobs.png">
+                <div class="panel-body">
+                    <div class="list-first-row">
+                        <div class="quests-list-title">选择你的技能</div>
                     </div>
-                    <div class="quests-list-bottom">
-                        <img src="{{\Clockos\Test::cdn('/img/level.png!35')}}" class="quests-logo" alt="Lv" align="right">
-                        <img src="{{\Clockos\Test::cdn('/img/'.$quest->difficulty.'.png!35')}}" class="quests-logo" align="right">
-
-                            <span class="quests-level">Lv.{{$quest->min_level}}</span>
+                </div>
+            </div>
+        </a>
+        
+        <a href="https://youtube.com" class="col-md-6 col-lg-4">
+            <div class="panel panel-default">
+                <img src="https://cdn.cooldevelop.com/img/types/task.png">
+                <div class="panel-body">
+                    <div class="list-first-row">
+                        <div class="quests-list-title">创建一个任务</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="https://youtube.com" class="col-md-6 col-lg-4">
+            <div class="panel panel-default">
+                <img src="https://cdn.cooldevelop.com/img/types/decision.png">
+                <div class="panel-body">
+                    <div class="list-first-row">
+                        <div class="quests-list-title">执行一个任务</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="https://youtube.com" class="col-md-6 col-lg-4">
+            <div class="panel panel-default">
+                <img src="https://cdn.cooldevelop.com/img/types/vote.png">
+                <div class="panel-body">
+                    <div class="list-first-row">
+                        <div class="quests-list-title">参与决策</div>
                     </div>
                 </div>
             </div>
         </a>
 
-    @endforeach
     </div>
 
 @stop
