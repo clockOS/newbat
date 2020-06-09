@@ -45,9 +45,9 @@
             <div class="panel panel-default">
                 <img src="https://cdn.cooldevelop.com/img/types/jobs.png">
                 <div class="panel-body">
-                    <div class="list-first-row">
-                        <div class="quests-list-title">选择你的技能</div>
-                    </div>
+
+                        <h3>选择你的技能</h3>
+
                 </div>
             </div>
         </a>
