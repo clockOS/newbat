@@ -25,7 +25,7 @@ class ActivationsController extends Controller
 
         $user['sponsor_code'] = md5($user['email'].time());
 
-        $user['avatar'] = 'https://clockos.b0.upaiyun.com/img/avatar.png';
+        $user['avatar'] = 'https://cdn.cooldevelop.com/img/roles/color/rookie.png';
 
         $newUser = User::create($user);
 
