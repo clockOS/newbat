@@ -13,9 +13,6 @@
                 我的介绍人：<a href="/profiles/{{$mySponsor->id}}">{{$mySponsor->username}}</a><br/>
             @endif
             {{trans('profile.promocode')}}&nbsp;&nbsp;&nbsp;<span class="label label-info">{{\Auth::user()->sponsor_code}}</span><br/>
-            <div class="form-group">
-                <input type="checkbox" data-setting="sponsor_code" class="settings-switch" {{Clockos\CheckedOrNot::setting('sponsor_code')}} >{{trans('profile.findbyemail')}}<br/><span id="sponsor-msg"></span>
-            </div>
         </div>
     </div>
     <div class="panel panel-default">
