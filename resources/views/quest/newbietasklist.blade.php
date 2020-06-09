@@ -25,7 +25,7 @@
 </style>
 @extends('app')
 @section('content')
-    <h1>{{trans('app.newbietask')}}</h1>
+    <h1>新手帮助</h1>
     <hr/>
 
     <div id="quests-list">
