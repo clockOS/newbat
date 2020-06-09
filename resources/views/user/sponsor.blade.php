@@ -41,7 +41,6 @@
     <div class="panel panel-warning">
         <div class="panel-heading">团队管理</div>
         <div class="panel-body">
-            我的推广代码：<span class="label label-info">{{\Auth::user()->sponsor_code}}</span><br/>
             确定你的介绍人后可以管理团队<br/>
             在此之前无法验证谁通过你的介绍加入到了cooldevelop，请尽快确认你的介绍人。
         </div>
@@ -50,15 +49,7 @@
     <div class="panel panel-danger">
         <div class="panel-heading">没有介绍人</div>
         <div class="panel-body">
-            有介绍人的情况下，分红中的5%会进入到介绍人的帐中。若没有介绍人，分红中的5%会返还到创始人手中。<br/>
-            如果有介绍人，请询问他的注册邮箱或推广代码，再到此界面填写。<br/>
-            <a href="/docs/sponsor">关于介绍人系统的详情</a>
-            <hr/>
-            {!! Form::open(['action' => 'TeamsController@confirm' ]) !!}
-            <div class="form-group">
-                {!! Form::submit('我已了解介绍人系统，确定没有介绍人', ['class' => 'btn btn-danger form-control']) !!}
-            </div>
-            {!! Form::close() !!}
+            只有填写完你的介绍人的推广码后才能获得你自己的推广码，并将cooldevelop继续介绍给别人，请想办法获取到推广码
         </div>
     </div>
 
