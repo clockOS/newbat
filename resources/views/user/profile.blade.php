@@ -4,12 +4,8 @@
 @include('partials.profiles')
     <div class="row">
         <div class="col-xs-6 col-md-3">
-            <a href="{{ url('profiles/avatar') }}" class="thumbnail">
+
                 <img src="{{$user->avatar}}" alt="{{$user->username}}">
-                <div class="carousel-caption">
-                    <h3>{{trans('profile.change')}}</h3>
-                </div>
-            </a>
 
         </div>
         <div class="col-xs-6 col-md-6">
