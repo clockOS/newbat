@@ -31,19 +31,28 @@
         <p><a class="btn btn-lg white-btn-lg" href="{{ url('/auth/login') }}" role="button">&nbsp;Start&nbsp;</a></p>
     </div>
 </div>
-<div class="jumbotron second-jumb">
+<div class="jumbotron second-jumb" style="display:none">
     <div class="container">
-        <h1>召集<span id="myTargetElement">1'000'000</span>名开发者</h1>
-        <h2>💩上最大的群P(rogramming)项目</h2>
-        <br/>
-        <p>
-            开发一款超级app<br/>
-            所有的开发者，一个共同的目标<br/>
-            像打游戏做任务一样最终打到终极BOSS<br/>
+       <div class="embed-responsive embed-responsive-16by9">
 
-            <br/>
-        <p><a class="btn btn-lg animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名玩家&nbsp;</a></p>
+        <iframe id="youtubeFrame" src="https://www.youtube.com/embed/-FNGXYXB_SM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" class="embed-responsive-item"></iframe>
+
+        </div>
     </div>
+
+</div>
+<div class="jumbotron second-jumb" id="alivid">
+    <div class="container">
+       <div class="embed-responsive embed-responsive-16by9">
+       
+        <video width="320" height="240" controls>
+          <source src="https://video.fuckb.at/video/580d8d15-166328a22eb-0005-869e-c38-18e49.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        
+        </div>
+    </div>
+
 </div>
 <div class="container">
     <div class="jumbotron left-jumb col-sm-6">
@@ -71,30 +80,21 @@
 
     </div>
 </div>
-
-<div class="jumbotron second-jumb" style="display:none">
+<div class="jumbotron second-jumb">
     <div class="container">
-       <div class="embed-responsive embed-responsive-16by9">
+        <h1>召集<span id="myTargetElement">1'000'000</span>名开发者</h1>
+        <h2>💩上最大的群P(rogramming)项目</h2>
+        <br/>
+        <p>
+            开发一款超级app<br/>
+            所有的开发者，一个共同的目标<br/>
+            像打游戏做任务一样最终打到终极BOSS<br/>
 
-        <iframe id="youtubeFrame" src="https://www.youtube.com/embed/-FNGXYXB_SM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" class="embed-responsive-item"></iframe>
-
-        </div>
+            <br/>
+        <p><a class="btn btn-lg animated pulse infinite" href="{{ url('/auth/register') }}" role="button">&nbsp;成为第{{$status->members+1}}名玩家&nbsp;</a></p>
     </div>
-
 </div>
-<div class="jumbotron second-jumb" id="alivid">
-    <div class="container">
-       <div class="embed-responsive embed-responsive-16by9">
-       
-        <video width="320" height="240" controls>
-          <source src="https://video.fuckb.at/video/580d8d15-166328a22eb-0005-869e-c38-18e49.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
-        
-        </div>
-    </div>
 
-</div>
 <div class="container">
     <div class="jumbotron last-jumb">
         <div class="jumbotron left-jumb col-sm-6">
