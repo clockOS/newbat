@@ -57,11 +57,6 @@
                         </div>
                         <hr/>
                         <div class="form-group">
-                            <div class="col-md-3 col-md-offset-3">
-                                <a id="github-login-button" class="btn btn-block btn-primary" href="{{ url('/auth/github') }}" style="background-image: url({{Clockos\Test::cdn('/img/other/github.png')}});">
-                                   &nbsp;&nbsp;{{trans('auth.github')}}
-                                </a>
-                            </div>
                             <div class="col-md-3">
                                 <a class="btn btn-primary btn-block" href="{{ url('/auth/register') }}" style="margin: 10px 0">
                                 {{trans('auth.signup')}}
