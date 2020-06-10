@@ -16,7 +16,6 @@ class PagesController extends Controller
     {
 
     }
-    //
 
 
     function about($page){
@@ -26,14 +25,15 @@ class PagesController extends Controller
     }
 
     public function contact(){
+        
         return view('about.contact');
+        
     }
 
     public function home(){
         
         $status = Status::latest()->first();
 
-        
         
         if(\App::getLocale()=='zh'){
             
@@ -44,5 +44,6 @@ class PagesController extends Controller
             return view('user.en_about',compact('status'));
             
         }
+        
     }
 }
