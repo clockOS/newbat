@@ -7,7 +7,6 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-use Clockos\ConnectToForum;
 
 class AuthController extends Controller
 {
@@ -39,10 +38,9 @@ class AuthController extends Controller
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
-    public function getLogout(ConnectToForum $forum)
+    public function getLogout()
     {
 
-        $forum->logout();
 
         if (!empty(\URL::previous()) && !str_contains(\URL::previous(), "auth/"))
         {
