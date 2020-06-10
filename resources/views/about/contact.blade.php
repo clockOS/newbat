@@ -1,7 +1,10 @@
 @extends('app')
 @section('content')
     <h1>{{trans('app.contact')}}</h1><hr/>
-    Email: contact@fuckb.at<br/>
-    Slack: <a href="https://join.slack.com/t/fuckbat/shared_invite/enQtNDQyMjU2ODY2MjYyLTgxZWIzZDRkYWM4YzQyNDNjZWJiMTFkMjgxMjI4NDcxZjIwZDgzNWI1ZmRiZmUyNGNiMTBhYmZlYzk1ZDViMDk">Click</a> <br/>
-    Telegram: <a href="https://t.me/joinchat/AAAAAE5dBakuhUBvFHHVlw">Click</a> <br/>
+    Email: pingdhf@gmail.com<br/>
+    Slack: <a href="https://join.slack.com/t/dahaofang/shared_invite/zt-eeg756g7-hpRwgPXrv2JJgJYNTt9Lhg">Join Slack</a> <br/>
+    电报: <a href="https://t.me/joinchat/AAAAAE5dBakuhUBvFHHVlw">电报频道<br/>
+    微信: pingdhf
+    YouTube: https://youtube.com/dahaofang
+    推特：https://twitter.com/dahaofang
 @stop
