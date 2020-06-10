@@ -57,11 +57,13 @@
                         </div>
                         <hr/>
                         <div class="form-group">
-                            <div class="col-md-3">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
                                 <a class="btn btn-primary btn-block" href="{{ url('/auth/register') }}" style="margin: 10px 0">
                                 {{trans('auth.signup')}}
                                 </a>
                             </div>
+                            <div class="col-md-4"></div>
                         </div>
                     </form>
 
