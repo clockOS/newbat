@@ -19,7 +19,7 @@
                 {!! Form::open( ['onsubmit'=>'return false;']) !!}
                 <div class="col-lg-6">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="介绍人的推广代码或邮箱" id="sponsor-code">
+                        <input type="text" class="form-control" placeholder="介绍人的推广代码" id="sponsor-code">
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button" id="search-sponsor">{{trans('app.search')}}</button>
                   </span>
