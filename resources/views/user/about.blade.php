@@ -116,7 +116,7 @@
         <p class="text-muted">
             <a href="/about/index">{{trans('app.about')}}</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/contact">{{trans('app.contact')}}</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>CoolDevelop</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://dahaofang.com">大好方Universe</a>
             <span style="font-size: 12px;float: right" class="visible-md visible-lg"><a href="http://www.miitbeian.gov.cn/" target="_blank">{{trans('app.beian')}}</a>  &nbsp;&nbsp;&nbsp;Copyright © {{date('Y')}} Wograss. All Rights Reserved.</span>
         </p>
     </div>
