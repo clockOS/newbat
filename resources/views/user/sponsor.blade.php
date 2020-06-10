@@ -13,7 +13,7 @@
                 确认之后可以开始管理团队。<br/>
 
     @else
-        请填写介绍人的邮箱或询问他/她的推广代码</div>
+        请填写介绍人的或询问他/她的推广代码</div>
         <div class="panel-body">
             <div class="row">
                 {!! Form::open( ['onsubmit'=>'return false;']) !!}
