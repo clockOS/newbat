@@ -18,6 +18,7 @@ return [
 
     'beian' => '辽ICP备14002468号-2',
     'settings' => '设置',
+    'help' => '帮助',
     'logout' => '注销',
     'notification' => '通知',
     'profiles' => '我的信息',
