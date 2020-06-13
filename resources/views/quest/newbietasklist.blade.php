@@ -30,7 +30,7 @@
 
     <div id="quests-list">
 
-        <a href="https://youtube.com" class="col-md-6 col-lg-4">
+        <a href="https://www.bilibili.com/video/BV1MT4y1J7f1/" class="col-md-6 col-lg-4" target="_blank">
             <div class="panel panel-default">
                 <img src="https://cdn.cooldevelop.com/img/types/invite.png">
                 <div class="panel-body">
