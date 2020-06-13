@@ -68,7 +68,7 @@
                 新型的决策方式，拥有少量的投票权也能左右你关心的决策<br/>
                 即使没有专业技能，也能参与到开发之中<br/>
                 直观的数据看到自己的成长<br/>
-                了解更多的详情 https://docs.cooldevelop.com
+                了解更多的详情 <a href="https://docs.cooldevelop.com">https://docs.cooldevelop.com</a>
                 <br/>
                 <br/>
                 <br/>
