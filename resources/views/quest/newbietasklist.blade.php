@@ -50,7 +50,7 @@
         
         <a href="https://www.bilibili.com/video/BV1kz411i7GP/" class="col-md-6 col-lg-4" target="_blank">
             <div class="panel panel-default">
-                <img src="https://cdn.cooldevelop.com/img/types/invite.png">
+                <img src="https://cdn.cooldevelop.com/img/types/task.png">
                 <div class="panel-body">
                         <h3>   3. 创建/拆分任务</h3>
                 </div>
