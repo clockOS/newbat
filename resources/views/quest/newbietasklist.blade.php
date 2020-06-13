@@ -39,7 +39,7 @@
             </div>
         </a>
         
-        <a href="https://youtube.com" class="col-md-6 col-lg-4">
+        <a href="https://www.bilibili.com/video/BV1YT4y1J7sd/" class="col-md-6 col-lg-4">
             <div class="panel panel-default">
                 <img src="https://cdn.cooldevelop.com/img/types/jobs.png">
                 <div class="panel-body">
@@ -48,13 +48,11 @@
             </div>
         </a>
         
-        <a href="https://youtube.com" class="col-md-6 col-lg-4">
+        <a href="https://www.bilibili.com/video/BV1kz411i7GP/" class="col-md-6 col-lg-4" target="_blank">
             <div class="panel panel-default">
-                <img src="https://cdn.cooldevelop.com/img/types/task.png">
+                <img src="https://cdn.cooldevelop.com/img/types/invite.png">
                 <div class="panel-body">
-                    <div class="list-first-row">
-                        <div class="quests-list-title">创建一个任务</div>
-                    </div>
+                        <h3>   3. 创建/拆分任务</h3>
                 </div>
             </div>
         </a>
@@ -64,7 +62,7 @@
                 <img src="https://cdn.cooldevelop.com/img/types/decision.png">
                 <div class="panel-body">
                     <div class="list-first-row">
-                        <div class="quests-list-title">执行一个任务</div>
+                        <div class="quests-list-title">[制作中]执行一个任务</div>
                     </div>
                 </div>
             </div>
@@ -75,7 +73,7 @@
                 <img src="https://cdn.cooldevelop.com/img/types/vote.png">
                 <div class="panel-body">
                     <div class="list-first-row">
-                        <div class="quests-list-title">参与决策</div>
+                        <div class="quests-list-title">[制作中]参与决策</div>
                     </div>
                 </div>
             </div>
