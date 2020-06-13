@@ -150,8 +150,6 @@ return [
 
         Spatie\Permission\PermissionServiceProvider::class,
         
-        Encore\Admin\Providers\AdminServiceProvider::class,
-
 
 
 
