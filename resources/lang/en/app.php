@@ -17,6 +17,7 @@ return [
 
     'beian' => '',
     'settings' => 'Settings',
+    'help' => 'Help',
     'logout' => 'Log out',
     'profiles' => 'Profiles',
     'user_profiles' => 'User\'s Profiles',
