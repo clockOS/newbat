@@ -149,6 +149,8 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
 
         Spatie\Permission\PermissionServiceProvider::class,
+        
+        Encore\Admin\Providers\AdminServiceProvider::class,
 
 
 
