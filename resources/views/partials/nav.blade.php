@@ -35,7 +35,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{ url('/notifications') }}"><span class="glyphicon glyphicon-globe"></span>{{trans_choice('app.notification',$notifications_number)}} <span class="badge">{{$notifications_number}}</span></a></li>
                         <li><a href="{{ url('/profiles') }}"><span class="glyphicon glyphicon-user"></span>{{trans('app.profiles')}}</a></li>
-                        <li><a href="{{ url('/newbies') }}"><span class="glyphicon glyphicon-user"></span>{{trans('app.help')}}</a></li>
+                        <li><a href="{{ url('/newbie') }}"><span class="glyphicon question-sign"></span>{{trans('app.help')}}</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="{{ url('/settings') }}"><span class="glyphicon glyphicon-cog"></span>{{trans('app.settings')}}</a></li>
                         <li><a href="{{ url('/auth/logout') }}"><span class="glyphicon glyphicon-log-out"></span>{{trans('app.logout')}}</a></li>
